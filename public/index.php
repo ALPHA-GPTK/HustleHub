@@ -263,13 +263,13 @@
 
                 <div class="w-full sm:w-1/5 flex flex-col">
                     <form>
-                        <label class="opacity-40 font-bold space-y-4">
+                        <label class="opacity-60 font-bold space-y-4">
                             <span>Subscribe</span>
                             <input type="text"
-                                   class="rounded-l-lg p-3 focus:outline-none border-t border-b border-l text-gray-800 w-3/4 -mr-1 bg-white"
+                                   class="rounded-l-lg p-3 placeholder-gray-700 focus:outline-none border-t border-b border-l w-3/4 -mr-1 bg-white border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                                    placeholder="Get product updates"/>
                         </label>
-                        <button class="rounded-r-lg text-gray-800 font-bold p-3 px-4 uppercase input-blue focus:outline-none shadow">
+                        <button class="rounded-r-lg font-bold p-3 px-4 uppercase input-blue focus:outline-none shadow">
                             <input type="image" class="focus:outline-none align-middle" src="./assets/img/arrows.png"
                                    alt="">
                         </button>
