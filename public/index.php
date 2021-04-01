@@ -216,7 +216,7 @@
     <section class="container w-full mx-auto py-20">
         <!--  COMPANIES  -->
         <div class="company space-x-16 flex pb-20 justify-center items-center">
-            <img src="./assets/img/manulife.svg" alt="manulife">
+            <a href="https://www.manulife.com.ph/"> <img src="./assets/img/manulife.svg" alt="manulife"> </a>
             <img src="./assets/img/fast-company.svg" alt="fast-company">
             <img src="./assets/img/hunter.svg" alt="hunter">
             <img src="./assets/img/citi-link.svg" alt="citi-link">
