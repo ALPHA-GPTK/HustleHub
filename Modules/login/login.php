@@ -12,7 +12,7 @@
               <div class="relative text-gray-700">
                 <label>
                   <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                         name="email" id="email"/>
+                         name="email" id="email" required/>
                 </label>
                 <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
                   <svg class="h-6 w-6 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -30,8 +30,8 @@
               </label>
               <div class="relative text-gray-700">
                 <label>
-                  <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                         name="password" id="password"/>
+                  <input type="password" class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                         name="password" id="password" required/>
                 </label>
                 <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
                   <svg class="h-6 w-6 text-gray-300" xmlns="http://www.w3.org/2000/svg"
