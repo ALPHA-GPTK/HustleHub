@@ -4,5 +4,5 @@ $dbUsername = "root";
 $dbPass = "";
 $dbName = "freelance_db";
 
-$conn = mysqli_connect($dbServerName, $dbUsername, $dbPass, $dbName);
-if (!$conn) { die("Connection failure: " . mysqli_connect_error()); }
+$conn = new mysqli($dbServerName, $dbUsername, $dbPass, $dbName);
+if ($conn->connect_error) { trigger_error("Connection failure: " . $conn->connect_error); }
