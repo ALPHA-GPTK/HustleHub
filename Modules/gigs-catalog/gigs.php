@@ -1,9 +1,9 @@
-<?php require_once "../../templates/header.php"?>
+<?php require_once "../../../templates/header.php"?>
 
     <!-- GIGS CATALOG -->
     <section class="provider  mx-auto">
         <div>
-            <h1 class="title-header">Top Providers</h1>
+            <h1 class="title-header">Popular Gigs</h1>
         </div>
 
         <div class="flex justify-center items-center">
