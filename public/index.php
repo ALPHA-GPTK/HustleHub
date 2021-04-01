@@ -199,7 +199,7 @@
                                         <span class="mr-2"></span>Message
                                         <span class="ml-2"></span>
                                     </button>
-                                    <button class="flex hire-button justify-center max-h-max whitespace-nowrap focus:outline-none focus:ring focus:border-blue-300 rounded max-w-max text-gray-100 bg-green-500 hover:bg-green-600 px-4 py-1 flex items-center hover:shadow-lg">
+                                    <button class="flex hire-button justify-center max-h-max whitespace-nowrap focus:outline-none focus:ring focus:border-blue-300 rounded max-w-max text-gray-100 bg-indigo-500 hover:bg-indigo-600 px-4 py-1 flex items-center hover:shadow-lg">
                                         <span class="mr-2"></span>
                                         Hire
                                         <span class="ml-2"></span>
