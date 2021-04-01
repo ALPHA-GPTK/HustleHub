@@ -51,7 +51,7 @@
             </div>
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="http://localhost:63342/HustleHub/public/index.php">
+                    <a href="/HustleHub/public/index.php">
                         <img class="hidden lg:block h-10 w-auto" src="/HustleHub/public/assets/img/logo.svg" alt="HustleHub">
                     </a>
                 </div>
