@@ -6,13 +6,13 @@
             <div class="m-7">
                 <form>
                     <div class="relative mb-6">
-                        <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400 uppercase">
+                        <label for="email" class="block mb-2 text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
                             Email
                         </label>
                         <div class="relative text-gray-700">
                             <label>
-                                <input class="w-full h-10 pl-3 pr-8 text-base placeholder-gray-300 rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                                       name="email" id="email" placeholder="your@company.com"/>
+                                <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                                       name="email" id="email""/>
                             </label>
                             <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
                                 <svg class="h-6 w-6 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -25,13 +25,13 @@
                         </div>
                     </div>
                     <div class="relative mb-6">
-                        <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400 uppercase">
+                        <label for="email" class="block mb-2 text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
                             Password
                         </label>
                         <div class="relative text-gray-700">
                             <label>
-                                <input class="w-full h-10 pl-3 pr-8 text-base placeholder-gray-300 rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                                       name="email" id="email" placeholder="your@company.com"/>
+                                <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                                       name="email" id="email"/>
                             </label>
                             <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
                                 <svg class="h-6 w-6 text-gray-300" xmlns="http://www.w3.org/2000/svg"
