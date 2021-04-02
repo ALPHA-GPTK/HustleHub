@@ -9,7 +9,7 @@
         <div class="flex flex-wrap -mx-4">
             <!-- Card 1 -->
             <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <div href="" class="card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                <div href="" class="card-gig block shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                     <div class="relative pb-48 overflow-hidden">
                         <img class="absolute inset-0 h-full w-full object-cover" src="https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
                     </div>
@@ -32,16 +32,21 @@
                             <img src="assets/img/stars.svg" alt="">
                         </span>
                     </div>
-                    <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid px-6 pt-4 pb-2">
-                        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border m-3 border-blue-500 hover:border-transparent rounded-lg">UPDATE</button>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">DELETE</button>
+                    <!-- Buttons -->
+                    <div class="grid grid-cols-2 p-10">
+                        <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
+                            <button class="message-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
+                        </div>
+                            <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
+                            <button class="hire-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Card 2 -->
             <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <div class="card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                <div class="card-gig block shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                     <div class="relative pb-48 overflow-hidden">
                         <img class="absolute inset-0 h-full w-full object-cover" src="https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
                     </div>
@@ -64,16 +69,21 @@
                             <img src="assets/img/stars.svg" alt="">
                         </span>
                     </div>
-                    <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid px-6 pt-4 pb-2">
-                        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border m-3 border-blue-500 hover:border-transparent rounded-lg">UPDATE</button>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">DELETE</button>
+                    <!-- Buttons -->
+                    <div class="grid grid-cols-2 p-10">
+                        <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
+                            <button class="message-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
+                        </div>
+                            <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
+                            <button class="hire-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Card 3 -->
             <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <div class="card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                <div class="card-gig block shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                     <div class="relative pb-48 overflow-hidden">
                         <img class="absolute inset-0 h-full w-full object-cover" src="https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
                     </div>
@@ -96,16 +106,21 @@
                             <img src="assets/img/stars.svg" alt="">
                         </span>
                     </div>
-                    <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid px-6 pt-4 pb-2">
-                        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border m-3 border-blue-500 hover:border-transparent rounded-lg">UPDATE</button>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">DELETE</button>
+                    <!-- Buttons -->
+                    <div class="grid grid-cols-2 p-10">
+                        <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
+                            <button class="message-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
+                        </div>
+                            <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
+                            <button class="hire-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Card 4 -->
             <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <div class="card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                <div class="card-gig block shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                     <div class="relative pb-48 overflow-hidden">
                         <img class="absolute inset-0 h-full w-full object-cover" src="https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
                     </div>
@@ -128,9 +143,14 @@
                             <img src="assets/img/stars.svg" alt="">
                         </span>
                     </div>
-                    <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid px-6 pt-4 pb-2">
-                        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border m-3 border-blue-500 hover:border-transparent rounded-lg">UPDATE</button>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">DELETE</button>
+                    <!-- Buttons -->
+                    <div class="grid grid-cols-2 p-10">
+                        <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
+                            <button class="message-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
+                        </div>
+                            <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
+                            <button class="hire-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
+                        </div>
                     </div>
                 </div>
             </div>
