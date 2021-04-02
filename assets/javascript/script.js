@@ -107,4 +107,82 @@ if (lastUrlElement == 'login.php') {
             confirmIcon.src = "./assets/img/check-not.svg";
         }
     });
+} else if (lastUrlElement == "forgot.php") {
+    //Email
+    const emailInput = document.getElementById('email');
+    const emailIcon = document.getElementById('email-icon');
+
+    emailInput.addEventListener('focusin', (event) => {
+        emailIcon.src = "./assets/img/mail-in.svg";
+    });
+
+    emailInput.addEventListener('focusout', (event) => {
+        emailIcon.src = "./assets/img/mail-out.svg";
+    });
+} else if (lastUrlElement == 'vericode.php') {
+    //Code Verification
+    const codeInput = document.getElementById('code');
+    const codeIcon = document.getElementById('code-icon');
+
+    codeInput.addEventListener('focusin', (event) => {
+        codeIcon.src = "./assets/img/code-in.svg";
+    });
+
+    codeInput.addEventListener('focusout', (event) => {
+        codeIcon.src = "./assets/img/code-out.svg";
+    });
+} else if (lastUrlElement == 'changepass.php') {
+    //Password
+    const passwordInput = document.getElementById('newpassword');
+    const passwordIcon = document.getElementById('newpassword-icon');
+
+    passwordIcon.addEventListener('mousedown', (event) => {
+        passwordIcon.src = "./assets/img/show.svg";
+        passwordInput.type = "text";
+    });
+
+    passwordIcon.addEventListener('mouseup', (event) => {
+        passwordIcon.src = "./assets/img/hide.svg";
+        passwordInput.type = "password";
+    });
+
+    //Confirm Password
+    const confirmInput = document.getElementById("confirm_password");
+    const confirmIcon = document.getElementById("confirm-password-check");
+
+    passwordInput.addEventListener('input', (event) => {
+        if (passwordInput.value == null) {
+            confirmInput.disabled;
+        } else {
+            confirmInput.disabled = false;
+        }
+
+        if (passwordInput.value == confirmInput.value) {
+            confirmIcon.src = "./assets/img/check-same.svg";
+        } else if (passwordInput.value != confirmInput.value) {
+            confirmIcon.src = "./assets/img/check-not.svg";
+        } else if ((passwordInput.value == '' || passwordInput.value == null) && (confirmInput.value == '' || confirmInput.value == null)) {
+            confirmIcon.src = "./assets/img/check-not.svg";
+        }
+    });
+
+    passwordInput.addEventListener('focusout', (event) => {
+        if ((passwordInput.value).trim() == null || (passwordInput.value).trim() == "") {
+            if (confirmInput.value != null) {
+                confirmInput.value = "";
+            }
+
+            confirmInput.disabled = true;
+        } else {
+            confirmInput.disabled = false;
+        }
+    });
+
+    confirmInput.addEventListener('input', (event) => {
+        if (passwordInput.value == confirmInput.value) {
+            confirmIcon.src = "./assets/img/check-same.svg";
+        } else {
+            confirmIcon.src = "./assets/img/check-not.svg";
+        }
+    });
 }

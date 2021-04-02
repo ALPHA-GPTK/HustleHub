@@ -27,7 +27,7 @@ if (isset($_POST["login"])) {
             header("location: login.php?account_status=notexist");
         }
     } else {
-        header("location: login.php?input_status=fillup");
+        header("location: login.php?input_status=blank");
     }
 } else {
     trigger_error("Connection failed: " . $conn->connect_error);
@@ -39,7 +39,7 @@ function checkAccount($email, $password, $conn)
     $result = $conn->query($sql) or die($conn->error);
     $userCount = count($result->fetch_all());
 
-    if ($userCount > 0) {
+    if ($userCount > 0 || $userCount == 0 || $userCount == null) {
         return false;
     } else {
         return true;
