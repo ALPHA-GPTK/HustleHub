@@ -1,6 +1,6 @@
 <div class="bg-lightBlue_8 h-screen">
   <?php require_once "header.php" ?>
-  <div class="flex justify-center overflow-hidden">
+  <div class="flex justify-center overflow-hidden -mt-5">
     <div class="container w-full">
       <form action="create_signup.php" method="post" oninput='password.setCustomValidity(password.value !== confirm_password.value ? "Password is not the same with the confirm password." : "")'>
         <div class="max-w-lg flex flex-wrap mx-auto md:space-y-4">
