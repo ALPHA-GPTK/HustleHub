@@ -1,4 +1,4 @@
-<div class="bg-lightBlue_8 h-screen">
+<div class="bg-lightBlue_8">
   <?php require_once "profile_header.php"; ?>
   <div class="md:flex px-36">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
