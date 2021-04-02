@@ -1,4 +1,4 @@
-<?php require_once "header.php" ?>
+<?php require_once "profile_header.php" ?>
 
 <section class="provider mx-auto">
     <div>
