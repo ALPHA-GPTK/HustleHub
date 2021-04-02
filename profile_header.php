@@ -50,10 +50,7 @@
                     </div>
                     <div class="hidden sm:block sm:ml-auto">
                         <div class="flex space-x-4">
-                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                            <a href="login.php" class="text-blue-900 text-dark px-6 py-2 rounded-full text-sm font-medium" aria-current="page">Login</a>
-
-                            <a href="signup.php" class="text-blue-900 hover:bg-blue-900 hover:text-white border-2 border-current px-6 py-2 rounded-full text-sm font-medium">Signup</a>
+                            <a href="logout.php" class="text-blue-900 hover:bg-blue-900 hover:text-white border-2 border-current px-6 py-2 rounded-full text-sm font-medium">LOG OUT</a>
                             <a href=""></a>
                         </div>
                     </div>
@@ -64,10 +61,7 @@
         <!-- Mobile menu, show/hide based on menu state. -->
         <div class="sm:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Login</a>
-
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Signup</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">LOG OUT</a>
             </div>
         </div>
     </nav>
