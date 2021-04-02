@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <nav>
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 mt-12 mb-16">
+    <nav class="pt-12 pb-16 flex justify-center">
+        <div class="max-w-7xl px-2 sm:px-6 lg:px-8 w-full">
             <div class="relative flex items-center justify-between h-16">
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                     <!-- Mobile menu button-->
@@ -44,7 +44,7 @@
                 </div>
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                     <div class="flex-shrink-0 flex items-center">
-                        <a href="./index.php"><span class="c-darkBlue_100 text-4xl f-fredokaone-regular">HUSTLE</span><span class="c-lightBlue_100 text-4xl f-fredokaone-regular">HUB</span></a>
+                        <a href="./index.php"><span class="c-darkBlue_100 text-3xl f-fredokaone-regular">HUSTLE</span><span class="c-lightBlue_100 text-3xl f-fredokaone-regular">HUB</span></a>
                     </div>
                     <div class="hidden sm:block sm:ml-auto">
                         <div class="flex space-x-4">
