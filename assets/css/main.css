@@ -8,6 +8,7 @@
 :root {
     --darkblue_100: rgba(54, 74, 124, 1);
     --lightblue_100: rgba(142, 193, 209, 1);
+    --lightblue_8: rgba(142, 193, 209, 0.08);
     --yellow_100: rgba(255, 211, 55, 1);
     --lightyellow_100: rgba(244, 245, 166, 1);
     --white_100: rgba(255, 255, 255, 1);
@@ -22,6 +23,10 @@
 
 .c-lightBlue_100 {
     color: var(--lightblue_100);
+}
+
+.bg-lightBlue_8 {
+    background-color: var(--lightblue_8);
 }
 
 .c-yellow_100 {
