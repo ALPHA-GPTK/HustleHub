@@ -44,7 +44,9 @@
                 </div>
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                     <div class="flex-shrink-0 flex items-center">
-                        <a href="./index.php"><span class="c-darkBlue_100 text-3xl f-fredokaone-regular">HUSTLE</span><span class="c-lightBlue_100 text-3xl f-fredokaone-regular">HUB</span></a>
+                        <div class="cursor-pointer">
+                            <a href="./index.php"><span class="c-darkBlue_100 text-3xl f-fredokaone-regular">HUSTLE</span><span class="c-lightBlue_100 text-3xl f-fredokaone-regular">HUB</span></a>
+                        </div>
                     </div>
                     <div class="hidden sm:block sm:ml-auto">
                         <div class="flex space-x-4">

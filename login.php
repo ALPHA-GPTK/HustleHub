@@ -22,9 +22,7 @@
               </div>
             </div>
             <div class="relative mb-6">
-              <label for="password" class="block mb-2 text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
-                Password
-              </label>
+              <label for="password" class="block mb-2 text-xs text-gray-600 dark:text-gray-400 uppercase font-black">Password</label>
               <div class="relative text-gray-700">
                 <label>
                   <input type="password" class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" name="password" id="password" required />
@@ -36,9 +34,7 @@
                   </svg>
                 </div>
               </div>
-              <a href="#" class="text-sm text-gray-400 focus:outline-none focus:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-300 flex justify-end mt-5">
-                Forgot password?
-              </a>
+              <a href="./forgot.php" class="text-sm text-gray-400 focus:outline-none focus:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-300 flex justify-end mt-5">Forgot password?</a>
             </div>
             <div class="flex justify-center mb-6">
               <label>
@@ -47,9 +43,7 @@
               </label>
             </div>
             <div class="mb-6">
-              <button type="submit" name="login" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-indigo-500 rounded-lg focus:bg-indigo-600 focus:outline-none uppercase font-black">
-                Log in
-              </button>
+              <input type="submit" value="Login" name="login" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-indigo-500 rounded-lg focus:bg-indigo-600 focus:outline-none uppercase font-black cursor-pointer">
             </div>
             <p class="text-sm text-center text-gray-400">New to HustleHub?
               <a class="text-blue focus:outline-none font-black focus:underline focus:text-indigo-500 dark:focus:border-indigo-800 uppercase" href="signup.php">Sign up</a>

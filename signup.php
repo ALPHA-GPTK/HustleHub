@@ -15,7 +15,7 @@
           <!-- Last Name -->
           <div class="w-full pl-2 md:w-1/2">
             <label class="block mb-1 text-xs text-gray-600 font-black uppercase" for="lName">Last name</label>
-            <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="lName" id="lName" />
+            <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="lName" id="lName" required />
           </div>
           <!-- Other Credentials -->
           <div class="w-full space-y-2">
