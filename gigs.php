@@ -35,10 +35,10 @@
                     <!-- Buttons -->
                     <div class="grid grid-cols-2 p-10">
                         <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
-                            <button class="message-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
+                            <button class="update-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
                         </div>
                             <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
-                            <button class="hire-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
+                            <button class="delete-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
                         </div>
                     </div>
                 </div>
@@ -72,10 +72,10 @@
                     <!-- Buttons -->
                     <div class="grid grid-cols-2 p-10">
                         <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
-                            <button class="message-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
+                            <button class="update-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
                         </div>
                             <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
-                            <button class="hire-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
+                            <button class="delete-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
                         </div>
                     </div>
                 </div>
@@ -109,10 +109,10 @@
                     <!-- Buttons -->
                     <div class="grid grid-cols-2 p-10">
                         <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
-                            <button class="message-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
+                            <button class="update-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
                         </div>
                             <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
-                            <button class="hire-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
+                            <button class="delete-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
                         </div>
                     </div>
                 </div>
@@ -146,10 +146,10 @@
                     <!-- Buttons -->
                     <div class="grid grid-cols-2 p-10">
                         <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
-                            <button class="message-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
+                            <button class="update-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</button>
                         </div>
                             <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
-                            <button class="hire-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
+                            <button class="delete-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</button>
                         </div>
                     </div>
                 </div>
