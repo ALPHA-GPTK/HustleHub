@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
     --darkblue_100: rgba(54, 74, 124, 1);
     --lightblue_100: rgba(142, 193, 209, 1);
@@ -220,17 +220,18 @@ input::-webkit-input-placeholder {
     background-color: #FFFFFF;
 }
 
-.message-button {
+.update-button {
     border-color: #364A7C;
 }
 
-.hire-button {
+.delete-button {
     background-color: #364A7C;
     color: #FFFFFF;
     font-weight: 700;
 }
 
-.message-button:hover, .hire-button:hover {
+.update-button:hover,
+.delete-button:hover {
     background-color: #1a4cca;
     color: #FFFFFF;
     font-weight: 700;
@@ -270,7 +271,9 @@ input::-webkit-input-placeholder {
     font-weight: 900;
 }
 
+
 /* login.php */
+
 .text-blue {
     color: #0F2D52;
 }
