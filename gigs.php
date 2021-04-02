@@ -7,8 +7,9 @@
 
     <div class="antialiased pl-14 pr-14">
         <div class="flex flex-wrap -mx-4">
+            <!-- Card 1 -->
             <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                <div href="" class="card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                     <div class="relative pb-48 overflow-hidden">
                         <img class="absolute inset-0 h-full w-full object-cover" src="https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
                     </div>
@@ -35,10 +36,12 @@
                         <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border m-3 border-blue-500 hover:border-transparent rounded-lg">UPDATE</button>
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">DELETE</button>
                     </div>
-                </a>
+                </div>
             </div>
+
+            <!-- Card 2 -->
             <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                <div class="card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                     <div class="relative pb-48 overflow-hidden">
                         <img class="absolute inset-0 h-full w-full object-cover" src="https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
                     </div>
@@ -65,10 +68,12 @@
                         <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border m-3 border-blue-500 hover:border-transparent rounded-lg">UPDATE</button>
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">DELETE</button>
                     </div>
-                </a>
+                </div>
             </div>
+
+            <!-- Card 3 -->
             <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                <div class="card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                     <div class="relative pb-48 overflow-hidden">
                         <img class="absolute inset-0 h-full w-full object-cover" src="https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
                     </div>
@@ -95,10 +100,12 @@
                         <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border m-3 border-blue-500 hover:border-transparent rounded-lg">UPDATE</button>
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">DELETE</button>
                     </div>
-                </a>
+                </div>
             </div>
+
+            <!-- Card 4 -->
             <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                <div class="card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                     <div class="relative pb-48 overflow-hidden">
                         <img class="absolute inset-0 h-full w-full object-cover" src="https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
                     </div>
@@ -125,7 +132,7 @@
                         <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border m-3 border-blue-500 hover:border-transparent rounded-lg">UPDATE</button>
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">DELETE</button>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </div>
