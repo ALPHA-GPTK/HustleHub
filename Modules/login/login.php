@@ -51,12 +51,12 @@
                     <div class="flex justify-center mb-6">
                         <label>
                             <input type="checkbox">
-                            <span class="dark:text-blue-300 text-xs">Remember me</span>
+                            <span class="text-sm text-gray-400">Remember me</span>
                         </label>
                     </div>
                     <div class="mb-6">
                         <button type="button"
-                                class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-indigo-500 rounded-lg focus:bg-indigo-600 focus:outline-none uppercase font-black">
+                                class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-blue-500 rounded-lg focus:bg-blue-600 focus:outline-none uppercase font-black">
                             Log in
                         </button>
                     </div>
