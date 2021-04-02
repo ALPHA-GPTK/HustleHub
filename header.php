@@ -11,7 +11,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.png">
 
-    <title>HustleHub - A freelance website for everyone</title>
+    <title>HustleHub - A Freelance Website for Everyone</title>
 </head>
 
 <body class="h-screen">

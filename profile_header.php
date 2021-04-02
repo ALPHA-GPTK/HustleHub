@@ -11,7 +11,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.png">
 
-    <title>HustleHub - PROFILE</title>
+    <title>HustleHub - Profile</title>
 </head>
 
 <body class="h-screen">
