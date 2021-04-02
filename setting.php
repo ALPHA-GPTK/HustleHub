@@ -211,13 +211,16 @@
 
                 <!-- DELETE BUTTON -->
                 <div class="max-w-full text-left">
-                  Account Deletion
+                  <h3 class="text-lg font-medium leading-6 text-gray-900">Account Deletion</h3>
 
                   <div class="px-8 flex justify-end">
-                    <button type="delete" class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white account-delete-button focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                      Save
+                    <button type="delete" class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white account-delete-button account-delete-button:hover">
+                      <a href="delete_account.php">
+                        Delete Account
+                      </a>
                     </button>
                   </div>
+
                 </div>
 
               </div>

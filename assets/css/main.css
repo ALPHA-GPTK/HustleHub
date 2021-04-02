@@ -308,3 +308,7 @@ input::-webkit-input-placeholder {
 .account-delete-button {
     background: #DA3A3A;
 }
+
+.account-delete-button:hover {
+    background: #7a0e0e;
+}
