@@ -1,4 +1,4 @@
-<div class="bg-lightBlue_8 h-full">
+<div class="bg-lightBlue_8 h-screen">
   <?php require_once "header.php" ?>
   <div class="flex justify-center overflow-hidden pb-32">
     <div class="container w-full pt-12">
