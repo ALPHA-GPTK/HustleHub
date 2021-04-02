@@ -123,52 +123,6 @@
                           <textarea id="about" name="about" rows="4"
                                     class="w-full shadow-sm text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500">
                           </textarea>
-                      </div>
-                      <p class="mt-2 text-sm text-gray-500">
-                        Brief description for your profile. URLs are hyperlinked.
-                      </p>
-                    </div>
-
-                    <!-- Checkboxes -->
-                    <fieldset>
-                      <legend class="text-xs text-gray-600 dark:text-gray-400 uppercase font-black">By Email
-                      </legend>
-                      <div class="mt-4 space-y-4 flex flex-col">
-                        <div class="flex items-start">
-                          <div class="flex items-center h-5">
-                            <input id="comments" name="comments" type="checkbox"
-                                   class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
-                          </div>
-                          <div class="ml-3 text-sm">
-                            <label for="comments" class="font-medium text-gray-700">Comments</label>
-                            <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
-                          </div>
-                        </div>
-                        <div class="flex items-start">
-                          <div class="flex items-center h-5">
-                            <input id="candidates" name="candidates" type="checkbox"
-                                   class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
-                          </div>
-                          <div class="ml-3 text-sm">
-                            <label for="candidates" class="font-medium text-gray-700">Candidates</label>
-                            <p class="text-gray-500">Get notified when a candidate applies for a job.</p>
-                          </div>
-                        </div>
-                        <div class="flex items-start">
-                          <div class="flex items-center h-5">
-                            <input id="offers" name="offers" type="checkbox"
-                                   class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
-                          </div>
-                          <div class="ml-3 text-sm">
-                            <label for="offers" class="font-medium text-gray-700">Offers</label>
-                            <p class="text-gray-500">Get notified when a candidate accepts or rejects an
-                              offer.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-
                 </div>
               </div>
               <div class="flex justify-center px-4 py-3 bg-gray-50 text-right sm:px-6 space-x-6">
