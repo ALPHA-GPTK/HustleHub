@@ -1,2 +1,0 @@
-The files here includes php files that does an exact thing such as Login, Signup or Logout folders.
-Separate each code with subfolders (e.g., Modules/Login,  Modules/Signup, etc.)

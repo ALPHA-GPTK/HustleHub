@@ -113,7 +113,7 @@ input::-webkit-input-placeholder {
 }
 
 .cta {
-    background: url(../public/assets/img/cta.png) no-repeat;
+    background: url(../img/cta.png) no-repeat;
     height: 457px;
 }
 

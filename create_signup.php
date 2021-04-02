@@ -1,4 +1,4 @@
-<?php require_once "../../Config/dbConnection.inc";
+<?php require_once "dbConnection.inc";
 
 if (isset($_POST["signup"])) {
     $fullName = sprintf("%s %s", $_POST["fName"], $_POST["lName"]);
@@ -14,10 +14,10 @@ if (isset($_POST["signup"])) {
         $query = mysqli_stmt_execute($stmt);
 
         if ($query !== false) {
-            header("Location: ../login/login.php?signup=success");
+            header("Location: login.php?signup=success");
         } else {
             echo "<script>alert('Signup Failed')</script>";
-            header("Location: ./signup.php?signup=fail");
+            header("Location: signup.php?signup=fail");
         }
         $conn->close();
     } else {

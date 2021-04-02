@@ -1,7 +1,7 @@
-<?php require_once "../../templates/header.php" ?>
+<?php require_once "header.php" ?>
   <div class="flex items-center h-screen bg-blue-50 dark:bg-gray-900">
     <div class="container mx-auto overflow-hidden">
-      <form action="./create_signup.php" method="post"
+      <form action="create_signup.php" method="post"
             oninput='password.setCustomValidity(password.value !== confirm_password.value ? "Password is not the same with the confirm password." : "")'>
         <div class="max-w-lg flex flex-wrap mx-auto md:space-y-4">
           <h1 class="text-3xl my-4 mx-auto text-blue dark:text-gray-200 uppercase font-black">Create Account</h1>
@@ -101,7 +101,7 @@
               </button>
               <p class="text-sm text-center text-gray-400">Already on HustleHub?
                 <a class="text-blue focus:outline-none font-black focus:underline focus:text-indigo-500 dark:focus:border-indigo-800 uppercase"
-                   href="/HustleHub/Modules/login/login.php">Log In</a>
+                   href="login.php">Log In</a>
               </p>
             </div>
           </div>
@@ -109,4 +109,4 @@
     </div>
   </div>
   </div>
-<?php require_once "../../templates/footer.php" ?>
+<?php require_once "footer.php" ?>

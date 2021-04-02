@@ -1,5 +1,5 @@
 <?php
-require_once "../../Config/dbConnection.inc";
+require_once "dbConnection.inc";
 
 if (isset($conn, $_POST["login"]) && $conn) {
     $user_email = mysqli_real_escape_string($conn, $_POST["email"]);
@@ -10,9 +10,9 @@ if (isset($conn, $_POST["login"]) && $conn) {
     $query = $conn->query($sql);
 
     if (mysqli_num_rows($query) > 0) {
-        header("Location: ../../public/index.php?login=success");
+        header("Location: index.php?login=success");
     } else {
-        trigger_error("Login Failed: " . $conn->error);
+        header("Location: index.php?login=fail");
     }
 } else {
     trigger_error("Connection failed: " . $conn->connect_error);

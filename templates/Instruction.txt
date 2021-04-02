@@ -1,1 +1,0 @@
-This folder are mainly for HTML files to render Modules files such files include Login.html, Signup.html, etc.

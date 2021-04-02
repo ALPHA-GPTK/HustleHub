@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/PHP_acad/HustleHub/public/assets/css/styles.css">
-    <link rel="stylesheet" href="/PHP_acad/HustleHub/src/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -51,18 +51,18 @@
             </div>
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="/PHP_acad/HustleHub/public/index.php">
-                        <img class="hidden lg:block h-10 w-auto" src="/PHP_acad/HustleHub/public/assets/img/logo.svg" alt="HustleHub">
+                    <a href="index.php">
+                        <img class="hidden lg:block h-10 w-auto" src="assets/img/logo.svg" alt="HustleHub">
                     </a>
                 </div>
                 <div class="hidden sm:block sm:ml-auto">
                     <div class="flex space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="/PHP_acad/HustleHub/Modules/login/login.php"
+                        <a href="login.php"
                            class="hover:bg-blue-900 hover:text-white text-blue-900 text-dark px-6 py-2 rounded-full text-sm font-medium"
                            aria-current="page">Login</a>
 
-                        <a href="/PHP_acad/HustleHub/Modules/signup/signup.php"
+                        <a href="signup.php"
                            class="text-blue-900 hover:bg-blue-900 hover:text-white border-2 border-current px-6 py-2 rounded-full text-sm font-medium">Signup</a>
                     </div>
                 </div>

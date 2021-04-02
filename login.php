@@ -1,4 +1,4 @@
-<?php require_once "../../templates/header.php" ?>
+<?php require_once "header.php" ?>
   <div class="flex items-center min-h-screen bg-blue-50 dark:bg-gray-900 overflow-hidden">
     <div class="container mx-auto">
       <div class="max-w-md mx-auto my-10">
@@ -62,11 +62,11 @@
             </div>
             <p class="text-sm text-center text-gray-400">New to HustleHub?
               <a class="text-blue focus:outline-none font-black focus:underline focus:text-indigo-500 dark:focus:border-indigo-800 uppercase"
-                 href="../signup/signup.php">Sign up</a>
+                 href="signup.php">Sign up</a>
             </p>
           </form>
         </div>
       </div>
     </div>
   </div>
-<?php require_once "../../templates/footer.php";
+<?php require_once "footer.php";

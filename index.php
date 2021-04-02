@@ -1,4 +1,4 @@
-<?php require_once "../templates/header.php"; ?>
+<?php require_once "header.php"; ?>
     <main class="flex mx-auto h-screen justify-between items-center w-full pl-16">
         <div class="tagline">
             <h1>Hustle your skill for money <br> with <span class="main-title">Hustle</span><span
@@ -7,7 +7,7 @@
         </div>
 
         <div class="photo">
-            <img src="./assets/img/hero_image.png" alt="Hero-Image"/>
+            <img src="assets/img/hero_image.png" alt="Hero-Image"/>
         </div>
     </main>
 
@@ -18,17 +18,17 @@
 
         <div class="text-center features flex justify-evenly items-center ">
             <div class="account">
-                <img class="inline-block" src="./assets/img/account.svg" alt="">
+                <img class="inline-block" src="assets/img/account.svg" alt="">
                 <p class="work-title">Account</p>
                 <p class="work-desc">Create your Account</p>
             </div>
             <div class="discover">
-                <img class="inline-block" src="./assets/img/discover.svg" alt="">
+                <img class="inline-block" src="assets/img/discover.svg" alt="">
                 <p class="work-title">Discover</p>
                 <p class="work-desc">Search your freelancer</p>
             </div>
             <div class="hire">
-                <img class="inline-block" src="./assets/img/hire.svg" alt="">
+                <img class="inline-block" src="assets/img/hire.svg" alt="">
                 <p class="work-title">Hire</p>
                 <p class="work-desc">Pay the price</p>
             </div>
@@ -75,12 +75,12 @@
                                     I can't start my day without a coffee cup
                                 </p>
                                 <div class="container space-x-8 social-links flex justify-center items-center pb-3">
-                                    <img src="./assets/img/dribbble-logo.svg" alt="dribbble-logo">
-                                    <img src="./assets/img/instagram-logo.svg" alt="instagram-logo">
-                                    <img src="./assets/img/twitter-logo.svg" alt="twitter-logo">
-                                    <img src="./assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
-                                    <img src="./assets/img/facebook-logo.svg" alt="facebook-logo">
-                                    <img src="./assets/img/behance-logo.svg" alt="behance-logo">
+                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
+                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
+                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
+                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
+                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
+                                    <img src="assets/img/behance-logo.svg" alt="behance-logo">
                                 </div>
                                 <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
                                 <span class="text-center px-2">
@@ -89,7 +89,7 @@
                                     <span class="client-body"> Client</span>
                                 </span>
                                     <span class="pl-2">
-                                    <img src="./assets/img/stars.svg" alt="stars">
+                                    <img src="assets/img/stars.svg" alt="stars">
                                 </span>
                                 </div>
                                 <div class="py-2 flex space-x-2">
@@ -126,12 +126,12 @@
                                     I can't start my day without a coffee cup
                                 </p>
                                 <div class="container space-x-8 social-links flex justify-center items-center pb-3">
-                                    <img src="./assets/img/dribbble-logo.svg" alt="dribbble-logo">
-                                    <img src="./assets/img/instagram-logo.svg" alt="instagram-logo">
-                                    <img src="./assets/img/twitter-logo.svg" alt="twitter-logo">
-                                    <img src="./assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
-                                    <img src="./assets/img/facebook-logo.svg" alt="facebook-logo">
-                                    <img src="./assets/img/behance-logo.svg" alt="behance-logo">
+                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
+                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
+                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
+                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
+                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
+                                    <img src="assets/img/behance-logo.svg" alt="behance-logo">
                                 </div>
                                 <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
                                 <span class="text-center px-2">
@@ -140,7 +140,7 @@
                                     <span class="client-body"> Client</span>
                                 </span>
                                     <span class="pl-2">
-                                    <img src="./assets/img/stars.svg" alt="">
+                                    <img src="assets/img/stars.svg" alt="">
                                 </span>
                                 </div>
                                 <div class="py-2 flex space-x-2">
@@ -177,12 +177,12 @@
                                     I can't start my day without a coffee cup
                                 </p>
                                 <div class="container space-x-8 social-links flex justify-center items-center pb-3">
-                                    <img src="./assets/img/dribbble-logo.svg" alt="dribbble-logo">
-                                    <img src="./assets/img/instagram-logo.svg" alt="instagram-logo">
-                                    <img src="./assets/img/twitter-logo.svg" alt="twitter-logo">
-                                    <img src="./assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
-                                    <img src="./assets/img/facebook-logo.svg" alt="facebook-logo">
-                                    <img src="./assets/img/behance-logo.svg" alt="behance-logo">
+                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
+                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
+                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
+                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
+                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
+                                    <img src="assets/img/behance-logo.svg" alt="behance-logo">
                                 </div>
                                 <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
                                 <span class="text-center px-2">
@@ -191,7 +191,7 @@
                                     <span class="client-body"> Client</span>
                                 </span>
                                     <span class="pl-2">
-                                    <img src="./assets/img/stars.svg" alt="">
+                                    <img src="assets/img/stars.svg" alt="">
                                 </span>
                                 </div>
                                 <div class="py-2 flex space-x-2">
@@ -216,10 +216,10 @@
     <section class="container w-full mx-auto py-20">
         <!--  COMPANIES  -->
         <div class="company space-x-16 flex pb-20 justify-center items-center">
-            <a href="https://www.manulife.com.ph/"> <img src="./assets/img/manulife.svg" alt="manulife"> </a>
-            <img src="./assets/img/fast-company.svg" alt="fast-company">
-            <img src="./assets/img/hunter.svg" alt="hunter">
-            <img src="./assets/img/citi-link.svg" alt="citi-link">
+            <a href="https://www.manulife.com.ph/"> <img src="assets/img/manulife.svg" alt="manulife"> </a>
+            <img src="assets/img/fast-company.svg" alt="fast-company">
+            <img src="assets/img/hunter.svg" alt="hunter">
+            <img src="assets/img/citi-link.svg" alt="citi-link">
         </div>
 
         <!-- CTA -->
@@ -240,7 +240,7 @@
         <div class="xl:px-40 pb-12 lg:px-20 md:px-10 sm:px-5 px-10">
             <div class="w-full pt-12 flex flex-col sm:flex-row space-y-4 justify-between">
                 <div class="flex flex-col space-y-4">
-                    <img src="./assets/img/footer-logo.png" alt="" width="250" height="250">
+                    <img src="assets/img/footer-logo.png" alt="" width="250" height="250">
                     <div class="text-center pt-2">
                         <p class="text-lg pb-4">(02) 8281-88-88</p>
                         <p class="opacity-60 text-xs">hustlehub@gmail.com</p>
@@ -270,7 +270,7 @@
                                    placeholder="Get product updates"/>
                         </label>
                         <button class="rounded-r-lg font-bold p-3 px-4 uppercase input-blue focus:outline-none shadow">
-                            <input type="image" class="focus:outline-none align-middle" src="./assets/img/arrows.png"
+                            <input type="image" class="focus:outline-none align-middle" src="assets/img/arrows.png"
                                    alt="">
                         </button>
                     </form>
@@ -281,9 +281,9 @@
         <div class="container flex mx-auto">
             <div class="pt-12 border-t-2 border-gray-300 w-full flex flex-col sm:flex-row">
                 <div class="space-x-2 sm:w-1/5 flex flex-row">
-                    <i><img src="./assets/img/linkedin-footer.svg" alt="linkedin-footer"></i>
-                    <i><img src="./assets/img/facebook-footer.svg" alt="facebook-footer"></i>
-                    <i><img src="./assets/img/twitter-footer.svg" alt="twitter-footer"></i>
+                    <i><img src="assets/img/linkedin-footer.svg" alt="linkedin-footer"></i>
+                    <i><img src="assets/img/facebook-footer.svg" alt="facebook-footer"></i>
+                    <i><img src="assets/img/twitter-footer.svg" alt="twitter-footer"></i>
                 </div>
 
                 <div class="attribution inline-flex justify-center text-center mx-auto flex-col sm:w-1/5">
@@ -296,4 +296,4 @@
             </div>
         </div>
     </footer>
-<?php require_once "../templates/footer.php"; ?>
+<?php require_once "footer.php"; ?>
