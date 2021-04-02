@@ -12,7 +12,7 @@
     <title>HustleHub - A freelance website for everyone</title>
 </head>
 
-<body>
+<body class="h-screen">
     <nav class="pt-12 pb-16 flex justify-center">
         <div class="max-w-7xl px-2 sm:px-6 lg:px-8 w-full">
             <div class="relative flex items-center justify-between h-16">
