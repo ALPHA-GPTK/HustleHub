@@ -145,4 +145,102 @@
     </div>
   </div>
 </div>
+
+      <div class="md:grid md:grid-cols-2 md:gap-6">
+        <div class="mt-5 md:mt-0 md:col-span-2">
+          <form action="#" method="POST">
+            <div class="shadow sm:rounded-md sm:overflow-hidden">
+              <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                <h3 class="text-lg font-medium leading-6 text-gray-900">Security</h3>
+              
+
+                <div class="px-28 flex justify-end">
+                  <button type="reset"
+                          class="py-1 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Edit
+                  </button>
+                </div>
+                <!-- Input Fields  -->
+                <div class="max-w-lg flex flex-wrap mx-auto">
+                  <div class="w-full md:w-1/2 pr-2">
+                    <label class="block mb-1 text-xs text-gray-600 font-black uppercase" for="fName">
+                      First name
+                    </label>
+                    <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                           type="text" name="fName" id="fName" required/>
+                  </div>
+                  <!-- Last Name -->
+                  <div class="w-full md:w-1/2 mb-2">
+                    <label class="block mb-1 text-xs text-gray-600 font-black uppercase" for="lName">Last name</label>
+                    <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                           type="text" name="lName" id="lName" required/>
+                  </div>
+                  <!-- Other Credentials -->
+                  <div class="w-full space-y-2">
+                    <!-- Username -->
+                    <label for="username" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
+                      Username
+                    </label>
+                    <div class="relative text-gray-700">
+                      <label>
+                        <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                               type="text" name="username" id="username" required/>
+                      </label>
+                      <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                             fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                clip-rule="evenodd"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <!-- Email -->
+                    <label for="email" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
+                      Email
+                    </label>
+                    <div class="relative text-gray-700">
+                      <label>
+                        <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                               type="email" name="email" id="email" required/>
+                      </label>
+                      <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                             fill="currentColor">
+                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="w-full">
+                      <label for="email" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
+                        About
+                      </label>
+                      <div class="mt-1">
+                          <textarea id="about" name="about" rows="4"
+                                    class="w-full shadow-sm text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500">
+                          </textarea>
+                </div>
+              </div>
+
+              <!-- CANCEL AND SAVE BUTTONS -->
+              <div class="flex justify-center px-4 py-3 bg-gray-50 text-right sm:px-6 space-x-6">
+                <button type="reset"
+                        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-change hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Cancel
+                </button>
+                <button type="submit"
+                        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-save focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Save
+                </button>
+              </div>
+
+
+            </div>
+        
+      </div>
+    </div>
+
+  </div>
+
+
 <?php require_once "footer.php" ?>
