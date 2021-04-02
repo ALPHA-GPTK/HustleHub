@@ -1,4 +1,4 @@
-<div class="bg-lightBlue_8">
+<div class="bg-lightBlue_8 h-screen">
   <?php require_once "profile_header.php"; ?>
   <div class="md:flex px-36">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -114,15 +114,12 @@
                       </button>
                     </div>
 
-
                   </div>
                 </div>
               </div>
             </div>
         </div>
       </div>
-
-
       <div class="md:grid md:grid-cols-2 md:gap-6">
         <div class="mt-5 md:mt-0 md:col-span-2">
           <form action="#" method="POST">
