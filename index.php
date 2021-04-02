@@ -1,8 +1,8 @@
 <?php require_once "header.php"; ?>
 <main class="flex mx-auto justify-between items-center w-full mb-28">
     <div class="tagline px-40">
-        <h1 class="mb-8 c-black_100 f-inter-bold text-5xl">Hustle your skill for money <br> with <span class="main-title f-fredokaone-regular">Hustle</span><span class="sub-title f-fredokaone-regular">Hub</span></h1>
-        <p class="c-black_50">An online freelance services platform for everyone</p>
+        <h1 class="mb-8 c-black_100 f-inter-bold text-5xl">Hustle your skills for money <br> with <span class="main-title f-fredokaone-regular">Hustle</span><span class="sub-title f-fredokaone-regular">Hub</span></h1>
+        <p class="c-black_50">An Online Freelance Services Platform for Everyone</p>
     </div>
 
     <div class="photo">
