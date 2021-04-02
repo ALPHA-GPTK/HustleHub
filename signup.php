@@ -20,47 +20,33 @@
           <!-- Other Credentials -->
           <div class="w-full space-y-2">
             <!-- Username -->
-            <label for="username" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
-              Username
-            </label>
+            <label for="username" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">Username</label>
             <div class="relative text-gray-700">
               <label>
-                <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="username" id="username" required />
+                <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="username" id="username" required />
               </label>
-              <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                <svg class="h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                </svg>
+              <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer">
+                <img src="./assets/img/user-out.svg" alt="user-icon" class="h-6 w-6" id="username-icon">
               </div>
             </div>
             <!-- Email -->
-            <label for="email" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
-              Email
-            </label>
+            <label for="email" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">Email</label>
             <div class="relative text-gray-700">
               <label>
-                <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="email" name="email" id="email" required />
+                <input class="w-full h-10 pl-3 pr-12text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="email" name="email" id="email-signup" required />
               </label>
               <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                <svg class="h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
+                <img src="./assets/img/mail-out.svg" alt="mail-logo" class="h-6 w-6 hide" id="signup-email-logo">
               </div>
             </div>
             <!-- Password -->
-            <label for="password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
-              password
-            </label>
+            <label for="password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">password</label>
             <div class="relative text-gray-700">
               <label>
-                <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="password" id="password" required />
+                <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="password" id="password" required />
               </label>
-              <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                <svg class="h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                  <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
-                </svg>
+              <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer">
+                <img src="./assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="password-icon">
               </div>
             </div>
             <!-- Confirm Password -->
@@ -69,12 +55,10 @@
             </label>
             <div class="relative text-gray-700">
               <label>
-                <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="confirm_password" id="confirm_password" required />
+                <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="confirm_password" id="confirm_password" required disabled />
               </label>
               <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                <svg class="h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
+                <img src="./assets/img/check-not.svg" alt="check-icon" class="h-6 w-6" id="confirm-password-check">
               </div>
             </div>
             <!-- Signup Button -->
