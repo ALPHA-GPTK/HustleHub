@@ -7,9 +7,7 @@
         <div class="m-7">
           <form action="check_login.php" method="post">
             <div class="relative mb-6">
-              <label for="email" class="block mb-2 text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
-                Email
-              </label>
+              <label for="email" class="block mb-2 text-xs text-gray-600 dark:text-gray-400 uppercase font-black">Email</label>
               <div class="relative text-gray-700">
                 <label>
                   <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" name="email" id="email" required />

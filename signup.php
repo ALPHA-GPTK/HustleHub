@@ -7,9 +7,7 @@
           <h1 class="text-3xl my-4 mx-auto text-blue dark:text-gray-200 uppercase font-black">Create Account</h1>
           <!-- First Name -->
           <div class="w-full md:w-1/2">
-            <label class="block mb-1 text-xs text-gray-600 font-black uppercase" for="fName">
-              First name
-            </label>
+            <label class="block mb-1 text-xs text-gray-600 font-black uppercase" for="fName">First name</label>
             <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="fName" id="fName" required />
           </div>
           <!-- Last Name -->
@@ -50,9 +48,7 @@
               </div>
             </div>
             <!-- Confirm Password -->
-            <label for="confirm_password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
-              confirm password
-            </label>
+            <label for="confirm_password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">confirm password</label>
             <div class="relative text-gray-700">
               <label>
                 <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="confirm_password" id="confirm_password" required disabled />
@@ -63,9 +59,7 @@
             </div>
             <!-- Signup Button -->
             <div class="py-6 space-y-6">
-              <button type="submit" name="signup" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-indigo-500 rounded-lg focus:bg-indigo-600 focus:outline-none uppercase font-black">
-                Sign up
-              </button>
+              <input type="submit" name="signup" value="Signup" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-indigo-500 rounded-lg focus:bg-indigo-600 focus:outline-none uppercase font-black cursor-pointer" />
               <p class="text-sm text-center text-gray-400">Already on HustleHub?
                 <a class="text-blue focus:outline-none font-black focus:underline focus:text-indigo-500 dark:focus:border-indigo-800 uppercase" href="login.php">Log In</a>
               </p>

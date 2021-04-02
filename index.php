@@ -108,11 +108,11 @@
                         <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
                             <button class="message-button border h-16 py-2 px-4 rounded-lg">Message</button>
                         </div>
-                            <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
+                        <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
                             <button class="hire-button h-16 py-2 px-4 rounded-lg">Hire</button>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -162,11 +162,11 @@
                         <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
                             <button class="message-button border h-16 py-2 px-4 rounded-lg">Message</button>
                         </div>
-                            <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
+                        <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
                             <button class="hire-button h-16 py-2 px-4 rounded-lg">Hire</button>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -216,7 +216,7 @@
                         <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
                             <button class="message-button border h-16 py-2 px-4 rounded-lg">Message</button>
                         </div>
-                            <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
+                        <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
                             <button class="hire-button h-16 py-2 px-4 rounded-lg">Hire</button>
                         </div>
                     </div>
@@ -303,4 +303,5 @@
     </div>
 </footer>
 <!-- End of Footer -->
+
 </html>
