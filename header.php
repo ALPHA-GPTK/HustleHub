@@ -8,10 +8,8 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <title>HustleHub</title>
+
+    <title>HustleHub - A freelance website for everyone</title>
 </head>
 
 <body>
@@ -46,9 +44,7 @@
                 </div>
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                     <div class="flex-shrink-0 flex items-center">
-                        <a href="index.php">
-                            <img class="hidden lg:block h-10 w-auto" src="assets/img/logo.svg" alt="HustleHub">
-                        </a>
+                        <a href="./index.php"><span class="c-darkBlue_100 text-4xl f-fredokaone-regular">HUSTLE</span><span class="c-lightBlue_100 text-4xl f-fredokaone-regular">HUB</span></a>
                     </div>
                     <div class="hidden sm:block sm:ml-auto">
                         <div class="flex space-x-4">

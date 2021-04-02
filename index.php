@@ -1,8 +1,8 @@
 <?php require_once "header.php"; ?>
 <main class="flex mx-auto justify-between items-center w-full mb-28">
     <div class="tagline px-40">
-        <h1 class="mb-8">Hustle your skill for money <br> with <span class="main-title">Hustle</span><span class="sub-title">Hub</span></h1>
-        <p>An online freelance services platform for everyone</p>
+        <h1 class="mb-8 c-black_100 f-inter-bold text-5xl">Hustle your skill for money <br> with <span class="main-title f-fredokaone-regular">Hustle</span><span class="sub-title f-fredokaone-regular">Hub</span></h1>
+        <p class="c-black_50">An online freelance services platform for everyone</p>
     </div>
 
     <div class="photo">
@@ -219,11 +219,11 @@
     </div>
 
     <!-- CTA -->
-    <div class="cta rounded-lg max-w-7xl mx-auto py-12 sm:px-6 lg:py-16 lg:px-12 lg:flex lg:items-center lg:justify-between">
+    <div class="cta rounded-3xl max-w-7xl mx-auto py-12 sm:px-6 lg:py-16 lg:px-12 lg:flex lg:items-center lg:justify-between">
         <div class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             <h2 class="block text-white mb-6">Join our Freelancing Team</h2>
             <div class="flex justify-center items-center pt-4">
-                <a href="#" class="inline-flex items-center justify-center rounded-lg px-5 py-3 border border-transparent text-base font-medium text-black shadow join-now">
+                <a href="#" class="inline-flex items-center justify-center rounded-lg px-5 py-3 border border-transparent shadow join-now c-black_100 f-inter-black text-lg">
                     Join Now
                 </a>
             </div>
