@@ -46,7 +46,7 @@ if (isset($_POST["signup"])) {
 //Check Account if already exists return boolean
 function checkAccount($email, $conn)
 {
-    $sql = "SELECT freelance_email, freelance_password FROM freelance_info WHERE freelance_email = '$email'";
+    $sql = "SELECT freelance_email FROM freelance_info WHERE freelance_email = '$email'";
     $result = $conn->query($sql) or die($conn->error);
     $userCount = count($result->fetch_all());
 
