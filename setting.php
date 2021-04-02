@@ -1,3 +1,4 @@
-<?php
-echo "This is your Setting";
-?>
+<?php require_once("./header.php"); ?>
+
+
+<?//php require_once("./footer.php"); ?>
