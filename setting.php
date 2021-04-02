@@ -100,8 +100,7 @@
                         About
                       </label>
                       <div class="mt-1">
-                        <textarea id="about" name="about" rows="4" class="w-full shadow-sm text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500">
-                          </textarea>
+                        <textarea id="about" name="about" rows="4" class="w-full shadow-sm text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"> </textarea>
                       </div>
                     </div>
 
@@ -143,11 +142,12 @@
                       <label>
                         <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="current-password" id="current-password" required />
                       </label>
+
+                      <!-- svg hide password icon -->
                       <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                        <svg class="h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                        </svg>
+                        <img src="assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="password-show">
                       </div>
+
                     </div>
 
                     <!-- New Password -->
@@ -158,15 +158,15 @@
                       <label>
                         <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="new-password" id="new-password" required />
                       </label>
+
+                      <!-- svg hide password icon -->
                       <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                        <svg class="h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                        </svg>
+                        <img src="assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="password-show">
                       </div>
+
                     </div>
 
-                  <!-- Confirm Password -->
+                    <!-- Confirm Password -->
                     <label for="current-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
                       Confirm Password
                     </label>
@@ -174,11 +174,12 @@
                       <label>
                         <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="confirm-password" id="confirm-password" required />
                       </label>
+
+                      <!-- svg hide password icon -->
                       <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                        <svg class="h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                        </svg>
+                        <img src="assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="password-show">
                       </div>
+
                     </div>
 
                     <!-- CANCEL AND SAVE BUTTONS -->
@@ -191,13 +192,43 @@
                       </button>
                     </div>
 
-
                   </div>
-
                 </div>
               </div>
-
             </div>
+        </div>
+        </form>
+      </div>
 
+      <br>
+      <div class="md:grid md:grid-cols-2 md:gap-6">
+        <div class="mt-5 md:mt-0 md:col-span-2">
+          <form action="#" method="POST">
+            <div class="shadow sm:rounded-md sm:overflow-hidden">
+              <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                <!-- <h3 class="text-lg font-medium leading-6 text-gray-900">Account</h3> -->
 
-            <?php require_once "footer.php" ?>
+                <!-- Input Fields  -->
+                <div class="max-w-lg flex flex mx-auto">
+
+                  ACCOUNT DELETION
+                </div>
+
+                <!-- DELETE BUTTON -->
+                <div class="px-28 flex justify-end">
+
+                  <button type="delete" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-save focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+        </form>
+      </div>
+      <br>
+    </div>
+
+  </div>
+</div>
+<?php require_once "footer.php" ?>
