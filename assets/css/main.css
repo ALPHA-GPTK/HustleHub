@@ -304,3 +304,7 @@ input::-webkit-input-placeholder {
 .bg-blue-change:hover {
     background-color: #364A7C;
 }
+
+.account-delete-button {
+    background: #DA3A3A;
+}

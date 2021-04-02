@@ -206,21 +206,20 @@
           <form action="#" method="POST">
             <div class="shadow sm:rounded-md sm:overflow-hidden">
               <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
-                <!-- <h3 class="text-lg font-medium leading-6 text-gray-900">Account</h3> -->
 
-                <!-- Input Fields  -->
-                <div class="max-w-lg flex flex mx-auto">
-
-                  ACCOUNT DELETION
-                </div>
+                <!-- <h3 class="max-w-lg flex flex text-left">Account Deletion</h3> -->
 
                 <!-- DELETE BUTTON -->
-                <div class="px-28 flex justify-end">
+                <div class="max-w-full text-left">
+                  Account Deletion
 
-                  <button type="delete" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-save focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Save
-                  </button>
+                  <div class="px-8 flex justify-end">
+                    <button type="delete" class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white account-delete-button focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      Save
+                    </button>
+                  </div>
                 </div>
+
               </div>
             </div>
         </div>
