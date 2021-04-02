@@ -8,6 +8,8 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.png">
 
     <title>HustleHub - A freelance website for everyone</title>
 </head>

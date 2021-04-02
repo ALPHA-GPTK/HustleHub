@@ -1,6 +1,6 @@
 <div class="bg-lightBlue_8 h-screen">
   <?php require_once "header.php" ?>
-  <div class="flex justify-center overflow-hidden pt-12">
+  <div class="flex justify-center overflow-hidden">
     <div class="container w-full">
       <div class="max-w-md mx-auto my-10">
         <h1 class="text-center my-3 text-3xl text-blue dark:text-gray-200 uppercase font-black">Login</h1>
