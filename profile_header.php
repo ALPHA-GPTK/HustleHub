@@ -53,15 +53,19 @@
                     <div class="hidden sm:block sm:ml-auto">
                         <div class="flex space-x-4">
 
-                        <a href="gigs.php" class="text-black-900 text-dark px-6 py-2 rounded-full text-sm font-medium" aria-current="page">MyGigs</a>
-                        
-                        <div class="text-black-900 text-dark px-6 py-2 rounded-full text-sm font-medium" aria-current="page">Hired</div>
+                            <a href="gigs.php" class="text-black-900 text-dark px-6 py-2 rounded-full text-sm font-medium" aria-current="page">MyGigs</a>
 
-                        <div class="inset-y-0 right-10 flex items-center pr-4 pointer-events-none"><img src="assets/img/message.svg" alt="message-icon" class="h-4 w-6 hide" id="message-icon"> </div>
+                            <div class="text-black-900 text-dark px-6 py-2 rounded-full text-sm font-medium" aria-current="page">Hired</div>
 
-                        <div class="inset-y-0 right-10 flex items-center pr-4 pointer-events-none"><img src="assets/img/notification.svg" alt="notification-icon" class="h-4 w-6 hide" id="notification-icon"> </div>
+                            <div class="inset-y-0 right-10 flex items-center pr-4 pointer-events-none"><img src="assets/img/notification.svg" alt="notification-icon" class="h-4 w-6 hide" id="notification-icon"> </div>
 
-                        <a href="logout.php" class="text-blue-900 hover:bg-blue-900 hover:text-white border-2 border-current px-6 py-2 rounded-full text-sm font-medium">LOG OUT</a>
+                            <div class="inset-y-0 right-10 flex items-center pr-4 pointer-events-none"><img src="assets/img/message.svg" alt="message-icon" class="h-4 w-6 hide" id="message-icon"> </div>
+
+                            <a href="setting.php">
+                                <div class="inset-y-0 right-10 flex items-center pr-4 pointer-events-none"> <img src="assets/img/settings.svg" alt="settings-icon" class="h-4 w-6 hide" id="settings-icon"></div>
+                            </a>
+
+                            <a href="logout.php" class="text-blue-900 hover:bg-blue-900 hover:text-white border-2 border-current px-6 py-2 rounded-full text-sm font-medium">LOG OUT</a>
                         </div>
                     </div>
                 </div>
