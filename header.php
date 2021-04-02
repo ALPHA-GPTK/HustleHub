@@ -15,7 +15,7 @@
 </head>
 
 <body class="h-screen">
-    <nav class="pt-12 pb-16 flex justify-center">
+    <nav class="p-12 flex justify-center">
         <div class="max-w-7xl px-2 sm:px-6 lg:px-8 w-full">
             <div class="relative flex items-center justify-between h-16">
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
