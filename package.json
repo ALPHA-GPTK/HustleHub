@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build src/style.css -o Public/assests/css/style.css"
+    "build-css": "tailwindcss build assets/css/main.css -o assets/css/styles.css"
   },
   "keywords": [],
   "author": "",
@@ -13,3 +13,4 @@
     "tailwindcss": "^2.0.4"
   }
 }
+

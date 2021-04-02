@@ -1,7 +1,0 @@
-The public folder is used to store files that are publicly available to the word. 
-Such files includes index.php or stylesheets, js or images.
-
-For stylesheets and other designs, use public/assets.
-For images, use public/img
-
-npx tailwindcss-cli@latest build ./src/styles.css -o ./public/styles.css

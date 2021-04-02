@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --darkblue_100: rgba(54, 74, 124, 1);
+    --lightblue_100: rgba(142, 193, 209, 1);
+    --yellow_100: rgba(255, 211, 55, 1);
+    --lightyellow_100: rgba(244, 245, 166, 1);
+    --white_100: rgba(255, 255, 255, 1);
+    --black_100: rgb(44, 44, 44, 1);
+    --black_50: rgb(44, 44, 44, 0.5);
+    --gray_100: rgba(181, 181, 181, 1);
+}
+
+.c-darkBlue_100 {
+    color: var(--darkblue_100);
+}
+
+.c-lightBlue_100 {
+    color: var(--lightblue_100);
+}
+
+.c-yellow_100 {
+    color: var(--yellow_100);
+}
+
+.c-lightyellow_100 {
+    color: var(--lightyellow_100);
+}
+
+.c-white_100 {
+    color: var(--white_100);
+}
+
+.c-black_100 {
+    color: var(--black_100);
+}
+
+.c-black_50 {
+    color: var(--black_50);
+}
+
+.c-gray_100 {
+    color: var(--gray_100);
+}
+
+.f-inter-thin {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 100;
+}
+
+.f-inter-extralight {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 200;
+}
+
+.f-inter-light {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.f-inter-regular {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.f-inter-medium {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.f-inter-semibold {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.f-inter-bold {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.f-inter-extrabold {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.f-inter-black {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.f-fredokaone-regular {
+    font-family: Fredoka One;
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    outline: none;
+}
+
+section {
+    padding-bottom: 150px;
+}
+
+footer {
+    background: rgba(142, 193, 209, 0.08);
+}
+
+input::-webkit-input-placeholder {
+    font-size: 14px;
+}
+
+.tagline h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.tagline p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 39px;
+    color: rgba(44, 44, 44, 0.5);
+}
+
+.main-title {
+    color: #364A7C;
+}
+
+.sub-title {
+    color: #8EC1D1;
+}
+
+.title-header {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 63px;
+    padding-top: 5rem;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.features img {
+    text-align: center;
+}
+
+.work-title {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+    margin-top: 27px;
+}
+
+.work-desc {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 31px;
+    color: rgba(44, 44, 44, 0.5);
+}
+
+.services {
+    background-color: #8EC1D1;
+}
+
+.tag {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 140.1%;
+    background-color: #EEF7FE;
+    text-align: center;
+    vertical-align: center;
+}
+
+.card {
+    background-color: #FFFFEE;
+}
+
+.message-button {
+    border-color: #364A7C;
+}
+
+.hire-button {
+    background-color: #364A7C;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.client-body {
+    color: #2C2C2C;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: normal;
+}
+
+.provider {
+    background: rgba(142, 193, 209, 0.08);
+}
+
+.cta {
+    background: url(../img/cta.png) no-repeat;
+    height: 457px;
+}
+
+.attribution {
+    color: #2C2C2C;
+}
+
+.input-blue {
+    background-color: #364A7C;
+}
+
+.join-now {
+    background-color: #FFD337;
+    font-weight: 900;
+}
+
+/* login.php */
+.text-blue {
+    color: #0F2D52;
+}
