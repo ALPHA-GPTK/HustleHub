@@ -216,12 +216,24 @@ input::-webkit-input-placeholder {
     background-color: #FFFFEE;
 }
 
+.card-gig {
+    background-color: #FFFFFF;
+}
+
 .message-button {
     border-color: #364A7C;
 }
 
 .hire-button {
     background-color: #364A7C;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.message-button:hover, .hire-button:hover {
+    background-color: #1a4cca;
+    color: #FFFFFF;
+    font-weight: 700;
 }
 
 .object-fit-cover {
