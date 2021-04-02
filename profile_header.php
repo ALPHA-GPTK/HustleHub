@@ -44,6 +44,7 @@
                         </svg>
                     </button>
                 </div>
+
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                     <div class="flex-shrink-0 flex items-center">
                         <a href="./index.php"><span class="c-darkBlue_100 text-3xl f-fredokaone-regular cursor-pointer">HUSTLE</span><span class="c-lightBlue_100 text-3xl f-fredokaone-regular cursor-pointer">HUB</span></a>
@@ -51,6 +52,11 @@
 
                     <div class="hidden sm:block sm:ml-auto">
                         <div class="flex space-x-4">
+
+                        <a href="gigs.php" class="text-black-900 text-dark px-6 py-2 rounded-full text-sm font-medium" aria-current="page">MyGigs</a>
+
+                        <div class="text-black-900 text-dark px-6 py-2 rounded-full text-sm font-medium" aria-current="page">Messsage</div>
+
                         <a href="logout.php" class="text-blue-900 hover:bg-blue-900 hover:text-white border-2 border-current px-6 py-2 rounded-full text-sm font-medium">LOG OUT</a>
                         </div>
                     </div>
