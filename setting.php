@@ -125,9 +125,11 @@
                           </textarea>
                 </div>
               </div>
+
+              <!-- CANCEL AND SAVE BUTTONS -->
               <div class="flex justify-center px-4 py-3 bg-gray-50 text-right sm:px-6 space-x-6">
                 <button type="reset"
-                        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-change hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-change hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                   Cancel
                 </button>
                 <button type="submit"
@@ -135,6 +137,8 @@
                   Save
                 </button>
               </div>
+
+
             </div>
         </div>
       </div>

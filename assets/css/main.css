@@ -271,13 +271,16 @@ input::-webkit-input-placeholder {
     font-weight: 900;
 }
 
+
 /* login.php */
 
 .text-blue {
     color: #0F2D52;
 }
 
+
 /* Settings */
+
 .bg-blue-sidebar:focus {
     background-color: #364A7C;
 }
@@ -290,6 +293,14 @@ input::-webkit-input-placeholder {
     background-color: #364A7C;
 }
 
+.bg-blue-save:hover {
+    background-color: #8EC1D1;
+}
+
 .bg-blue-change {
     background-color: #8EC1D1;
+}
+
+.bg-blue-change:hover {
+    background-color: #364A7C;
 }
