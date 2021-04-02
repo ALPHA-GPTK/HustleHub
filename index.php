@@ -1,8 +1,8 @@
 <?php require_once "header.php"; ?>
 <main class="flex mx-auto justify-between items-center w-full mb-28">
     <div class="tagline px-40">
-        <h1 class="mb-8 c-black_100 f-inter-bold text-5xl">Hustle your skills for money <br> with <span class="main-title f-fredokaone-regular">Hustle</span><span class="sub-title f-fredokaone-regular">Hub</span></h1>
-        <p class="c-black_50">An Online Freelance Services Platform for Everyone</p>
+        <h1 class="mb-8 c-black_100 f-inter-bold text-5xl">Hustle your skill for money <br> with <span class="main-title f-fredokaone-regular">Hustle</span><span class="sub-title f-fredokaone-regular">Hub</span></h1>
+        <p class="c-black_50">An online freelance services platform for everyone</p>
     </div>
 
     <div class="photo">
@@ -10,6 +10,7 @@
     </div>
 </main>
 
+<!-- Start of How it Works Section -->
 <section class="w-full mx-auto bg-blue-50">
     <div>
         <h1 class="title-header">How it Works</h1>
@@ -33,7 +34,9 @@
         </div>
     </div>
 </section>
+<!-- End of How it Works Section -->
 
+<!-- Start of Popular Service Section -->
 <section class="container mx-auto">
     <div>
         <h1 class="title-header">Popular Services</h1>
@@ -49,158 +52,172 @@
         <div class="services rounded-full py-3 px-6 inline-block text-white">Video Editing</div>
     </div>
 </section>
+<!-- End of Popular Service Section -->
 
-<!-- TOP PROVIDERS -->
-<section class="provider  mx-auto">
+<!-- Start of Top Providers Section -->
+<section class="provider mx-auto">
     <div>
         <h1 class="title-header">Top Providers</h1>
     </div>
 
-    <div class="flex justify-center items-center">
-        <div class='flex space-x-2 w-full rounded-lg overflow-hidden mx-auto justify-center transform scale-75 opacity-50'>
-            <div class="card min-w-sm border border-gray-100 min-w-max">
-                <div class="flex items-center p-9 pt-24">
-                    <div class="relative flex flex-col items-center w-full">
-                        <div class="h-24 w-24 rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
-                            <img class="h-24 w-24 md rounded-full relative" src="https://avatars3.githubusercontent.com/u/11801238?v=4" alt="">
-                            <div class="absolute"></div>
-                        </div>
-                        <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
-                            <span class="text-md whitespace-nowrap text-gray-800 rounded-lg tag py-2 px-3">PRO</span>
-                            <span class="text-md whitespace-nowrap text-black font-bold leading-normal ">Prince Carl Velasco</span>
-                            <span class="text-sm whitespace-nowrap text-gray-600 pb-3">Data Scientist</span>
-                            <p class="text-sm text-gray-500 pb-3">
-                                I can't start my day without a coffee cup
-                            </p>
-                            <div class="container space-x-8 social-links flex justify-center items-center pb-3">
-                                <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
-                                <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
-                                <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
-                                <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
-                                <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
-                                <img src="assets/img/behance-logo.svg" alt="behance-logo">
+    <div class="antialiased pl-14 pr-14">
+        <div class="flex flex-wrap -mx-4">
+            <!-- Card 1 -->
+            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-1/2 md:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
+                <div class="card block bg-white shadow-md rounded-lg overflow-hidden">
+                    <div class="flex items-center p-9 pt-24">
+                        <div class="relative flex flex-col items-center w-full">
+                            <!-- Image -->
+                            <div class="h-24 w-24 rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
+                                <img class="h-24 w-24 md rounded-full relative" src="./assets/img/velasco-pic.jpg" alt="">
+                                <div class="absolute"></div>
                             </div>
-                            <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
-                                <span class="text-center px-2">
-                                    <span class="font-bold text-gray-700">23</span>
-                                    <br>
-                                    <span class="client-body"> Client</span>
-                                </span>
-                                <span class="pl-2">
-                                    <img src="assets/img/stars.svg" alt="stars">
-                                </span>
-                            </div>
-                            <div class="py-2 flex space-x-2">
-                                <button class="flex message-button justify-center max-h-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300 rounded max-w-max border bg-transparent px-4 py-1 flex items-center hover:shadow-lg">
-                                    <span class="mr-2"></span>Message
-                                    <span class="ml-2"></span>
-                                </button>
-                                <button class="flex hire-button justify-center max-h-max whitespace-nowrap focus:outline-none focus:ring focus:border-blue-300 rounded max-w-max text-gray-100 bg-green-500 hover:bg-green-600 px-4 py-1 flex items-center hover:shadow-lg motion-reduce:transform-none">
-                                    <span class="mr-2"></span>
-                                    Hire
-                                    <span class="ml-2"></span>
-                                </button>
+                            <!-- PRO, Name, Description -->
+                            <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
+                                <span class="text-md whitespace-nowrap text-gray-800 rounded-lg tag py-2 px-3">PRO</span>
+                                <span class="text-md whitespace-nowrap text-black font-bold leading-normal ">Prince Carl Velasco</span>
+                                <span class="text-sm whitespace-nowrap text-gray-600 pb-3">Data Scientist</span>
+                                <p class="text-sm text-gray-500 pb-3">
+                                    I can't start my day without a coffee cup
+                                </p>
+                                <!-- Linked Accounts -->
+                                <div class="container space-x-8 social-links flex justify-center items-center pb-3">
+                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
+                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
+                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
+                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
+                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
+                                    <img src="assets/img/behance-logo.svg" alt="behance-logo">
+                                </div>
+                                <!-- No. of Clients, Stars -->
+                                <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
+                                    <span class="text-center px-2">
+                                        <span class="font-bold text-gray-700">23</span>
+                                        <br>
+                                        <span class="client-body"> Client</span>
+                                    </span>
+                                    <span class="pl-2">
+                                        <img src="assets/img/stars.svg" alt="stars">
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Buttons -->
+                    <div class="grid grid-cols-2 px-5 pb-5">
+                        <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
+                            <button class="message-button border h-16 py-2 px-4 rounded-lg">Message</button>
+                        </div>
+                            <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
+                            <button class="hire-button h-16 py-2 px-4 rounded-lg">Hire</button>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
-        </div>
 
-        <div class='flex space-x-2 w-full rounded-lg overflow-hidden mx-auto justify-center'>
-            <div class="card min-w-sm border border-gray-100 transition-shadow shadow-xl hover:shadow-xl min-w-max">
-                <div class="flex items-center p-9 pt-24">
-                    <div class="relative flex flex-col items-center w-full">
-                        <div class="h-24 w-24 md rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
-                            <img class="h-24 w-24 md rounded-full relative" src="https://avatars3.githubusercontent.com/u/11801238?v=4" alt="">
-                            <div class="absolute"></div>
-                        </div>
-                        <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
-                            <span class="text-md whitespace-nowrap text-gray-800 rounded-lg tag py-2 px-3">PRO</span>
-                            <span class="text-md whitespace-nowrap text-black font-bold leading-normal ">Katherine Therese Marie Mariñas</span>
-                            <span class="text-sm whitespace-nowrap text-gray-600 pb-3">UI / UX Designer</span>
-                            <p class="text-sm text-gray-500 pb-3">
-                                I can't start my day without a coffee cup
-                            </p>
-                            <div class="container space-x-8 social-links flex justify-center items-center pb-3">
-                                <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
-                                <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
-                                <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
-                                <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
-                                <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
-                                <img src="assets/img/behance-logo.svg" alt="behance-logo">
+            <!-- Card 2 -->
+            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-1/2 md:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
+                <div class="card block bg-white shadow-md rounded-lg overflow-hidden">
+                    <div class="flex items-center p-9 pt-24">
+                        <div class="relative flex flex-col items-center w-full">
+                            <!-- Image -->
+                            <div class="h-24 w-24 rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
+                                <img class="h-24 w-24 md rounded-full relative" src="https://avatars3.githubusercontent.com/u/11801238?v=4" alt="">
+                                <div class="absolute"></div>
                             </div>
-                            <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
-                                <span class="text-center px-2">
-                                    <span class="font-bold text-gray-700">23</span>
-                                    <br>
-                                    <span class="client-body"> Client</span>
-                                </span>
-                                <span class="pl-2">
-                                    <img src="assets/img/stars.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="py-2 flex space-x-2">
-                                <button class="flex message-button justify-center max-h-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300 rounded max-w-max border bg-transparent px-4 py-1 flex items-center hover:shadow-lg">
-                                    <span class="mr-2"></span>Message
-                                    <span class="ml-2"></span>
-                                </button>
-                                <button class="flex hire-button justify-center max-h-max whitespace-nowrap focus:outline-none focus:ring focus:border-blue-300 rounded max-w-max text-gray-100 bg-green-500 hover:bg-green-600 px-4 py-1 flex items-center hover:shadow-lg">
-                                    <span class="mr-2"></span>
-                                    Hire
-                                    <span class="ml-2"></span>
-                                </button>
+                            <!-- PRO, Name, Description -->
+                            <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
+                                <span class="text-md whitespace-nowrap text-gray-800 rounded-lg tag py-2 px-3">PRO</span>
+                                <span class="text-md whitespace-nowrap text-black font-bold leading-normal ">Katherine Therese Marie Mariñas</span>
+                                <span class="text-sm whitespace-nowrap text-gray-600 pb-3">UI/UX Designer</span>
+                                <p class="text-sm text-gray-500 pb-3">
+                                    I can't start my day without a coffee cup
+                                </p>
+                                <!-- Linked Accounts -->
+                                <div class="container space-x-8 social-links flex justify-center items-center pb-3">
+                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
+                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
+                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
+                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
+                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
+                                    <img src="assets/img/behance-logo.svg" alt="behance-logo">
+                                </div>
+                                <!-- No. of Clients, Stars -->
+                                <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
+                                    <span class="text-center px-2">
+                                        <span class="font-bold text-gray-700">23</span>
+                                        <br>
+                                        <span class="client-body"> Client</span>
+                                    </span>
+                                    <span class="pl-2">
+                                        <img src="assets/img/stars.svg" alt="stars">
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Buttons -->
+                    <div class="grid grid-cols-2 px-5 pb-5">
+                        <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
+                            <button class="message-button border h-16 py-2 px-4 rounded-lg">Message</button>
+                        </div>
+                            <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
+                            <button class="hire-button h-16 py-2 px-4 rounded-lg">Hire</button>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
-        </div>
 
-        <div class='flex space-x-2 w-full rounded-lg overflow-hidden mx-auto justify-center transform scale-75'>
-            <div class="card min-w-sm border border-gray-100 transition-shadow shadow-xl hover:shadow-xl min-w-max opacity-50">
-                <div class="flex items-center p-9 pt-24">
-                    <div class="relative flex flex-col items-center w-full">
-                        <div class="h-24 w-24 md rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
-                            <img class="h-24 w-24 md rounded-full relative" src="https://avatars3.githubusercontent.com/u/11801238?v=4" alt="">
-                            <div class="absolute"></div>
+            <!-- Card 3 -->
+            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-1/2 md:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
+                <div class="card block bg-white shadow-md rounded-lg overflow-hidden">
+                    <div class="flex items-center p-9 pt-24">
+                        <div class="relative flex flex-col items-center w-full">
+                            <!-- Image -->
+                            <div class="h-24 w-24 rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
+                                <img class="h-24 w-24 md rounded-full relative" src="https://avatars3.githubusercontent.com/u/11801238?v=4" alt="">
+                                <div class="absolute"></div>
+                            </div>
+                            <!-- PRO, Name, Description -->
+                            <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
+                                <span class="text-md whitespace-nowrap text-gray-800 rounded-lg tag py-2 px-3">PRO</span>
+                                <span class="text-md whitespace-nowrap text-black font-bold leading-normal ">Tricia Dorine Relox</span>
+                                <span class="text-sm whitespace-nowrap text-gray-600 pb-3">Technopreneur</span>
+                                <p class="text-sm text-gray-500 pb-3">
+                                    I can't start my day without a coffee cup
+                                </p>
+                                <!-- Linked Accounts -->
+                                <div class="container space-x-8 social-links flex justify-center items-center pb-3">
+                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
+                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
+                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
+                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
+                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
+                                    <img src="assets/img/behance-logo.svg" alt="behance-logo">
+                                </div>
+                                <!-- No. of Clients, Stars -->
+                                <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
+                                    <span class="text-center px-2">
+                                        <span class="font-bold text-gray-700">23</span>
+                                        <br>
+                                        <span class="client-body"> Client</span>
+                                    </span>
+                                    <span class="pl-2">
+                                        <img src="assets/img/stars.svg" alt="stars">
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
-                            <span class="text-md whitespace-nowrap text-gray-800 rounded-lg tag py-2 px-3">PRO</span>
-                            <span class="text-md whitespace-nowrap text-black font-bold leading-normal ">Tricia Dorine Relox</span>
-                            <span class="text-sm whitespace-nowrap text-gray-600 pb-3">UI / UX Designer</span>
-                            <p class="text-sm text-gray-500 pb-3">
-                                I can't start my day without a coffee cup
-                            </p>
-                            <div class="container space-x-8 social-links flex justify-center items-center pb-3">
-                                <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
-                                <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
-                                <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
-                                <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
-                                <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
-                                <img src="assets/img/behance-logo.svg" alt="behance-logo">
-                            </div>
-                            <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
-                                <span class="text-center px-2">
-                                    <span class="font-bold text-gray-700">23</span>
-                                    <br>
-                                    <span class="client-body"> Client</span>
-                                </span>
-                                <span class="pl-2">
-                                    <img src="assets/img/stars.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="py-2 flex space-x-2">
-                                <button class="flex message-button justify-center max-h-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300 rounded max-w-max border bg-transparent px-4 py-1 flex items-center hover:shadow-lg">
-                                    <span class="mr-2"></span>Message
-                                    <span class="ml-2"></span>
-                                </button>
-                                <button class="flex hire-button justify-center max-h-max whitespace-nowrap focus:outline-none focus:ring focus:border-blue-300 rounded max-w-max text-gray-100 bg-indigo-500 hover:bg-indigo-600 px-4 py-1 flex items-center hover:shadow-lg">
-                                    <span class="mr-2"></span>
-                                    Hire
-                                    <span class="ml-2"></span>
-                                </button>
-                            </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="grid grid-cols-2 px-5 pb-5">
+                        <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
+                            <button class="message-button border h-16 py-2 px-4 rounded-lg">Message</button>
+                        </div>
+                            <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
+                            <button class="hire-button h-16 py-2 px-4 rounded-lg">Hire</button>
                         </div>
                     </div>
                 </div>
@@ -208,9 +225,10 @@
         </div>
     </div>
 </section>
+<!-- End of Top Providers Section -->
 
+<!-- Start of Companies Section -->
 <section class="container w-full mx-auto">
-    <!--  COMPANIES  -->
     <div class="company space-x-16 flex py-36 justify-center items-center">
         <a href="https://www.manulife.com.ph/"> <img src="assets/img/manulife.svg" alt="manulife"> </a>
         <img src="assets/img/fast-company.svg" alt="fast-company">
@@ -230,6 +248,9 @@
         </div>
     </div>
 </section>
+<!-- End of Companies Section -->
+
+<!-- Start of Footer -->
 <footer class="pb-32 pt-24">
     <div class="xl:px-40 pb-14 lg:px-20 md:px-10 sm:px-5 px-10">
         <div class="w-full pt-12 flex flex-col sm:flex-row space-y-4 justify-between">
@@ -276,8 +297,10 @@
                 <p class="text-base c-black_100 f-inter-regular">Developed by Alpha Developers</p>
             </div>
             <div class="attribution text-xs justify-center items-end flex sm:w-1/5 flex-col">
-                <p class="c-black_100 text-base f-inter-regular">© 2021 HustleHub. All rights reserved</p>
+                <p class="c-black_100 text-base f-inter-regular"> &copy; 2021 HustleHub. All rights reserved</p>
             </div>
         </div>
     </div>
 </footer>
+<!-- End of Footer -->
+</html>
