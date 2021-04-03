@@ -303,48 +303,50 @@
 <!-- End of Banner Section -->
 
 <!-- Start of Footer -->
-<footer class="container mx-auto px-6 lg:px-20 py-12">
-    <div class="lg:flex">
-        <div class="w-full lg:w-3/4">
-            <div class="lg:flex">
-                <div class="w-full flex flex-col justify-center items-center mb-12 lg:mb-0 lg:w-1/2 lg:space-y-4">
-                    <a href="./index.php"><span class="c-darkBlue_100 text-5xl f-fredokaone-regular cursor-pointer">HUSTLE</span><span class="c-lightBlue_100 text-5xl f-fredokaone-regular cursor-pointer">HUB</span></a>
-                    <div class="text-center pt-2">
-                        <p class="text-base pb-2 lg:pb-4 c-black_100">(02) 8281-88-88</p>
-                        <p class="text-base c_gray">hustlehub@gmail.com</p>
+<footer>
+    <div class="container w-full mx-auto px-6 lg:px-20 py-12">
+        <div class="lg:flex">
+            <div class="w-full lg:w-3/4">
+                <div class="lg:flex">
+                    <div class="w-full flex flex-col justify-center items-center mb-12 lg:mb-0 lg:w-1/2 lg:space-y-4">
+                        <a href="./index.php"><span class="c-darkBlue_100 text-5xl sm:text-5xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-5xl f-fredokaone-regular cursor-pointer">HUSTLE</span><span class="c-lightBlue_100 text-5xl sm:text-5xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-5xl f-fredokaone-regular cursor-pointer">HUB</span></a>
+                        <div class="text-center pt-6">
+                            <p class="text-base pb-2 lg:pb-4 c-black_100">(02) 8281-88-88</p>
+                            <p class="text-base c_gray">hustlehub@gmail.com</p>
+                        </div>
                     </div>
-                </div>
-                <div class="w-full lg:w-1/2 lg:flex lg:px-6 ">
-                    <div class="w-full mb-6 lg:mb-0 lg:w-1/2 lg:space-y-4">
-                        <a class="font-semibold pb-2 c-black_100">About</a>
-                        <ul>
-                            <li class="py-2"><a class="cursor-pointer c-gray_100">Privacy Policy</a></li>
-                            <li class="py-2"><a class="cursor-pointer c-gray_100">Terms of Service</a></li>
-                            <li class="py-2"><a class="cursor-pointer c-gray_100">Intellectual Property Claims</a></li>
-                        </ul>
-                    </div>
-                    <div class="w-full mb-6 lg:mb-0 lg:w-1/2 lg:space-y-4">
-                        <a class="font-semibold pb-2 c-black_100">Support</a>
-                        <ul>
-                            <li class="py-2"><a class="cursor-pointer c-gray_100">Help & Support</a></li>
-                            <li class="py-2"><a class="cursor-pointer c-gray_100">Trust & Safety</a></li>
-                            <li class="py-2"><a class="cursor-pointer c-gray_100">Community Standards</a>
-                            </li>
-                        </ul>
+                    <div class="w-full sm:flex sm:flex-row lg:w-1/2 lg:flex lg:px-6">
+                        <div class="w-full mb-6 space-y-2 lg:mb-0 lg:w-1/2 lg:space-y-4">
+                            <a class="font-semibold pb-2 text-lg c-black_100 lg:text-base xl:text-lg 2xl:text-lg">About</a>
+                            <ul class="text-base lg:text-base xl:text-base 2xl:text-base">
+                                <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Privacy Policy</a></li>
+                                <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Terms of Service</a></li>
+                                <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Intellectual Property Claims</a></li>
+                            </ul>
+                        </div>
+                        <div class="w-full mb-6 space-y-2 lg:mb-0 lg:w-1/2 lg:space-y-4 lg:ml-6">
+                            <a class="font-semibold pb-2 text-lg c-black_100 lg:text-base xl:text-lg 2xl:text-lg">Support</a>
+                            <ul class="text-base lg:text-base xl:text-base 2xl:text-base">
+                                <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Help & Support</a></li>
+                                <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Trust & Safety</a></li>
+                                <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Community Standards</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="w-full lg:w-1/4">
-            <form>
-                <label class="space-y-4">
-                    <p class="font-semibold c-black_100">Subscribe</p>
-                    <input type="text" class="rounded-l-lg p-3 placeholder-gray-700 focus:outline-none border-t border-b border-l w-3/4 -mr-1 bg-white border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" placeholder="Get product updates" />
-                </label>
-                <button class="rounded-r-lg font-bold p-3 px-4 uppercase input-blue focus:outline-none shadow">
-                    <input type="image" class="focus:outline-none align-middle" src="assets/img/arrows.png" alt="Arrow Button">
-                </button>
-            </form>
+            <div class="w-full lg:w-1/4 flex">
+                <form>
+                    <label class="space-y-5">
+                        <p class="font-semibold text-lg c-black_100 lg:text-base xl:text-lg 2xl:text-lg">Subscribe</p>
+                        <input type="text" class="lg:text-sm xl:text-base rounded-l-lg p-3 placeholder-gray-400 focus:outline-none border-t border-b border-l w-3/4 -mr-1 bg-white border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" placeholder="Get product updates" />
+                    </label>
+                    <button class="rounded-r-lg font-bold p-3 px-4 uppercase input-blue focus:outline-none shadow">
+                        <input type="image" class="focus:outline-none align-middle" src="assets/img/arrows.png" alt="Arrow Button">
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
     <div class="container flex mx-auto pt-12">
