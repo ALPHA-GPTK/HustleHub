@@ -20,6 +20,9 @@ if ((isset($_COOKIE['user_email'], $_COOKIE['user_password']))) {
 
 ?>
 
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+<title>HustleHub | Login</title>
 <div class="bg-lightBlue_8 h-screen">
   <?php require_once "header.php" ?>
   <div class="flex justify-center overflow-hidden">

@@ -1,4 +1,7 @@
 <div class="bg-lightBlue_8 h-screen">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+  <title>HustleHub | Signup</title>
   <?php require_once "header.php" ?>
   <div class="flex justify-center overflow-hidden mt-5">
     <div class="container w-full">
