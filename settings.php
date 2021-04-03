@@ -58,8 +58,8 @@ if (isset($userId, $userName, $userEmail)) {
                       </svg>
                     </span>
                     <div class="flex flex-col space-y-2">
-                      <input type="file" value="Choose File" class="ml-5 bg-blue-save py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                      <input type="submit" value="Upload Now" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      <input type="file" value="Choose File" class="ml-5 bg-blue-save py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
+                      <input type="submit" value="Upload Now" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
                     </div>
                   </div>
                 </div>
@@ -198,7 +198,7 @@ if (isset($userId, $userName, $userEmail)) {
 
                     <!-- CANCEL AND SAVE BUTTONS -->
                     <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6">
-                      <input type="reset" value="Cancel" name="cancelPass"  class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-change hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer" />
+                      <input type="reset" value="Cancel" name="cancelPass" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-change hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer" />
                       <input type="submit" value="Save" name="changePass" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-save focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer" />
                     </div>
                   </div>
