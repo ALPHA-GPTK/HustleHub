@@ -27,7 +27,7 @@ if (isset($_POST["login"], $conn) && $conn) {
                 $_SESSION['user_password'] = $userResult['freelance_password'];
 
                 echo "<script>alert('Login Successfully.')
-                window.location.href='gigs.php';
+                window.location.href='mygigs.php';
                 </script>";
             } else {
                 echo "<script>alert('Username or Password is incorrect.')
