@@ -2,9 +2,27 @@
 
 session_start();
 
+function checkAccount(...$info): bool
+{
+    if (count($info) === 3) {
+        [$conn, $email, $password] = $info;
+        $sql = "SELECT freelance_email, freelance_password FROM freelance_info 
+                WHERE freelance_email = '$email' AND freelance_password = '$password'";
+    } elseif (count($info) === 2) {
+        [$conn, $email] = $info;
+        $sql = "SELECT freelance_email FROM freelance_info 
+                WHERE freelance_email = '$email'";
+    } else {
+        echo "Please Fix.";
+    }
+
+    $result = $conn->query($sql) or trigger_error($conn->error);
+    return $result->num_rows;
+}
+
 function checkSession()
 {
-    if (!isset(($_SESSION['user_id']), ($_SESSION['user_username']), ($_SESSION['user_email']), ($_SESSION['user_password']))) {
+    if (!isset($_SESSION['user_id'], $_SESSION['user_username'], $_SESSION['user_email'], $_SESSION['user_password'])) {
         session_destroy();
         header("location: login.php");
     }
@@ -12,7 +30,7 @@ function checkSession()
 
 function checkSessionGoToGig()
 {
-    if (isset(($_SESSION['user_id']), ($_SESSION['user_username']), ($_SESSION['user_email']), ($_SESSION['user_password']))) {
+    if (isset($_SESSION['user_id'], $_SESSION['user_username'], $_SESSION['user_email'], $_SESSION['user_password'])) {
         header("location: gigs.php");
     }
 }

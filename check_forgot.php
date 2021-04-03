@@ -4,13 +4,14 @@ session_start();
 
 require_once "dbConnection.inc";
 require_once "sendmail.php";
+require_once "./function.php";
 
 if (isset($_POST['email'], $conn, $mail, $gmailUsername)) {
     if (!empty($_POST['email'])) {
-        $ck_Account = checkAccount($_POST['email'], $conn);
+        $ck_Account = checkAccount($conn, $_POST['email']);
 
         $email = $_POST['email'];
-        if ($ck_Account) {
+        if ($ck_Account !== 0 && $ck_Account !== NULL) {
             $bytes = random_bytes(20);
             $randomCode = bin2hex($bytes);
             $shaRandCode = sha1($randomCode);
@@ -47,13 +48,4 @@ if (isset($_POST['email'], $conn, $mail, $gmailUsername)) {
     } else {
         header("location: forgot.php?input_status=blank");
     }
-}
-
-function checkAccount($email, $conn): bool
-{
-    $sql = "SELECT freelance_email FROM freelance_info WHERE freelance_email = '$email'";
-    $result = $conn->query($sql) or die($conn->error);
-    $userCount = count($result->fetch_all());
-
-    return $userCount === 1;
 }

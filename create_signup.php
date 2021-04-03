@@ -1,4 +1,5 @@
 <?php require_once "dbConnection.inc";
+require_once "./function.php";
 
 if (isset($_POST["signup"], $conn) && $conn) {
 
@@ -7,9 +8,9 @@ if (isset($_POST["signup"], $conn) && $conn) {
         if ($_POST['password'] === $_POST['confirm_password']) {
 
             //Check Account return Boolean
-            $ckAccount = checkAccount($_POST['email'], $conn);
+            $ckAccount = checkAccount($conn, $_POST['email']);
 
-            if ($ckAccount) {
+            if (!($ckAccount > 0)) {
                 $fullName = sprintf("%s %s", $_POST["fName"], $_POST["lName"]);
                 $userName = $_POST["username"];
                 $email = $_POST["email"];
@@ -49,14 +50,4 @@ if (isset($_POST["signup"], $conn) && $conn) {
     }
 } else {
     trigger_error("Connection Failed: " . $conn->connect_error);
-}
-
-//Check Account if already exists return boolean
-function checkAccount($email, $conn): bool
-{
-    $sql = "SELECT freelance_email FROM freelance_info WHERE freelance_email = '$email'";
-    $result = $conn->query($sql) or die($conn->error);
-    $userCount = count($result->fetch_all());
-
-    return !($userCount > 0);
 }

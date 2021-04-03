@@ -10,9 +10,9 @@ if (isset($_POST["login"], $conn) && $conn) {
         //Check Account return Boolean
         $shaPass = sha1($_POST['password']);
         $origPass = $_POST['password'];
-        $ckAccount = checkAccount($_POST["email"], $shaPass, $conn);
+        $ckAccountRows = checkAccount($conn, $_POST["email"], $shaPass);
 
-        if ($ckAccount) {
+        if ($ckAccountRows !== 0  && $ckAccountRows !== null) {
             $user_email = $_POST["email"];
             $user_password = sha1($_POST["password"]);
             $sql = "SELECT freelance_id, freelance_username, freelance_email, freelance_password FROM freelance_info 
@@ -56,14 +56,4 @@ if (isset($_POST["login"], $conn) && $conn) {
     }
 } else {
     trigger_error("Connection failed: " . $conn->connect_error);
-}
-
-function checkAccount($email, $password, $conn): bool
-{
-    $sql = "SELECT freelance_email, freelance_password FROM freelance_info 
-            WHERE freelance_email = '$email' AND freelance_password = '$password'";
-    $result = $conn->query($sql) or die($conn->error);
-    $userCount = count($result->fetch_all());
-
-    return !($userCount === 0 || $userCount === null);
 }
