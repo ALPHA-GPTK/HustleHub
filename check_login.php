@@ -19,7 +19,7 @@ if (isset($_POST["login"], $conn) && $conn) {
             $userCount = count($query->fetch_all());
 
             if ($userCount === 1) {
-                header("Location: login.php?login=success");
+                header("Location: gigs.php");
             } else {
                 header("Location: login.php?login=fail");
             }
