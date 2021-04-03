@@ -1,5 +1,6 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" s href="assets/img/favicon.png">
+    <title>HustleHub - Settings</title>
     <div class="bg-lightBlue_8">
       <?php require_once "profile_header.php"; ?>
       <div class="md:flex px-36">
