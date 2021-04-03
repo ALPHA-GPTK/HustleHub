@@ -26,7 +26,7 @@
 
     <div class="flex-1 px-20">
       <!-- Basic Information -->
-      <div class="md:grid md:grid-cols-2 md:gap-6" id="con-basicinfo">
+      <div class="md:grid md:grid-cols-2 duration-500 md:gap-6" id="con-basicinfo">
         <div id="div1" class="targetDiv  mt-5 md:mt-0 md:col-span-2">
           <form action="#" method="POST">
             <div class="shadow sm:rounded-md sm:overflow-hidden">
@@ -124,7 +124,7 @@
         </div>
       </div>
       <!-- Security -->
-      <div class="md:grid-cols-2 md:gap-6 delay-500 hidden" id="con-security">
+      <div class="md:grid-cols-2 md:gap-6 duration-500 hidden" id="con-security">
         <div id="div2" class="targetDiv  mt-5 md:mt-0 md:col-span-2">
           <form action="#" method="POST">
             <div class="shadow sm:rounded-md sm:overflow-hidden">
@@ -200,7 +200,7 @@
       </div>
       <!-- Account Deletion -->
       <br>
-      <div class="md:grid-cols-2 md:gap-6 delay-500 hidden" id="con-account">
+      <div class="md:grid-cols-2 md:gap-6 duration-500 hidden" id="con-account">
         <div id="div3" class="targetDiv  mt-5 md:mt-0 md:col-span-2">
           <form action="#" method="POST">
             <div class="shadow sm:rounded-md sm:overflow-hidden">

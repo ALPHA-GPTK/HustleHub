@@ -213,10 +213,12 @@ if ((lastUrlElement.includes("login.php"))) {
         }
 
         if ((conSecurity.classList.contains("md:grid"))) {
+            conSecurity.classList.remove("md:grid");
             conSecurity.classList.add("hidden");
         }
 
-        if (!(conAccount.classList.contains("md:grid"))) {
+        if ((conAccount.classList.contains("md:grid"))) {
+            conAccount.classList.remove("md:grid");
             conAccount.classList.add("hidden");
         }
     });
@@ -254,4 +256,7 @@ if ((lastUrlElement.includes("login.php"))) {
             conSecurity.classList.remove("md:grid");
         }
     });
+
+    //Current Password
+
 }
