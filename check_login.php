@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "dbConnection.inc";
 
 if (isset($_POST["login"], $conn) && $conn) {
@@ -19,6 +20,14 @@ if (isset($_POST["login"], $conn) && $conn) {
             $userCount = count($query->fetch_all());
 
             if ($userCount === 1) {
+                $sql = "SELECT freelance_id, freelance_username, freelance_email, freelance_password FROM freelance_info WHERE freelance_user = '$user_email' AND freelance_password = '$user_password'";
+                $result = $conn->query($sql);
+                $userResult = $result->fetch_assoc();
+
+                $_SESSION['user_id'] = $userResult['freelance_id'];
+                $_SESSION['user_username'] = $userResult['freelance_username'];
+                $_SESSION['user_email'] = $userResult['freelance_email'];
+                $_SESSION['user_password'] = $userResult['freelance_password'];
                 header("Location: gigs.php");
             } else {
                 header("Location: login.php?login=fail");
