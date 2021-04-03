@@ -323,4 +323,12 @@ if ((lastUrlElement.includes("login.php"))) {
             confirmIcon.src = "./assets/img/check-not.svg";
         }
     });
+} else if ((lastUrlElement.includes("settings.php"))) {}
+
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+
+    return true;
 }

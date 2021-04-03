@@ -39,7 +39,7 @@ if (isset($_POST["login"], $conn) && $conn) {
                 }
 
                 echo "<script>alert('Login Successfully.')
-                window.location.href='mygigs.php';
+                window.location.href='gigs.php';
                 </script>";
             } else {
                 echo "<script>alert('Username or Password is incorrect.')
