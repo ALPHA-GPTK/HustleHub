@@ -186,8 +186,7 @@ if (isset($_POST['email'], $conn, $mail, $gmailUsername)) {
             </table>
         </center>
     </div>
-</body>
- ";
+</body> ";
 
             $mail->addAddress($email);
 
