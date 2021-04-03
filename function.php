@@ -56,3 +56,13 @@ function infoDecrypt($encryption)
     $decryption = openssl_decrypt($encryption, $ciphering, $decryption_key, $options, $decryption_iv);
     return $decryption;
 }
+
+function getSessionValues()
+{
+    $userId = $_SESSION['user_id'];
+    $userFName = $_SESSION['user_firstname'];
+    $userLName = $_SESSION['user_lastname'];
+    $userName = $_SESSION['user_username'];
+    $userEmail = $_SESSION['user_email'];
+    $userPassword = $_SESSION['user_password'];
+}

@@ -15,7 +15,7 @@ if (isset($_POST["login"], $conn) && $conn) {
         if ($ckAccountRows !== 0  && $ckAccountRows !== null) {
             $user_email = $_POST["email"];
             $user_password = sha1($_POST["password"]);
-            $sql = "SELECT freelance_id, freelance_username, freelance_email, freelance_password FROM freelance_info 
+            $sql = "SELECT freelance_id, freelance_fName, freelance_lName, freelance_username, freelance_email, freelance_password FROM freelance_info 
                     WHERE freelance_email = '$user_email' AND freelance_password = '$user_password'";
             $result = $conn->query($sql) or die($conn->error);
             $userCount = $result->num_rows;
@@ -24,6 +24,8 @@ if (isset($_POST["login"], $conn) && $conn) {
                 $userResult = $result->fetch_assoc();
 
                 $_SESSION['user_id'] = $userResult['freelance_id'];
+                $_SESSION['user_firstname'] = $userResult['freelance_fName'];
+                $_SESSION['user_lastname'] = $userResult['freelance_lName'];
                 $_SESSION['user_username'] = $userResult['freelance_username'];
                 $_SESSION['user_email'] = $userResult['freelance_email'];
                 $_SESSION['user_password'] = $userResult['freelance_password'];
