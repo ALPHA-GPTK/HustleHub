@@ -218,7 +218,7 @@ if (isset($userId, $userName, $userEmail)) {
       <br>
       <div class="md:grid-cols-2 md:gap-6 duration-500 hidden" id="con-account">
         <div id="div3" class="targetDiv  mt-5 md:mt-0 md:col-span-2">
-          <form action="#" method="POST">
+          <form action="delete_account.php" method="POST">
             <div class="shadow sm:rounded-md sm:overflow-hidden">
               <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
 
@@ -229,10 +229,8 @@ if (isset($userId, $userName, $userEmail)) {
                   <h3 class="text-lg font-medium leading-6 text-gray-900">Account Deletion</h3>
 
                   <div class="px-8 flex justify-end">
-                    <button type="delete" class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white account-delete-button account-delete-button:hover">
-                      <a href="delete_account.php">
-                        Delete Account
-                      </a>
+                    <button name="delete" type="submit" class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white account-delete-button account-delete-button:hover">
+                      Delete Account
                     </button>
                   </div>
                 </div>
