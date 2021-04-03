@@ -1,5 +1,5 @@
 <div class="bg-lightBlue_8">
-    <?php require_once "profile_header.php" ?>
+    <?php require_once "./profile_header.php"; ?>
 
     <section class="mx-auto">
         <div>

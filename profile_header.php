@@ -1,3 +1,10 @@
+<?php
+
+require_once "./function.php";
+
+checkSession();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/png" s href="./assets/img/favicon.png">
 
     <title>HustleHub - Profile</title>
 </head>

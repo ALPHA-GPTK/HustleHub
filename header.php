@@ -1,3 +1,11 @@
+<?php
+
+require_once "./function.php";
+
+checkSessionGoToGig();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
