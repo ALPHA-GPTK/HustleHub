@@ -20,7 +20,7 @@ if (isset($_POST["login"], $conn) && $conn) {
             $userCount = count($query->fetch_all());
 
             if ($userCount === 1) {
-                $sql = "SELECT freelance_id, freelance_username, freelance_email, freelance_password FROM freelance_info WHERE freelance_user = '$user_email' AND freelance_password = '$user_password'";
+                $sql = "SELECT freelance_id, freelance_username, freelance_email, freelance_password FROM freelance_info WHERE freelance_email = '$user_email' AND freelance_password = '$user_password'";
                 $result = $conn->query($sql);
                 $userResult = $result->fetch_assoc();
 
