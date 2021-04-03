@@ -1,7 +1,7 @@
-<div class="bg-lightBlue_8 h-screen">
+<div class="bg-lightBlue_8">
     <?php require_once "profile_header.php" ?>
 
-    <section class="provider mx-auto">
+    <section class="mx-auto">
         <div>
             <h1 class="title-header font-bold">MyGigs</h1>
         </div>

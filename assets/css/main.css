@@ -249,10 +249,6 @@ input::-webkit-input-placeholder {
     line-height: normal;
 }
 
-.provider {
-    background: rgba(142, 193, 209, 0.08);
-}
-
 .cta {
     background: url(../img/cta.png) no-repeat;
     height: 457px;
