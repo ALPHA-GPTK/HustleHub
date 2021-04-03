@@ -21,11 +21,12 @@ if (isset($_POST['email'], $conn, $mail, $gmailUsername)) {
             $mail->setFrom($gmailUsername, "HustleHub");
 
             $mail->Subject = "Reset Password - HustleHub";
-            $mail->Body = "<h1 class=\"h1-gmail\">Verification Code</h1><br/>
-                            <h3>This email is to confirm a recent password reset request for your 
-                            HustleHub account.</h3><br/>
-                            <h3>To confirm this request and reset your password, please copy the code:</h3><br/>
-                            <h4>$randomCode</h4>";
+            $mail->Body = "
+                            <h2 style=\"font-weight:700;\">Password Reset Code Request</h2><hr><br/>
+                            <h4>This email is to confirm a recent password reset request for your 
+                            HustleHub account. To confirm this request and reset your password, please copy the code below.</h4><br/>
+                            <h4>Code: $randomCode</h4><br/>
+                            <h4>Best Regards, <br/> ALPHA Developers</h4>  ";
 
             $mail->addAddress($email);
 

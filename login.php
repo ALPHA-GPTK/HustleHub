@@ -20,12 +20,15 @@ if ((isset($_COOKIE['user_email'], $_COOKIE['user_password']))) {
 
 ?>
 
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+<title>HustleHub | Log In</title>
 <div class="bg-lightBlue_8 h-screen">
   <?php require_once "header.php" ?>
   <div class="flex justify-center overflow-hidden">
     <div class="container w-full">
       <div class="max-w-md mx-auto my-10">
-        <h1 class="text-center my-3 text-3xl text-blue dark:text-gray-200 uppercase font-black">Login</h1>
+        <h1 class="text-center my-3 text-3xl text-blue dark:text-gray-200 uppercase font-black">Log In</h1>
         <div class="m-7">
           <form action="check_login.php" method="post">
             <div class="relative mb-6">
@@ -58,10 +61,10 @@ if ((isset($_COOKIE['user_email'], $_COOKIE['user_password']))) {
               </label>
             </div>
             <div class="mb-6">
-              <input type="submit" value="Login" name="login" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-indigo-500 rounded-lg focus:bg-indigo-600 focus:outline-none uppercase font-black cursor-pointer">
+              <input type="submit" value="Log In" name="login" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-indigo-500 rounded-lg focus:bg-indigo-600 focus:outline-none uppercase font-black cursor-pointer">
             </div>
             <p class="text-sm text-center text-gray-400">New to HustleHub?
-              <a class="text-blue focus:outline-none font-black focus:underline focus:text-indigo-500 dark:focus:border-indigo-800 uppercase" href="signup.php">Sign up</a>
+              <a class="text-blue focus:outline-none font-black focus:underline focus:text-indigo-500 dark:focus:border-indigo-800 uppercase" href="signup.php">Sign Up</a>
             </p>
           </form>
         </div>
