@@ -23,6 +23,10 @@
     color: var(--darkblue_100);
 }
 
+.bg-darkBlue_100 {
+    background-color: var(--darkblue_100);
+}
+
 .c-darkBlue_65 {
     color: var(--darkblue_65);
 }
@@ -177,6 +181,10 @@ input::-webkit-input-placeholder {
     color: #8EC1D1;
 }
 
+.active {
+    background-color: var(--darkblue_100);
+    color: var(--white_100);
+}
 
 /*
 .title-header {

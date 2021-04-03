@@ -185,4 +185,73 @@ if ((lastUrlElement.includes("login.php"))) {
             confirmIcon.src = "./assets/img/check-not.svg";
         }
     });
+} else if ((lastUrlElement.includes("settings.php"))) {
+
+    const btnBasic = document.getElementById("btn-basic");
+    const btnSecurity = document.getElementById("btn-security");
+    const btnDeletion = document.getElementById("btn-deletion");
+
+    var conBasic = document.getElementById("con-basicinfo");
+    var conSecurity = document.getElementById("con-security");
+    var conAccount = document.getElementById("con-account");
+
+    const btnSideBar = document.getElementsByClassName("btn-sidebar");
+
+    for (var a = 0; a < btnSideBar.length; a++) {
+        btnSideBar[a].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+
+        });
+    }
+
+    btnBasic.addEventListener("click", function () {
+        if (conBasic.classList.contains("hidden")) {
+            conBasic.classList.remove("hidden");
+            conSecurity.classList.add("md:grid");
+        }
+
+        if ((conSecurity.classList.contains("md:grid"))) {
+            conSecurity.classList.add("hidden");
+        }
+
+        if (!(conAccount.classList.contains("md:grid"))) {
+            conAccount.classList.add("hidden");
+        }
+    });
+
+    btnSecurity.addEventListener("click", function () {
+        if (conSecurity.classList.contains("hidden")) {
+            conSecurity.classList.remove("hidden");
+            conSecurity.classList.add("md:grid");
+        }
+
+        if (!(conBasic.classList.contains("hidden"))) {
+            conBasic.classList.add("hidden");
+            conBasic.classList.remove("md:grid");
+        }
+
+        if (!(conAccount.classList.contains("hidden"))) {
+            conAccount.classList.remove("md:grid");
+            conAccount.classList.add("hidden");
+        }
+    });
+
+    btnDeletion.addEventListener("click", function () {
+        if (conAccount.classList.contains("hidden")) {
+            conAccount.classList.remove("hidden");
+            conAccount.classList.add("md:grid");
+        }
+
+        if (!(conBasic.classList.contains("hidden"))) {
+            conBasic.classList.add("hidden");
+            conBasic.classList.remove("md:grid");
+        }
+
+        if (!(conSecurity.classList.contains("hidden"))) {
+            conSecurity.classList.add("hidden");
+            conSecurity.classList.remove("md:grid");
+        }
+    });
 }
