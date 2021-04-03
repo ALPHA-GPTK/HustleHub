@@ -1,6 +1,6 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" s href="assets/img/favicon.png">
-    <title>HustleHub - MyGigs</title>
+    <title>HustleHub | MyGigs</title>
     <div class="bg-lightBlue_8">
         <?php require_once "./profile_header.php"; ?>
 
