@@ -1,6 +1,6 @@
 <?php
-session_start();
 require_once "dbConnection.inc";
+require_once "./function.php";
 
 if (isset($_POST["login"], $conn) && $conn) {
 
@@ -8,7 +8,9 @@ if (isset($_POST["login"], $conn) && $conn) {
     if ((!empty($_POST['email'])) && (!empty($_POST['password']))) {
 
         //Check Account return Boolean
-        $ckAccount = checkAccount($_POST["email"], sha1($_POST['password']), $conn);
+        $shaPass = sha1($_POST['password']);
+        $origPass = $_POST['password'];
+        $ckAccount = checkAccount($_POST["email"], $shaPass, $conn);
 
         if ($ckAccount) {
             $user_email = $_POST["email"];
@@ -25,6 +27,14 @@ if (isset($_POST["login"], $conn) && $conn) {
                 $_SESSION['user_username'] = $userResult['freelance_username'];
                 $_SESSION['user_email'] = $userResult['freelance_email'];
                 $_SESSION['user_password'] = $userResult['freelance_password'];
+
+                if (isset($_POST['rememberme'])) {
+                    setcookie("user_email", infoEncrypt($user_email), time() + 86400);
+                    setcookie("user_password", infoEncrypt($origPass), time() + 86400);
+                } else {
+                    setcookie("user_email", "", time() - 86400);
+                    setcookie("user_password", "", time() - 86400);
+                }
 
                 echo "<script>alert('Login Successfully.')
                 window.location.href='mygigs.php';
