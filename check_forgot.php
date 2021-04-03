@@ -21,7 +21,7 @@ if (isset($_POST['email'], $conn, $mail, $gmailUsername)) {
             $mail->setFrom($gmailUsername, "HustleHub");
 
             $mail->Subject = "Reset Password - HustleHub";
-            $mail->Body = "<h1>Verification Code</h1><br/>
+            $mail->Body = "<h1 class=\"h1-gmail\">Verification Code</h1><br/>
                             <h3>Please copy this code</h3><br/>
                             <h4>$randomCode</h4>";
 
