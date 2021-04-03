@@ -1,3 +1,21 @@
+<?php
+
+require_once "./dbConnection.inc";
+require_once "./function.php";
+
+getSessionValues();
+
+$firstname = null;
+$lastname = null;
+$username = null;
+$email = null;
+$about = null;
+
+if (isset($userId, $userName, $userEmail)) {
+}
+
+?>
+
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
 <title>HustleHub | Settings</title>
@@ -17,7 +35,7 @@
           </button>
         </div>
         <nav :class="{'block': open, 'hidden': !open}" class="sidebar flex-grow md:block w-full mb-44 md:pb-0 md:overflow-y-auto">
-          <a class="showSingle block px-10 py-4 text-sm font-semibold cursor-pointer rounded-t-lg btn-sidebar active" target="1" id="btn-basic">Account</a>
+          <a class="showSingle block px-10 py-4 text-sm font-semibold cursor-pointer rounded-t-lg c-darkBlue_65 btn-sidebar active" target="1" id="btn-basic">Account</a>
           <a class="showSingle block px-10 py-4 text-sm font-semibold cursor-pointer btn-sidebar c-darkBlue_65" target="2" id="btn-security">Security</a>
           <a class="showSingle block px-10 py-4 text-sm font-semibold cursor-pointer btn-sidebar c-darkBlue_65" target="3" id="btn-deletion">Deletion</a>
         </nav>
@@ -40,18 +58,14 @@
                       </svg>
                     </span>
                     <div class="flex flex-col space-y-2">
-                      <button type="button" class="ml-5 bg-blue-save py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Choose File
-                      </button>
-                      <button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Upload Now
-                      </button>
+                      <input type="file" value="Choose File" class="ml-5 bg-blue-save py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      <input type="submit" value="Upload Now" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     </div>
                   </div>
                 </div>
 
                 <div class="px-28 flex justify-end">
-                  <button type="reset" class="py-1 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  <button type="" id="edit" class="py-1 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     Edit
                   </button>
                 </div>
@@ -61,7 +75,7 @@
                     <label class="block mb-1 text-xs text-gray-600 font-black uppercase" for="fName">
                       First name
                     </label>
-                    <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="fName" id="fName" required />
+                    <input value="" class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="fName" id="fName" required />
                   </div>
                   <!-- Last Name -->
                   <div class="w-full md:w-1/2 mb-2">
@@ -109,7 +123,7 @@
                     </div>
 
                     <!-- CANCEL AND SAVE BUTTONS -->
-                    <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6">
+                    <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6" id="btnCS">
                       <button type="reset" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-change hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Cancel
                       </button>
@@ -142,12 +156,12 @@
                     </label>
                     <div class="relative text-gray-700">
                       <label>
-                        <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="current-password" id="current-password" required />
+                        <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="current-password" id="current-password" required />
                       </label>
 
                       <!-- svg hide password icon -->
-                      <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                        <img src="assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="password-show">
+                      <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer">
+                        <img src="./assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="current-password-icon">
                       </div>
 
                     </div>
@@ -158,12 +172,12 @@
                     </label>
                     <div class="relative text-gray-700">
                       <label>
-                        <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="new-password" id="new-password" required />
+                        <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="new-password" id="new-password" required />
                       </label>
 
                       <!-- svg hide password icon -->
-                      <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                        <img src="assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="password-show">
+                      <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer">
+                        <img src="./assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="new-password-icon">
                       </div>
 
                     </div>
@@ -174,12 +188,12 @@
                     </label>
                     <div class="relative text-gray-700">
                       <label>
-                        <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="confirm-password" id="confirm-password" required />
+                        <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="confirm-password" id="confirm-password" required disabled />
                       </label>
 
-                      <!-- svg hide password icon -->
+                      <!-- svg check password icon -->
                       <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                        <img src="assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="password-show">
+                        <img src="./assets/img/check-not.svg" alt="check-icon" class="h-6 w-6" id="confirm-password-check">
                       </div>
 
                     </div>
