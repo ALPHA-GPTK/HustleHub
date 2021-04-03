@@ -66,7 +66,7 @@ checkSession();
 
                             <div class="inset-y-0 right-10 flex items-center pr-4 pointer-events-none"><img src="assets/img/message.svg" alt="message-icon" class="h-4 w-6 hide" id="message-icon"> </div>
 
-                            <a href="setting.php" class="inset-y-0 right-10 flex items-center pr-4">
+                            <a href="settings.php" class="inset-y-0 right-10 flex items-center pr-4">
                                 <div class=""> <img src="assets/img/settings.svg" alt="settings-icon" class="h-4 w-6 hide" id="settings-icon"></div>
                             </a>
 
