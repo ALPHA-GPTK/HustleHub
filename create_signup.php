@@ -13,7 +13,7 @@ if (isset($_POST["signup"], $conn) && $conn) {
                 $fullName = sprintf("%s %s", $_POST["fName"], $_POST["lName"]);
                 $userName = $_POST["username"];
                 $email = $_POST["email"];
-                $password = $_POST["password"];
+                $password = sha1($_POST["password"]);
 
                 $sql = "INSERT INTO `freelance_db`.freelance_info (freelance_fullname, freelance_username, freelance_email, freelance_password) 
                         VALUES (?, ?, ?, ?);";
