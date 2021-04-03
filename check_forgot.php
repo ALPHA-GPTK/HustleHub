@@ -25,7 +25,8 @@ if (isset($_POST['email'], $conn, $mail, $gmailUsername)) {
                             <div class=\"c-black_100\">This email is to confirm a recent password reset request for your 
                             HustleHub account.</div><br/>
                             <div class=\"c-black_100\">To confirm this request and reset your password, please copy the code:</div><br/>
-                            <div class=\"c-black_100\">$randomCode</div>";
+                            <div class=\"c-black_100\">$randomCode</div>
+                            <div class=\"\">HustleHub | ALPHA Developers</div>";
 
             $mail->addAddress($email);
 
