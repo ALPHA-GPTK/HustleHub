@@ -151,9 +151,7 @@ if (isset($userId, $userName, $userEmail)) {
                   <div class="w-full space-y-2">
 
                     <!-- Current Password -->
-                    <label for="current-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
-                      Current Password
-                    </label>
+                    <label for="current-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">Current Password</label>
                     <div class="relative text-gray-700">
                       <label>
                         <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="current-password" id="current-password" required />
@@ -200,12 +198,8 @@ if (isset($userId, $userName, $userEmail)) {
 
                     <!-- CANCEL AND SAVE BUTTONS -->
                     <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6">
-                      <button type="reset" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-change hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Cancel
-                      </button>
-                      <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-save focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Save
-                      </button>
+                      <input type="reset" value="Cancel" name="cancelPass"  class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-change hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer" />
+                      <input type="submit" value="Save" name="changePass" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-save focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer" />
                     </div>
                   </div>
                 </div>

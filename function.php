@@ -59,6 +59,7 @@ function infoDecrypt($encryption)
 
 function getSessionValues()
 {
+    global $userId, $userFName, $userLName, $userName, $userEmail, $userPassword;
     $userId = $_SESSION['user_id'];
     $userFName = $_SESSION['user_firstname'];
     $userLName = $_SESSION['user_lastname'];
