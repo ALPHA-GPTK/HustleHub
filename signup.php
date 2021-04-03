@@ -1,6 +1,6 @@
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
-  <title>HustleHub | Signup</title>
+  <title>HustleHub | Sign Up</title>
   <div class="bg-lightBlue_8 h-screen">
     <?php require_once "header.php" ?>
     <div class="flex justify-center overflow-hidden mt-5">
@@ -62,7 +62,7 @@
               </div>
               <!-- Signup Button -->
               <div class="py-6 space-y-6">
-                <input type="submit" name="signup" value="Signup" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-indigo-500 rounded-lg focus:bg-indigo-600 focus:outline-none uppercase font-black cursor-pointer" />
+                <input type="submit" name="signup" value="Sign Up" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-indigo-500 rounded-lg focus:bg-indigo-600 focus:outline-none uppercase font-black cursor-pointer" />
                 <p class="text-sm text-center text-gray-400">Already on HustleHub?
                   <a class="text-blue focus:outline-none font-black focus:underline focus:text-indigo-500 dark:focus:border-indigo-800 uppercase" href="login.php">Log In</a>
                 </p>
