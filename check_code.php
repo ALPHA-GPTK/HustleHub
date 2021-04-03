@@ -10,7 +10,9 @@ if (isset($_POST['code'], $conn)) {
         $result = $conn->query($sql) or die($conn->error);
         $userResult = $result->fetch_assoc();
 
-        if ($userResult['freelance_passwordcode'] === $_POST['code']) {
+        if ($userResult['freelance_passwordcode'] === sha1($_POST['code'])) {
+            $sql = "UPDATE freelance_info SET freelance_passwordcode = NULL WHERE freelance_email = '$email'";
+            $conn->query($sql);
             header("location: changepass.php");
         } else {
             header("location: vericode.php?code=invalid");
