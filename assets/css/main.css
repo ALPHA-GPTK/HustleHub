@@ -135,7 +135,7 @@ a:focus {
 }
 
 section {
-    padding-bottom: 150px;
+    padding-bottom: 100px;
 }
 
 footer {
@@ -149,14 +149,12 @@ input::-webkit-input-placeholder {
 .tagline h1 {
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
     line-height: 58px;
 }
 
 .tagline p {
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
     line-height: 39px;
     color: rgba(44, 44, 44, 0.5);
 }
@@ -169,6 +167,8 @@ input::-webkit-input-placeholder {
     color: #8EC1D1;
 }
 
+
+/*
 .title-header {
     font-style: normal;
     font-weight: 900;
@@ -178,28 +178,27 @@ input::-webkit-input-placeholder {
     margin-bottom: 100px;
     text-align: center;
 }
+*/
 
 .features img {
     text-align: center;
 }
 
-.work-title {
+
+/*.work-title { 
     font-weight: 900;
     font-size: 28px;
     line-height: 34px;
     margin-top: 27px;
-}
-
-.work-desc {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 31px;
-    color: rgba(44, 44, 44, 0.5);
-}
+}*/
 
 .services {
     background-color: #8EC1D1;
+    transition: 0.3s;
+}
+
+.services:hover {
+    background-color: #364A7C;
 }
 
 .tag {
@@ -220,16 +219,20 @@ input::-webkit-input-placeholder {
     background-color: #FFFFFF;
 }
 
+.message-button,
 .update-button {
     border-color: #364A7C;
 }
 
+.hire-button,
 .delete-button {
     background-color: #364A7C;
     color: #FFFFFF;
     font-weight: 700;
 }
 
+.message-button:hover,
+.hire-button:hover,
 .update-button:hover,
 .delete-button:hover {
     background-color: #1a4cca;
@@ -307,11 +310,4 @@ input::-webkit-input-placeholder {
 
 .account-delete-button:hover {
     background: #7a0e0e;
-}
-
-
-/*Gmail Format*/
-
-.h1-gmail {
-    color: #2C2C2C;
 }
