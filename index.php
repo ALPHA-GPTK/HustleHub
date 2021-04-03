@@ -303,5 +303,3 @@
     </div>
 </footer>
 <!-- End of Footer -->
-
-</html>

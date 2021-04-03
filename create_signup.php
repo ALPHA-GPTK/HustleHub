@@ -1,10 +1,10 @@
 <?php require_once "dbConnection.inc";
 
-if (isset($_POST["signup"])) {
+if (isset($_POST["signup"], $conn)) {
 
     //Check input if empty
     if ((!empty($_POST['fName'])) && (!empty($_POST['lName'])) && (!empty($_POST['username'])) && (!empty($_POST['email'])) && (!empty($_POST['password'])) && (!empty($_POST['confirm_password']))) {
-        if ($_POST['password'] == $_POST['confirm_password']) {
+        if ($_POST['password'] === $_POST['confirm_password']) {
 
             //Check Account return Boolean
             $ckAccount = checkAccount($_POST['email'], $conn);
@@ -15,7 +15,7 @@ if (isset($_POST["signup"])) {
                 $email = $_POST["email"];
                 $password = sha1($_POST["password"]);
 
-                if (isset($conn) && $conn) {
+                if ($conn) {
                     $sql = "INSERT INTO `freelance_db`.freelance_info (freelance_fullname, freelance_username, freelance_email, freelance_password) 
                               VALUES (?, ?, ?, ?);";
                     $stmt = mysqli_prepare($conn, $sql);
@@ -30,7 +30,7 @@ if (isset($_POST["signup"])) {
                     }
                     $conn->close();
                 } else {
-                    die("Connection Failed: " . $conn->erorr());
+                    die("Connection Failed: " . $conn->connect_error);
                 }
             } else {
                 header(("location: signup.php?account_status=exists"));
@@ -44,15 +44,11 @@ if (isset($_POST["signup"])) {
 }
 
 //Check Account if already exists return boolean
-function checkAccount($email, $conn)
+function checkAccount($email, $conn): bool
 {
     $sql = "SELECT freelance_email FROM freelance_info WHERE freelance_email = '$email'";
     $result = $conn->query($sql) or die($conn->error);
     $userCount = count($result->fetch_all());
 
-    if ($userCount > 0) {
-        return false;
-    } else {
-        return true;
-    }
+    return !($userCount > 0);
 }

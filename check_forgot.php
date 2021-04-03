@@ -5,7 +5,7 @@ session_start();
 require_once "dbConnection.inc";
 require_once "sendmail.php";
 
-if (isset($_POST['email'])) {
+if (isset($_POST['email'], $conn, $mail, $gmailUsername)) {
     if (!empty($_POST['email'])) {
         $ck_Account = checkAccount($_POST['email'], $conn);
 
@@ -25,11 +25,15 @@ if (isset($_POST['email'])) {
 
             $mail->addAddress($email);
 
-            if (!$mail->Send()) {
-                echo "Mailer Error: " . $mail->ErrorInfo;
-            } else {
-                $_SESSION['email'] = $email;
-                header("location: vericode.php");
+            try {
+                if (!$mail->Send()) {
+                    echo "Mailer Error: " . $mail->ErrorInfo;
+                } else {
+                    $_SESSION['email'] = $email;
+                    header("location: vericode.php");
+                }
+            } catch (phpmailerException $e) {
+                return $e;
             }
             //////////////////////////////////////////////
         } else {
@@ -40,15 +44,11 @@ if (isset($_POST['email'])) {
     }
 }
 
-function checkAccount($email, $conn)
+function checkAccount($email, $conn): bool
 {
     $sql = "SELECT freelance_email FROM freelance_info WHERE freelance_email = '$email'";
     $result = $conn->query($sql) or die($conn->error);
     $userCount = count($result->fetch_all());
 
-    if ($userCount == 1) {
-        return true;
-    } else {
-        return false;
-    }
+    return $userCount === 1;
 }
