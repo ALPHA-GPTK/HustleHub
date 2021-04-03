@@ -121,6 +121,7 @@
                 </div>
               </div>
             </div>
+          </form>
         </div>
       </div>
       <!-- Security -->
@@ -196,6 +197,7 @@
                 </div>
               </div>
             </div>
+          </form>
         </div>
       </div>
       <!-- Account Deletion -->
@@ -222,6 +224,7 @@
                 </div>
               </div>
             </div>
+          </form>
         </div>
       </div>
       <br>
