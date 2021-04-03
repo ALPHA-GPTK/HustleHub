@@ -13,7 +13,7 @@ if (isset($_POST["login"], $conn) && $conn) {
         if ($ckAccount) {
             $user_email = $_POST["email"];
             $user_password = sha1($_POST["password"]);
-            $sql = "SELECT freelance_email FROM freelance_info 
+            $sql = "SELECT freelance_id, freelance_username, freelance_email, freelance_password FROM freelance_info 
                     WHERE freelance_email = '$user_email' AND freelance_password = '$user_password'";
             $result = $conn->query($sql) or die($conn->error);
             $userCount = $result->num_rows;
