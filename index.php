@@ -78,7 +78,7 @@
     <div class="antialiased pl-14 pr-14">
         <div class="flex flex-wrap -mx-4">
             <!-- Card 1 -->
-            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
+            <div class="mx-auto justify-center transform scale-90 transition duration-500 w-full sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100">
                 <div class="card block bg-white shadow-md rounded-lg overflow-hidden">
                     <div class="flex items-center p-9 pt-24">
                         <div class="relative flex flex-col items-center w-full">
@@ -131,7 +131,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
+            <div class="mx-auto justify-center transform scale-90 transition duration-500 w-full sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100">
                 <div class="card block bg-white shadow-md rounded-lg overflow-hidden">
                     <div class="flex items-center p-9 pt-24">
                         <div class="relative flex flex-col items-center w-full">
@@ -184,7 +184,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
+            <div class="mx-auto justify-center transform scale-90 transition duration-500 w-full sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100">
                 <div class="card block bg-white shadow-md rounded-lg overflow-hidden">
                     <div class="flex items-center p-9 pt-24">
                         <div class="relative flex flex-col items-center w-full">
@@ -286,7 +286,7 @@
 <!-- End of Companies Section -->
 
 <!-- Start of Banner Section -->
-<section class="container mx-auto relative py-8 px-4">
+<section class="container mx-auto relative py-8 px-4 mb-20 sm:mb-24 md:mb-32 lg:mb-40 xl:mb-56 2xl:mb-56">
     <div class="z-20 relative text-white container mx-auto rounded-3xl lg:mt-0 lg:pt-4 xl:pt-20 2xl:pt-14 2xl:pl-14 2xl:pt-6">
         <div class="flex flex-wrap justify-center -mt-2 sm:mt-5 md:mt-8 lg:justify-start lg:m-16 lg:mt-9 xl:justify-start xl:m-10 xl:-mt-8 2xl:justify-start 2xl:mt-5">
             <div class="text-2xl md:text-3xl lg:text-4xl xl:text-4xl xl:m-8 2xl:text-4xl font-extrabold text-white">Join our Freelancing Team</div>
