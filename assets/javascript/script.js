@@ -4,7 +4,7 @@
 var urlCheck = (window.location.href).split("/");
 var lastUrlElement = urlCheck[urlCheck.length - 1]
 
-if (lastUrlElement == 'login.php') {
+if ((lastUrlElement.includes("login.php"))) {
     const emailInput = document.getElementById("email");
     const emailLogo = document.getElementById("email-logo");
 
@@ -29,7 +29,7 @@ if (lastUrlElement == 'login.php') {
         passwordIcon.src = "./assets/img/hide.svg";
         passwordInput.type = "password";
     });
-} else if (lastUrlElement == 'signup.php') { //Sign up Page
+} else if ((lastUrlElement.includes("signup.php"))) { //Sign up Page
     //Username
     const userNameInput = document.getElementById('username');
     const userNameIcon = document.getElementById('username-icon');
@@ -107,7 +107,7 @@ if (lastUrlElement == 'login.php') {
             confirmIcon.src = "./assets/img/check-not.svg";
         }
     });
-} else if (lastUrlElement == "forgot.php") {
+} else if ((lastUrlElement.includes("forgot.php"))) {
     //Email
     const emailInput = document.getElementById('email');
     const emailIcon = document.getElementById('email-icon');
@@ -119,7 +119,7 @@ if (lastUrlElement == 'login.php') {
     emailInput.addEventListener('focusout', (event) => {
         emailIcon.src = "./assets/img/mail-out.svg";
     });
-} else if (lastUrlElement == 'vericode.php') {
+} else if ((lastUrlElement.includes("vericode.php"))) {
     //Code Verification
     const codeInput = document.getElementById('code');
     const codeIcon = document.getElementById('code-icon');
@@ -131,7 +131,7 @@ if (lastUrlElement == 'login.php') {
     codeInput.addEventListener('focusout', (event) => {
         codeIcon.src = "./assets/img/code-out.svg";
     });
-} else if (lastUrlElement == 'changepass.php') {
+} else if ((lastUrlElement.includes("changepass.php"))) {
     //Password
     const passwordInput = document.getElementById('newpassword');
     const passwordIcon = document.getElementById('newpassword-icon');
