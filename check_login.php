@@ -8,35 +8,41 @@ if (isset($_POST["login"], $conn) && $conn) {
     if ((!empty($_POST['email'])) && (!empty($_POST['password']))) {
 
         //Check Account return Boolean
-
-        $ckAccount = checkAccount($_POST["email"], sha1($_POST['password']), $conn);
+        $ckAccount = checkAccount($_POST["email"], $_POST['password'], $conn);
 
         if ($ckAccount) {
-            $user_email = mysqli_real_escape_string($conn, $_POST["email"]);
-            $user_password = mysqli_real_escape_string($conn, sha1($_POST["password"]));
+            $user_email = $_POST["email"];
+            $user_password = $_POST["password"];
             $sql = "SELECT freelance_email FROM freelance_info 
                     WHERE freelance_email = '$user_email' AND freelance_password = '$user_password'";
-            $query = $conn->query($sql) or die($conn->error);
-            $userCount = count($query->fetch_all());
+            $result = $conn->query($sql) or die($conn->error);
+            $userCount = $result->num_rows;
 
             if ($userCount === 1) {
-                $sql = "SELECT freelance_id, freelance_username, freelance_email, freelance_password FROM freelance_info WHERE freelance_email = '$user_email' AND freelance_password = '$user_password'";
-                $result = $conn->query($sql);
                 $userResult = $result->fetch_assoc();
 
                 $_SESSION['user_id'] = $userResult['freelance_id'];
                 $_SESSION['user_username'] = $userResult['freelance_username'];
                 $_SESSION['user_email'] = $userResult['freelance_email'];
                 $_SESSION['user_password'] = $userResult['freelance_password'];
-                header("Location: gigs.php");
+
+                echo "<script>alert('Login Successfully.')
+                window.location.href='gigs.php';
+                </script>";
             } else {
-                header("Location: login.php?login=fail");
+                echo "<script>alert('Username or Password is incorrect.')
+                window.location.href='login.php?account_status=fail';
+                </script>";
             }
         } else {
-            header("location: login.php?account_status=notexist");
+            echo "<script>alert('User doesn\'t exists.')
+            window.location.href='login.php?account_status=not_exist';
+            </script>";
         }
     } else {
-        header("location: login.php?input_status=blank");
+        echo "<script>alert('Please fill in the required information.')
+        window.location.href='login.php?account_status=blank';
+        </script>";
     }
 } else {
     trigger_error("Connection failed: " . $conn->connect_error);
@@ -44,7 +50,8 @@ if (isset($_POST["login"], $conn) && $conn) {
 
 function checkAccount($email, $password, $conn): bool
 {
-    $sql = "SELECT freelance_email, freelance_password FROM freelance_info WHERE freelance_email = '$email' AND freelance_password = '$password'";
+    $sql = "SELECT freelance_email, freelance_password FROM freelance_info 
+            WHERE freelance_email = '$email' AND freelance_password = '$password'";
     $result = $conn->query($sql) or die($conn->error);
     $userCount = count($result->fetch_all());
 
