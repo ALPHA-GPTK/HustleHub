@@ -5,8 +5,7 @@
         <div class="c-black_50 text-lg 2xl:text-2xl">An online freelance services platform for everyone</div>
     </div>
 
-    <!-- FIX THIS FOR MOBILE image should not be visible-->
-    <div class="photo">
+    <div class="photo hidden md:block lg:block xl:block 2xl:block">
         <img src="assets/img/hero_image.png" alt="Hero-Image" />
     </div>
 </main>
@@ -297,49 +296,58 @@
     </div>
     <div class="absolute inset-0 h-auto z-10">
         <div class="w-11/12 rounded-3xl mx-auto">
-            <img src="./assets/img/cta.png" alt="" class="h-full w-full object-fit-cover">  
+            <img src="./assets/img/cta.png" alt="" class="h-full w-full object-fit-cover">
         </div>
     </div>
 </section>
 <!-- End of Banner Section -->
 
 <!-- Start of Footer -->
-<footer class="pb-32 pt-24">
-    <div class="xl:px-40 pb-14 lg:px-20 md:px-10 sm:px-5 px-10">
-        <div class="w-full pt-12 flex flex-col sm:flex-row space-y-4 justify-between">
-            <div class="flex flex-col space-y-4">
-                <a href="./index.php"><span class="c-darkBlue_100 text-5xl f-fredokaone-regular">HUSTLE</span><span class="c-lightBlue_100 text-5xl f-fredokaone-regular">HUB</span></a>
-                <div class="text-center pt-2">
-                    <p class="text-xl pb-4 c-black_100">(02) 8281-88-88</p>
-                    <p class="text-base c_gray">hustlehub@gmail.com</p>
+<footer class="container mx-auto px-6 lg:px-20 py-12">
+    <div class="lg:flex">
+        <div class="w-full lg:w-3/4">
+            <div class="lg:flex">
+                <div class="w-full flex flex-col justify-center items-center mb-12 lg:mb-0 lg:w-1/2 lg:space-y-4">
+                    <a href="./index.php"><span class="c-darkBlue_100 text-5xl f-fredokaone-regular cursor-pointer">HUSTLE</span><span class="c-lightBlue_100 text-5xl f-fredokaone-regular cursor-pointer">HUB</span></a>
+                    <div class="text-center pt-2">
+                        <p class="text-base pb-2 lg:pb-4 c-black_100">(02) 8281-88-88</p>
+                        <p class="text-base c_gray">hustlehub@gmail.com</p>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 lg:flex lg:px-6 ">
+                    <div class="w-full mb-6 lg:mb-0 lg:w-1/2 lg:space-y-4">
+                        <a class="font-semibold pb-2 c-black_100">About</a>
+                        <ul>
+                            <li class="py-2"><a class="cursor-pointer c-gray_100">Privacy Policy</a></li>
+                            <li class="py-2"><a class="cursor-pointer c-gray_100">Terms of Service</a></li>
+                            <li class="py-2"><a class="cursor-pointer c-gray_100">Intellectual Property Claims</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-full mb-6 lg:mb-0 lg:w-1/2 lg:space-y-4">
+                        <a class="font-semibold pb-2 c-black_100">Support</a>
+                        <ul>
+                            <li class="py-2"><a class="cursor-pointer c-gray_100">Help & Support</a></li>
+                            <li class="py-2"><a class="cursor-pointer c-gray_100">Trust & Safety</a></li>
+                            <li class="py-2"><a class="cursor-pointer c-gray_100">Community Standards</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="w-full sm:w-1/5 flex flex-col space-y-4">
-                <a class="font-semibold pb-2 c-black_100">About Us</a>
-                <a class="cursor-pointer c-gray_100">Privacy Policy</a>
-                <a class="cursor-pointer c-gray_100">Terms of Service</a>
-                <a class="cursor-pointer c-gray_100">Intellectual Property Claims</a>
-            </div>
-            <div class="w-full sm:w-1/5 flex flex-col space-y-4">
-                <a class="font-semibold pb-2 c-black_100">Support</a>
-                <a class="cursor-pointer c-gray_100">Help & Support</a>
-                <a class="cursor-pointer c-gray_100">Trust & Safety</a>
-                <a class="cursor-pointer c-gray_100">Community Standards</a>
-            </div>
-            <div class="w-full sm:w-1/5 flex flex-col">
-                <form>
-                    <label class="space-y-4">
-                        <p class="font-semibold c-black_100">Subscribe</p>
-                        <input type="text" class="rounded-l-lg p-3 placeholder-gray-700 focus:outline-none border-t border-b border-l w-3/4 -mr-1 bg-white border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" placeholder="Get product updates" />
-                    </label>
-                    <button class="rounded-r-lg font-bold p-3 px-4 uppercase input-blue focus:outline-none shadow">
-                        <input type="image" class="focus:outline-none align-middle" src="assets/img/arrows.png" alt="">
-                    </button>
-                </form>
-            </div>
+        </div>
+        <div class="w-full lg:w-1/4">
+            <form>
+                <label class="space-y-4">
+                    <p class="font-semibold c-black_100">Subscribe</p>
+                    <input type="text" class="rounded-l-lg p-3 placeholder-gray-700 focus:outline-none border-t border-b border-l w-3/4 -mr-1 bg-white border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" placeholder="Get product updates" />
+                </label>
+                <button class="rounded-r-lg font-bold p-3 px-4 uppercase input-blue focus:outline-none shadow">
+                    <input type="image" class="focus:outline-none align-middle" src="assets/img/arrows.png" alt="Arrow Button">
+                </button>
+            </form>
         </div>
     </div>
-    <div class="container flex mx-auto">
+    <div class="container flex mx-auto pt-12">
         <div class="pt-12 border-t-2 border-gray-300 w-full flex flex-col sm:flex-row">
             <div class="space-x-2 sm:w-1/5 flex flex-row">
                 <i class="cursor-pointer"><img src="assets/img/linkedin-footer.svg" alt="linkedin-footer"></i>
@@ -356,4 +364,5 @@
     </div>
 </footer>
 <!-- End of Footer -->
+
 </html>
