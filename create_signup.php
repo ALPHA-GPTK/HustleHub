@@ -19,11 +19,11 @@ if (isset($_POST["signup"], $conn) && $conn) {
 
                 $sql = "INSERT INTO `freelance_db`.freelance_info (freelance_fName, freelance_lName, freelance_username, freelance_email, freelance_password) 
                         VALUES (?, ?, ?, ?, ?);";
-                $stmt = mysqli_prepare($conn, $sql);
-                mysqli_stmt_bind_param($stmt, "sssss", $firstName,$lastName, $userName, $email, $password);
-                $result = mysqli_stmt_execute($stmt);
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("sssss", $firstName, $lastName, $userName, $email, $password);
+                $stmt->execute();
 
-                if (mysqli_stmt_affected_rows($stmt) === 1) {
+                if ($stmt->affected_rows === 1) {
                     echo "<script>alert('Login Successfully')
                     window.location.href='gigs.php';
                     </script>";
