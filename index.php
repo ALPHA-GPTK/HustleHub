@@ -14,24 +14,38 @@
 <!-- Start of How it Works Section -->
 <section class="w-full mx-auto bg-blue-50 -mb-10">
     <div>
-        <div class="text-4xl pt-20 py-10 mb-12 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-5xl lg:mb-14 lg:pt-20 xl:text-5xl xl:mb-14 2xl:text-5xl 2xl:mb-14 font-black ">How it Works</div>
+        <div class="text-4xl pt-20 py-10 mb-12 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-5xl lg:mb-14 lg:pt-20 xl:text-5xl xl:mb-14 2xl:text-5xl 2xl:mb-14 font-black">How it Works</div>
     </div>
 
-    <div class="text-center features flex justify-evenly items-center">
-        <div class="account">
-            <img class="inline-block w-1/2 lg:w-2/3 xl:w-2/3 2xl:w-2/3" src="assets/img/account.svg" alt="Account" width="125">
-            <p class="font-black text-xl pt-2 leading-8 md:text-2xl lg: mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Account</p>
-            <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Create your Account</p>
+    <div class="features flex flex-wrap justify-evenly items-center text-center -mb-5">
+        <div class="flex justify-center align-center">
+            <div class="p-4">
+                <div class="account flex flex-row">
+                    <div class="flex-1">
+                        <img class="inline-block w-full lg:w-2/3 xl:w-2/3 2xl:w-2/3" src="assets/img/account.svg" alt="Account" style="width: 140px;">
+                        <p class="font-black text-xl pt-2 leading-8 mt-3 md:text-2xl md:mt-5 lg:mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Account</p>
+                        <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Create your Account</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="discover">
-            <img class="inline-block w-1/2 lg:w-2/3 xl:w-2/3 2xl:w-2/3" src="assets/img/discover.svg" alt="Discover" width="125">
-            <p class="font-black text-xl pt-2 leading-8 md:text-2xl lg: mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Discover</p>
-            <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Search your freelancer</p>
+        <div class="p-4">
+            <div class="account flex flex-row">
+                <div class="flex-1">
+                    <img class="inline-block w-full lg:w-2/3 xl:w-2/3 2xl:w-2/3" src="assets/img/discover.svg" alt="Discover" style="width: 140px;">
+                    <p class="font-black text-xl pt-2 leading-8 mt-3 md:text-2xl md:mt-5 lg:mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Discover</p>
+                    <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Search your freelancer</p>
+                </div>
+            </div>
         </div>
-        <div class="hire">
-            <img class="inline-block w-1/2 lg:w-2/3 xl:w-2/3 2xl:w-2/3" src="assets/img/hire.svg" alt="Hire" width="125">
-            <p class="font-black text-xl pt-2 leading-8 md:text-2xl lg: mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Hire</p>
-            <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Pay the price</p>
+        <div class="p-4">
+            <div class="account flex flex-row">
+                <div class="flex-1">
+                    <img class="inline-block w-full md:w-full lg:w-full xl:w-full 2xl:w-full" src="assets/img/hire.svg" alt="Hire" style="width: 140px;">
+                    <p class="font-black text-xl pt-2 leading-8 mt-3 md:text-2xl md:mt-5 lg:mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Hire</p>
+                    <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Pay the price</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -83,12 +97,12 @@
                                 </p>
                                 <!-- Linked Accounts -->
                                 <div class="container space-x-8 social-links flex justify-center items-center pb-6">
-                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
-                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
-                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
-                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
-                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
-                                    <img src="assets/img/behance-logo.svg" alt="behance-logo">
+                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/behance-logo.svg" alt="behance-logo" class="transform duration-300 opacity-60 hover:opacity-100">
                                 </div>
                                 <!-- No. of Clients, Stars -->
                                 <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
@@ -136,12 +150,12 @@
                                 </p>
                                 <!-- Linked Accounts -->
                                 <div class="container space-x-8 social-links flex justify-center items-center pb-6">
-                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
-                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
-                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
-                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
-                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
-                                    <img src="assets/img/behance-logo.svg" alt="behance-logo">
+                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/behance-logo.svg" alt="behance-logo" class="transform duration-300 opacity-60 hover:opacity-100">
                                 </div>
                                 <!-- No. of Clients, Stars -->
                                 <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
@@ -189,12 +203,12 @@
                                 </p>
                                 <!-- Linked Accounts -->
                                 <div class="container space-x-8 social-links flex justify-center items-center pb-6">
-                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
-                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
-                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
-                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo">
-                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo">
-                                    <img src="assets/img/behance-logo.svg" alt="behance-logo">
+                                    <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/instagram-logo.svg" alt="instagram-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/twitter-logo.svg" alt="twitter-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/linkedIn-logo.svg" alt="linkedIn-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/facebook-logo.svg" alt="facebook-logo" class="transform duration-300 opacity-60 hover:opacity-100">
+                                    <img src="assets/img/behance-logo.svg" alt="behance-logo" class="transform duration-300 opacity-60 hover:opacity-100">
                                 </div>
                                 <!-- No. of Clients, Stars -->
                                 <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
@@ -230,7 +244,7 @@
 <section class="container w-full mx-auto">
     <div class="company space-x-16 flex pt-24 justify-center items-center">
         <div class="flex flex-wrap justify-center items-center">
-            <div class="w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/4 p-3 flex justify-center align-center">
+            <div class="w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 p-3 flex justify-center align-center">
                 <div class="p-2">
                     <div class="flex flex-row items-center">
                         <div class="flex-1">
@@ -239,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/4 p-3 flex justify-center align-center">
+            <div class="w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 p-3 flex justify-center align-center">
                 <div class="p-2">
                     <div class="flex flex-row items-center">
                         <div class="flex-1">
@@ -248,7 +262,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/4 p-3 flex justify-center align-center">
+            <div class="w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 p-3 flex justify-center align-center">
                 <div class="p-2">
                     <div class="flex flex-row items-center">
                         <div class="flex-1 justify-items-center align-center">
@@ -257,7 +271,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/4 p-3 flex justify-center align-center">
+            <div class="w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 p-3 flex justify-center align-center">
                 <div class="p-2">
                     <div class="flex flex-row items-center">
                         <div class="flex-1">
@@ -269,21 +283,25 @@
         </div>
     </div>
 </section>
+<!-- End of Companies Section -->
 
-<section class="container w-full mx-auto -mb-8">
-    <!-- CTA -->
-    <div class="cta rounded-3xl max-w-7xl mx-auto py-12 sm:px-6 lg:py-16 lg:px-12 lg:flex lg:items-center lg:justify-between">
-        <div class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            <h2 class="block text-white mb-6">Join our Freelancing Team</h2>
-            <div class="flex justify-center items-center pt-4">
-                <a href="#" class="inline-flex items-center justify-center rounded-lg px-5 py-3 border border-transparent shadow join-now c-black_100 f-inter-black text-lg">
-                    Join Now
-                </a>
-            </div>
+<!-- Start of Banner Section -->
+<section class="container mx-auto relative py-8 px-4">
+    <div class="z-20 relative text-white container mx-auto rounded-3xl lg:mt-0 lg:pt-4 xl:pt-20 2xl:pt-14 2xl:pl-14 2xl:pt-6">
+        <div class="flex flex-wrap justify-center -mt-2 sm:mt-5 md:mt-8 lg:justify-start lg:m-16 lg:mt-9 xl:justify-start xl:m-10 xl:-mt-8 2xl:justify-start 2xl:mt-5">
+            <div class="text-2xl md:text-3xl lg:text-4xl xl:text-4xl xl:m-8 2xl:text-4xl font-extrabold text-white">Join our Freelancing Team</div>
+        </div>
+        <div class="flex flex-wrap justify-center lg:justify-start xl:ml-24 xl:ml-24 2xl:ml-24">
+            <a href="#" class="inline-flex items-center justify-center rounded-lg px-3 py-2 mt-2 text-sm sm:px-3 sm:py-2 md:px-5 md:py-3 lg:px-5 lg:py-3 lg:-mt-12 lg:ml-16 xl:justify-start xl:-ml-6 xl:py-3 border border-transparent shadow join-now c-black_100 f-inter-black text-xs 2xl:text-lg">Join Now</a>
+        </div>
+    </div>
+    <div class="absolute inset-0 h-auto z-10">
+        <div class="w-11/12 rounded-3xl mx-auto">
+            <img src="./assets/img/cta.png" alt="" class="h-full w-full object-fit-cover">  
         </div>
     </div>
 </section>
-<!-- End of Companies Section -->
+<!-- End of Banner Section -->
 
 <!-- Start of Footer -->
 <footer class="pb-32 pt-24">
@@ -338,3 +356,4 @@
     </div>
 </footer>
 <!-- End of Footer -->
+</html>
