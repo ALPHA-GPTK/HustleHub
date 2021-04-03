@@ -6,7 +6,7 @@
 
         <section class="mx-auto">
             <div>
-                <h1 class="title-header font-bold">MyGigs</h1>
+                <h1 class="title-header font-bold">Gigs</h1>
             </div>
 
             <div class="antialiased pl-14 pr-14">

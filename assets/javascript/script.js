@@ -258,5 +258,70 @@ if ((lastUrlElement.includes("login.php"))) {
     });
 
     //Current Password
+    const currentPasswordInput = document.getElementById('current-password');
+    const currentPasswordIcon = document.getElementById('current-password-icon');
 
+    currentPasswordIcon.addEventListener('mousedown', (event) => {
+        currentPasswordIcon.src = "./assets/img/show.svg";
+        currentPasswordInput.type = "text";
+    });
+
+    currentPasswordIcon.addEventListener('mouseup', (event) => {
+        currentPasswordIcon.src = "./assets/img/hide.svg";
+        currentPasswordInput.type = "password";
+    });
+
+    //New Password
+    const newPasswordInput = document.getElementById('new-password');
+    const newPasswordIcon = document.getElementById('new-password-icon');
+
+    newPasswordIcon.addEventListener('mousedown', (event) => {
+        newPasswordIcon.src = "./assets/img/show.svg";
+        newPasswordInput.type = "text";
+    });
+
+    newPasswordIcon.addEventListener('mouseup', (event) => {
+        newPasswordIcon.src = "./assets/img/hide.svg";
+        newPasswordInput.type = "password";
+    });
+
+    //Confirm Password
+    const confirmInput = document.getElementById("confirm-password");
+    const confirmIcon = document.getElementById("confirm-password-check");
+
+    newPasswordInput.addEventListener('input', (event) => {
+        if (newPasswordInput.value == null) {
+            confirmInput.disabled;
+        } else {
+            confirmInput.disabled = false;
+        }
+
+        if (newPasswordInput.value == confirmInput.value) {
+            confirmIcon.src = "./assets/img/check-same.svg";
+        } else if (newPasswordInput.value != confirmInput.value) {
+            confirmIcon.src = "./assets/img/check-not.svg";
+        } else if ((newPasswordInput.value == '' || newPasswordInput.value == null) && (confirmInput.value == '' || confirmInput.value == null)) {
+            confirmIcon.src = "./assets/img/check-not.svg";
+        }
+    });
+
+    newPasswordInput.addEventListener('focusout', (event) => {
+        if ((newPasswordInput.value).trim() == null || (newPasswordInput.value).trim() == "") {
+            if (confirmInput.value != null) {
+                confirmInput.value = "";
+            }
+
+            confirmInput.disabled = true;
+        } else {
+            confirmInput.disabled = false;
+        }
+    });
+
+    confirmInput.addEventListener('input', (event) => {
+        if (newPasswordInput.value == confirmInput.value) {
+            confirmIcon.src = "./assets/img/check-same.svg";
+        } else {
+            confirmIcon.src = "./assets/img/check-not.svg";
+        }
+    });
 }
