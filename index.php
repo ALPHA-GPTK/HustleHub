@@ -1,48 +1,49 @@
 <?php require_once "header.php"; ?>
 <main class="flex mx-auto justify-between items-center w-full mb-28">
-    <div class="tagline px-40">
-        <h1 class="mb-8 c-black_100 f-inter-bold text-5xl">Hustle your skill for money <br> with <span class="main-title f-fredokaone-regular">Hustle</span><span class="sub-title f-fredokaone-regular">Hub</span></h1>
-        <p class="c-black_50">An online freelance services platform for everyone</p>
+    <div class="tagline px-10 2xl:px-40">
+        <div class="mb-8 c-black_100 f-inter-bold text-4xl xl:text-5xl 2xl:text-5xl">Hustle your skill for money <br> with <span class="main-title f-fredokaone-regular">Hustle</span><span class="sub-title f-fredokaone-regular">Hub</span></div>
+        <div class="c-black_50 text-lg 2xl:text-2xl">An online freelance services platform for everyone</div>
     </div>
 
+    <!-- FIX THIS FOR MOBILE image should not be visible-->
     <div class="photo">
         <img src="assets/img/hero_image.png" alt="Hero-Image" />
     </div>
 </main>
 
 <!-- Start of How it Works Section -->
-<section class="w-full mx-auto bg-blue-50">
+<section class="w-full mx-auto bg-blue-50 -mb-10">
     <div>
-        <h1 class="title-header">How it Works</h1>
+        <div class="text-4xl pt-20 py-10 mb-12 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-5xl lg:mb-14 lg:pt-20 xl:text-5xl xl:mb-14 2xl:text-5xl 2xl:mb-14 font-black ">How it Works</div>
     </div>
 
-    <div class="text-center features flex justify-evenly items-center ">
+    <div class="text-center features flex justify-evenly items-center">
         <div class="account">
-            <img class="inline-block" src="assets/img/account.svg" alt="">
-            <p class="work-title">Account</p>
-            <p class="work-desc">Create your Account</p>
+            <img class="inline-block w-1/2 lg:w-2/3 xl:w-2/3 2xl:w-2/3" src="assets/img/account.svg" alt="Account" width="125">
+            <p class="font-black text-xl pt-2 leading-8 md:text-2xl lg: mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Account</p>
+            <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Create your Account</p>
         </div>
         <div class="discover">
-            <img class="inline-block" src="assets/img/discover.svg" alt="">
-            <p class="work-title">Discover</p>
-            <p class="work-desc">Search your freelancer</p>
+            <img class="inline-block w-1/2 lg:w-2/3 xl:w-2/3 2xl:w-2/3" src="assets/img/discover.svg" alt="Discover" width="125">
+            <p class="font-black text-xl pt-2 leading-8 md:text-2xl lg: mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Discover</p>
+            <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Search your freelancer</p>
         </div>
         <div class="hire">
-            <img class="inline-block" src="assets/img/hire.svg" alt="">
-            <p class="work-title">Hire</p>
-            <p class="work-desc">Pay the price</p>
+            <img class="inline-block w-1/2 lg:w-2/3 xl:w-2/3 2xl:w-2/3" src="assets/img/hire.svg" alt="Hire" width="125">
+            <p class="font-black text-xl pt-2 leading-8 md:text-2xl lg: mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Hire</p>
+            <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Pay the price</p>
         </div>
     </div>
 </section>
 <!-- End of How it Works Section -->
 
 <!-- Start of Popular Service Section -->
-<section class="container mx-auto">
+<section class="container mx-auto mb-14">
     <div>
-        <h1 class="title-header">Popular Services</h1>
+        <div class="text-4xl pt-20 mt-10 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-5xl lg:pt-20 xl:text-5xl 2xl:text-5xl font-black mb-12">Popular Services</div>
     </div>
 
-    <div class="container-services space-y-2 mx-36 text-center">
+    <div class="container-services space-y-2 mx-36 text-center -mb-16">
         <div class="services rounded-full py-3 px-6 inline-block text-white">Web Design</div>
         <div class="services rounded-full py-3 px-6 inline-block text-white">Accounting</div>
         <div class="services rounded-full py-3 px-6 inline-block text-white">Architectural Design</div>
@@ -57,31 +58,31 @@
 <!-- Start of Top Providers Section -->
 <section class="provider mx-auto">
     <div>
-        <h1 class="title-header">Top Providers</h1>
+        <div div class="text-4xl pt-20 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-5xl lg:pt-20 xl:text-5xl 2xl:text-5xl font-black mb-12">Top Providers</div>
     </div>
 
     <div class="antialiased pl-14 pr-14">
         <div class="flex flex-wrap -mx-4">
             <!-- Card 1 -->
-            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-1/2 md:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
+            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
                 <div class="card block bg-white shadow-md rounded-lg overflow-hidden">
                     <div class="flex items-center p-9 pt-24">
                         <div class="relative flex flex-col items-center w-full">
                             <!-- Image -->
-                            <div class="h-24 w-24 rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
-                                <img class="h-24 w-24 md rounded-full relative" src="./assets/img/velasco-pic.jpg" alt="">
+                            <div class="relative flex items-end justify-end absolute -top-16 flex row-start-1 row-end-3">
+                                <img class="inline object-cover h-24 w-24 md rounded-full" src="./assets/img/velasco-pic.jpg" alt="Prince Velasco">
                                 <div class="absolute"></div>
                             </div>
                             <!-- PRO, Name, Description -->
                             <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
                                 <span class="text-md whitespace-nowrap text-gray-800 rounded-lg tag py-2 px-3">PRO</span>
-                                <span class="text-md whitespace-nowrap text-black font-bold leading-normal ">Prince Carl Velasco</span>
-                                <span class="text-sm whitespace-nowrap text-gray-600 pb-3">Data Scientist</span>
-                                <p class="text-sm text-gray-500 pb-3">
+                                <span class="text-lg whitespace-nowrap text-black font-bold leading-normal">Prince Carl Velasco</span>
+                                <span class="text-base whitespace-nowrap text-gray-600 pb-3">Data Scientist</span>
+                                <p class="text-sm text-gray-500 pb-6">
                                     I can't start my day without a coffee cup
                                 </p>
                                 <!-- Linked Accounts -->
-                                <div class="container space-x-8 social-links flex justify-center items-center pb-3">
+                                <div class="container space-x-8 social-links flex justify-center items-center pb-6">
                                     <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
                                     <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
                                     <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
@@ -94,17 +95,17 @@
                                     <span class="text-center px-2">
                                         <span class="font-bold text-gray-700">23</span>
                                         <br>
-                                        <span class="client-body"> Client</span>
+                                        <span class="client-body">Client</span>
                                     </span>
                                     <span class="pl-2">
-                                        <img src="assets/img/stars.svg" alt="stars">
+                                        <img src="assets/img/stars.svg" width="200" alt="stars">
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Buttons -->
-                    <div class="grid grid-cols-2 px-5 pb-5">
+                    <div class="grid grid-cols-2 px-5 pb-5 -mt-3">
                         <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
                             <button class="message-button border h-16 py-2 px-4 rounded-lg">Message</button>
                         </div>
@@ -112,30 +113,29 @@
                             <button class="hire-button h-16 py-2 px-4 rounded-lg">Hire</button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-1/2 md:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
+            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
                 <div class="card block bg-white shadow-md rounded-lg overflow-hidden">
                     <div class="flex items-center p-9 pt-24">
                         <div class="relative flex flex-col items-center w-full">
                             <!-- Image -->
-                            <div class="h-24 w-24 rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
-                                <img class="h-24 w-24 md rounded-full relative" src="https://avatars3.githubusercontent.com/u/11801238?v=4" alt="">
+                            <div class="relative flex items-end justify-end absolute -top-16 flex row-start-1 row-end-3">
+                                <img class="inline object-cover h-24 w-24 md rounded-full" src="./assets/img/relox-pic.jpg" alt="Tricia Relox">
                                 <div class="absolute"></div>
                             </div>
                             <!-- PRO, Name, Description -->
                             <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
                                 <span class="text-md whitespace-nowrap text-gray-800 rounded-lg tag py-2 px-3">PRO</span>
-                                <span class="text-md whitespace-nowrap text-black font-bold leading-normal ">Katherine Therese Marie Mariñas</span>
-                                <span class="text-sm whitespace-nowrap text-gray-600 pb-3">UI/UX Designer</span>
-                                <p class="text-sm text-gray-500 pb-3">
+                                <span class="text-lg whitespace-nowrap text-black font-bold leading-normal">Tricia Dorine Relox</span>
+                                <span class="text-base whitespace-nowrap text-gray-600 pb-3">Technopreneur</span>
+                                <p class="text-sm text-gray-500 pb-6">
                                     I can't start my day without a coffee cup
                                 </p>
                                 <!-- Linked Accounts -->
-                                <div class="container space-x-8 social-links flex justify-center items-center pb-3">
+                                <div class="container space-x-8 social-links flex justify-center items-center pb-6">
                                     <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
                                     <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
                                     <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
@@ -148,17 +148,17 @@
                                     <span class="text-center px-2">
                                         <span class="font-bold text-gray-700">23</span>
                                         <br>
-                                        <span class="client-body"> Client</span>
+                                        <span class="client-body">Client</span>
                                     </span>
                                     <span class="pl-2">
-                                        <img src="assets/img/stars.svg" alt="stars">
+                                        <img src="assets/img/stars.svg" width="200" alt="stars">
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Buttons -->
-                    <div class="grid grid-cols-2 px-5 pb-5">
+                    <div class="grid grid-cols-2 px-5 pb-5 -mt-3">
                         <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
                             <button class="message-button border h-16 py-2 px-4 rounded-lg">Message</button>
                         </div>
@@ -166,30 +166,29 @@
                             <button class="hire-button h-16 py-2 px-4 rounded-lg">Hire</button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-1/2 md:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
+            <div class="mx-auto justify-center transform scale-90 transition duration-500 opacity-50 w-full sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/3 p-4 rounded-lg hover:scale-100 hover:opacity-100">
                 <div class="card block bg-white shadow-md rounded-lg overflow-hidden">
                     <div class="flex items-center p-9 pt-24">
                         <div class="relative flex flex-col items-center w-full">
                             <!-- Image -->
-                            <div class="h-24 w-24 rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
-                                <img class="h-24 w-24 md rounded-full relative" src="https://avatars3.githubusercontent.com/u/11801238?v=4" alt="">
+                            <div class="relative flex items-end justify-end absolute -top-16 flex row-start-1 row-end-3">
+                                <img class="inline object-cover h-24 w-24 md rounded-full" src="./assets/img/marinas-pic.jpg" alt="Katherine Mariñas">
                                 <div class="absolute"></div>
                             </div>
                             <!-- PRO, Name, Description -->
                             <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
                                 <span class="text-md whitespace-nowrap text-gray-800 rounded-lg tag py-2 px-3">PRO</span>
-                                <span class="text-md whitespace-nowrap text-black font-bold leading-normal ">Tricia Dorine Relox</span>
-                                <span class="text-sm whitespace-nowrap text-gray-600 pb-3">Technopreneur</span>
-                                <p class="text-sm text-gray-500 pb-3">
+                                <span class="text-lg whitespace-nowrap text-black font-bold leading-normal">Katherine Therese Marie Mariñas</span>
+                                <span class="text-base whitespace-nowrap text-gray-600 pb-3">UI/UX Designer</span>
+                                <p class="text-sm text-gray-500 pb-6">
                                     I can't start my day without a coffee cup
                                 </p>
                                 <!-- Linked Accounts -->
-                                <div class="container space-x-8 social-links flex justify-center items-center pb-3">
+                                <div class="container space-x-8 social-links flex justify-center items-center pb-6">
                                     <img src="assets/img/dribbble-logo.svg" alt="dribbble-logo">
                                     <img src="assets/img/instagram-logo.svg" alt="instagram-logo">
                                     <img src="assets/img/twitter-logo.svg" alt="twitter-logo">
@@ -202,17 +201,17 @@
                                     <span class="text-center px-2">
                                         <span class="font-bold text-gray-700">23</span>
                                         <br>
-                                        <span class="client-body"> Client</span>
+                                        <span class="client-body">Client</span>
                                     </span>
                                     <span class="pl-2">
-                                        <img src="assets/img/stars.svg" alt="stars">
+                                        <img src="assets/img/stars.svg" width="200" alt="stars">
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Buttons -->
-                    <div class="grid grid-cols-2 px-5 pb-5">
+                    <div class="grid grid-cols-2 px-5 pb-5 -mt-3">
                         <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
                             <button class="message-button border h-16 py-2 px-4 rounded-lg">Message</button>
                         </div>
@@ -229,13 +228,49 @@
 
 <!-- Start of Companies Section -->
 <section class="container w-full mx-auto">
-    <div class="company space-x-16 flex py-36 justify-center items-center">
-        <a href="https://www.manulife.com.ph/"> <img src="assets/img/manulife.svg" alt="manulife"> </a>
-        <img src="assets/img/fast-company.svg" alt="fast-company">
-        <img src="assets/img/hunter.svg" alt="hunter">
-        <img src="assets/img/citi-link.svg" alt="citi-link">
+    <div class="company space-x-16 flex pt-24 justify-center items-center">
+        <div class="flex flex-wrap justify-center items-center">
+            <div class="w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/4 p-3 flex justify-center align-center">
+                <div class="p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-1">
+                            <img src="assets/img/manulife.svg" alt="manulife" class="transition duration-300 opacity-50 hover:opacity-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/4 p-3 flex justify-center align-center">
+                <div class="p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-1">
+                            <img src="assets/img/fast-company.svg" alt="fast-company" class="transition duration-300 opacity-50 hover:opacity-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/4 p-3 flex justify-center align-center">
+                <div class="p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-1 justify-items-center align-center">
+                            <img src="assets/img/hunter.svg" alt="hunter" class="transition duration-300 opacity-50 hover:opacity-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-2/3 md:w-1/2 lg:w-1/2 xl:w-1/4 p-3 flex justify-center align-center">
+                <div class="p-2">
+                    <div class="flex flex-row items-center">
+                        <div class="flex-1">
+                            <img src="assets/img/citi-link.svg" alt="citi-link" class="transition duration-300 opacity-50 hover:opacity-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
+<section class="container w-full mx-auto -mb-8">
     <!-- CTA -->
     <div class="cta rounded-3xl max-w-7xl mx-auto py-12 sm:px-6 lg:py-16 lg:px-12 lg:flex lg:items-center lg:justify-between">
         <div class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
