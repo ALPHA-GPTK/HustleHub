@@ -311,3 +311,10 @@ input::-webkit-input-placeholder {
 .account-delete-button:hover {
     background: #7a0e0e;
 }
+
+
+/*Gmail Format*/
+
+.h1-gmail {
+    color: #2C2C2C;
+}
