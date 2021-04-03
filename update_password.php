@@ -13,7 +13,7 @@ if (isset($_POST['change_password'], $conn) && $conn) {
             $conn->query($sql);
 
             session_destroy();
-            header(("location: login.php"));
+            header(("location: login.php?password=successful"));
         } else {
             header("location: changepass.php?password=incorrect");
         }

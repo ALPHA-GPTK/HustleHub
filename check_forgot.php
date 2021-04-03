@@ -11,7 +11,8 @@ if (isset($_POST['email'], $conn, $mail, $gmailUsername)) {
 
         $email = $_POST['email'];
         if ($ck_Account) {
-            $randomCode = sprintf("%06d", mt_rand(1, 999999));
+            $bytes = random_bytes(20);
+            $randomCode = bin2hex($bytes);
             $shaRandCode = sha1($randomCode);
             $sql = "UPDATE freelance_info SET freelance_passwordcode = '$shaRandCode' WHERE freelance_email = '$email'";
             $conn->query($sql);
