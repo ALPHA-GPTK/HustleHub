@@ -5,8 +5,10 @@
 /* Fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
     --darkblue_100: rgba(54, 74, 124, 1);
+    --darkblue_65: rgba(54, 74, 124, 0.65);
     --lightblue_100: rgba(142, 193, 209, 1);
     --lightblue_8: rgba(142, 193, 209, 0.08);
     --yellow_100: rgba(255, 211, 55, 1);
@@ -19,6 +21,10 @@
 
 .c-darkBlue_100 {
     color: var(--darkblue_100);
+}
+
+.c-darkBlue_65 {
+    color: var(--darkblue_65);
 }
 
 .c-lightBlue_100 {
@@ -39,6 +45,10 @@
 
 .c-white_100 {
     color: var(--white_100);
+}
+
+.bg-white_100 {
+    background-color: var(--white_100);
 }
 
 .c-black_100 {
@@ -167,6 +177,7 @@ input::-webkit-input-placeholder {
     color: #8EC1D1;
 }
 
+
 /*
 .title-header {
     font-style: normal;
@@ -182,6 +193,7 @@ input::-webkit-input-placeholder {
 .features img {
     text-align: center;
 }
+
 
 /*.work-title { 
     font-weight: 900;
@@ -217,11 +229,13 @@ input::-webkit-input-placeholder {
     background-color: #FFFFFF;
 }
 
-.message-button, .update-button {
+.message-button,
+.update-button {
     border-color: #364A7C;
 }
 
-.hire-button, .delete-button {
+.hire-button,
+.delete-button {
     background-color: #364A7C;
     color: #FFFFFF;
     font-weight: 700;
@@ -306,4 +320,11 @@ input::-webkit-input-placeholder {
 
 .account-delete-button:hover {
     background: #7a0e0e;
+}
+
+
+/*Gmail Format*/
+
+.h1-gmail {
+    color: #2C2C2C;
 }
