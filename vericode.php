@@ -3,12 +3,12 @@
     <div class="flex justify-center overflow-hidden pb-32">
         <div class="container w-full pt-12">
             <div class="max-w-md mx-auto my-10">
-                <h1 class="text-center my-3 text-3xl text-blue dark:text-gray-200 uppercase font-black">Code</h1>
+                <h1 class="text-center my-3 text-3xl text-blue dark:text-gray-200 uppercase font-black">Code Verification</h1>
                 <p class="text-center f-inter-light c-black_100 mb-16">The code will be sent to the registered email.</p>
                 <div class="m-7">
                     <form action="check_code.php" method="post">
                         <div class="relative mb-6">
-                            <label for="code" class="block mb-2 text-xs text-gray-600 dark:text-gray-400 uppercase font-black">6-Digit Code</label>
+                            <label for="code" class="block mb-2 text-xs text-gray-600 dark:text-gray-400 uppercase font-black">Code</label>
                             <div class="relative text-gray-700">
                                 <label>
                                     <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="code" id="code" required />
