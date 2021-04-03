@@ -57,7 +57,7 @@ if ((isset($_COOKIE['user_email'], $_COOKIE['user_password']))) {
             <div class="flex justify-center mb-6">
               <label class="flex items-center">
                 <input type="checkbox" name="rememberme" class="mr-1 outline-none" <?php if (isset($rememberme)) echo $rememberme; ?>>
-                <span class="text-xs f-inter-regular c-black_100">Remember me</span>
+                <span class="text-xs f-inter-regular">Remember me</span>
               </label>
             </div>
             <div class="mb-6">
