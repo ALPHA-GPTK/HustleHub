@@ -13,7 +13,7 @@
 <!-- Start of How it Works Section -->
 <section class="w-full mx-auto bg-blue-50 -mb-10">
     <div>
-        <div class="text-4xl pt-20 py-10 mb-12 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-5xl lg:mb-14 lg:pt-20 xl:text-5xl xl:mb-14 2xl:text-5xl 2xl:mb-14 font-black">How it Works</div>
+        <div class="text-4xl pt-20 py-10 mb-12 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-4xl lg:mb-14 lg:pt-20 xl:text-5xl xl:mb-14 2xl:text-5xl 2xl:mb-14 font-black">How it Works</div>
     </div>
 
     <div class="features flex flex-wrap justify-evenly items-center text-center -mb-5">
@@ -22,8 +22,8 @@
                 <div class="account flex flex-row">
                     <div class="flex-1">
                         <img class="inline-block w-full lg:w-2/3 xl:w-2/3 2xl:w-2/3" src="assets/img/account.svg" alt="Account" style="width: 140px;">
-                        <p class="font-black text-xl pt-2 leading-8 mt-3 md:text-2xl md:mt-5 lg:mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Account</p>
-                        <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Create your Account</p>
+                        <p class="font-black text-xl pt-2 leading-8 mt-3 md:text-2xl md:mt-5 lg:mt-7 lg:text-2xl xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Account</p>
+                        <p class="text-lg text-gray-400 pt-2 xl:leading-7 lg:text-base xl:text-xl 2xl:text-xl">Create your Account</p>
                     </div>
                 </div>
             </div>
@@ -32,8 +32,8 @@
             <div class="account flex flex-row">
                 <div class="flex-1">
                     <img class="inline-block w-full lg:w-2/3 xl:w-2/3 2xl:w-2/3" src="assets/img/discover.svg" alt="Discover" style="width: 140px;">
-                    <p class="font-black text-xl pt-2 leading-8 mt-3 md:text-2xl md:mt-5 lg:mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Discover</p>
-                    <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Search your freelancer</p>
+                    <p class="font-black text-xl pt-2 leading-8 mt-3 md:text-2xl md:mt-5 lg:mt-7 lg:text-2xl xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Discover</p>
+                    <p class="text-lg text-gray-400 pt-2 xl:leading-7 lg:text-base xl:text-xl 2xl:text-xl">Search your freelancer</p>
                 </div>
             </div>
         </div>
@@ -41,8 +41,8 @@
             <div class="account flex flex-row">
                 <div class="flex-1">
                     <img class="inline-block w-full md:w-full lg:w-full xl:w-full 2xl:w-full" src="assets/img/hire.svg" alt="Hire" style="width: 140px;">
-                    <p class="font-black text-xl pt-2 leading-8 mt-3 md:text-2xl md:mt-5 lg:mt-7 xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Hire</p>
-                    <p class="text-lg text-gray-400 pt-2 xl:leading-7 xl:text-xl">Pay the price</p>
+                    <p class="font-black text-xl pt-2 leading-8 mt-3 md:text-2xl md:mt-5 lg:mt-7 lg:text-2xl xl:mt-7 xl:text-2xl 2xl:mt-8 2xl:text-2xl">Hire</p>
+                    <p class="text-lg text-gray-400 pt-2 xl:leading-7 lg:text-base xl:text-xl 2xl:text-xl">Pay the price</p>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
 <!-- Start of Popular Service Section -->
 <section class="container mx-auto mb-14">
     <div>
-        <div class="text-4xl pt-20 mt-10 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-5xl lg:pt-20 xl:text-5xl 2xl:text-5xl font-black mb-12">Popular Services</div>
+        <div class="text-4xl pt-20 mt-10 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-4xl lg:pt-20 xl:text-5xl 2xl:text-5xl font-black mb-12">Popular Services</div>
     </div>
 
     <div class="container-services space-y-2 mx-36 text-center -mb-16">
@@ -71,7 +71,7 @@
 <!-- Start of Top Providers Section -->
 <section class="provider mx-auto">
     <div>
-        <div div class="text-4xl pt-20 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-5xl lg:pt-20 xl:text-5xl 2xl:text-5xl font-black mb-12">Top Providers</div>
+        <div div class="text-4xl pt-20 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-4xl lg:pt-20 xl:text-5xl 2xl:text-5xl font-black mb-12">Top Providers</div>
     </div>
 
     <div class="antialiased pl-14 pr-14">
@@ -291,7 +291,7 @@
             <div class="text-2xl md:text-3xl lg:text-4xl xl:text-4xl xl:m-8 2xl:text-4xl font-extrabold text-white">Join our Freelancing Team</div>
         </div>
         <div class="flex flex-wrap justify-center lg:justify-start xl:ml-24 xl:ml-24 2xl:ml-24">
-            <a href="#" class="inline-flex items-center justify-center rounded-lg px-3 py-2 mt-2 text-sm sm:px-3 sm:py-2 md:px-5 md:py-3 lg:px-5 lg:py-3 lg:-mt-12 lg:ml-16 xl:justify-start xl:-ml-6 xl:py-3 border border-transparent shadow join-now c-black_100 f-inter-black text-xs 2xl:text-lg">Join Now</a>
+            <a href="./signup.php" class="inline-flex items-center justify-center rounded-lg px-3 py-2 mt-2 text-sm sm:px-3 sm:py-2 md:px-5 md:py-3 lg:px-5 lg:py-3 lg:-mt-12 lg:ml-16 xl:justify-start xl:-ml-6 xl:py-3 border border-transparent shadow join-now c-black_100 f-inter-black text-xs 2xl:text-lg">Join Now</a>
         </div>
     </div>
     <div class="absolute inset-0 h-auto z-10">
@@ -304,21 +304,21 @@
 
 <!-- Start of Footer -->
 <footer>
-    <div class="container w-full mx-auto px-6 lg:px-20 py-12">
+    <div class="container w-full mx-auto px-6 lg:px-20 py-20 xl:py-16">
         <div class="lg:flex">
             <div class="w-full lg:w-3/4">
                 <div class="lg:flex">
                     <div class="w-full flex flex-col justify-center items-center mb-12 lg:mb-0 lg:w-1/2 lg:space-y-4">
                         <a href="./index.php"><span class="c-darkBlue_100 text-5xl sm:text-5xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-5xl f-fredokaone-regular cursor-pointer">HUSTLE</span><span class="c-lightBlue_100 text-5xl sm:text-5xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-5xl f-fredokaone-regular cursor-pointer">HUB</span></a>
                         <div class="text-center pt-6">
-                            <p class="text-base pb-2 lg:pb-4 c-black_100">(02) 8281-88-88</p>
-                            <p class="text-base c_gray">hustlehub@gmail.com</p>
+                            <p class="text-base pb-2 lg:text-sm lg:pb-4 c-black_100">(02) 8281-88-88</p>
+                            <p class="text-base lg:text-sm c_gray">hustlehub@gmail.com</p>
                         </div>
                     </div>
                     <div class="w-full sm:flex sm:flex-row lg:w-1/2 lg:flex lg:px-6">
                         <div class="w-full mb-6 space-y-2 lg:mb-0 lg:w-1/2 lg:space-y-4">
                             <a class="font-semibold pb-2 text-lg c-black_100 lg:text-base xl:text-lg 2xl:text-lg">About</a>
-                            <ul class="text-base lg:text-base xl:text-base 2xl:text-base">
+                            <ul class="text-base lg:text-sm xl:text-base 2xl:text-base">
                                 <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Privacy Policy</a></li>
                                 <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Terms of Service</a></li>
                                 <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Intellectual Property Claims</a></li>
@@ -326,7 +326,7 @@
                         </div>
                         <div class="w-full mb-6 space-y-2 lg:mb-0 lg:w-1/2 lg:space-y-4 lg:ml-6">
                             <a class="font-semibold pb-2 text-lg c-black_100 lg:text-base xl:text-lg 2xl:text-lg">Support</a>
-                            <ul class="text-base lg:text-base xl:text-base 2xl:text-base">
+                            <ul class="text-base lg:text-sm xl:text-base 2xl:text-base">
                                 <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Help & Support</a></li>
                                 <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Trust & Safety</a></li>
                                 <li class="py-2"><a class="cursor-pointer c-gray_100 transform duration-300 hover:text-gray-900">Community Standards</a>
@@ -349,18 +349,26 @@
             </div>
         </div>
     </div>
-    <div class="container flex mx-auto pt-12">
-        <div class="pt-12 border-t-2 border-gray-300 w-full flex flex-col sm:flex-row">
-            <div class="space-x-2 sm:w-1/5 flex flex-row">
-                <i class="cursor-pointer"><img src="assets/img/linkedin-footer.svg" alt="linkedin-footer"></i>
-                <i class="cursor-pointer"><img src="assets/img/facebook-footer.svg" alt="facebook-footer"></i>
-                <i class="cursor-pointer"><img src="assets/img/twitter-footer.svg" alt="twitter-footer"></i>
-            </div>
-            <div class="attribution inline-flex justify-center text-center mx-auto flex-col sm:w-1/5">
-                <p class="text-base c-black_100 f-inter-regular">Developed by Alpha Developers</p>
-            </div>
-            <div class="attribution text-xs justify-center items-end flex sm:w-1/5 flex-col">
-                <p class="c-black_100 text-base f-inter-regular"> &copy; 2021 HustleHub. All rights reserved</p>
+    <div class="container flex mx-auto pb-16">
+        <div class="pt-12 border-t-2 border-gray-300 w-full flex flex-col mx-8 sm:flex-row md:pt-8 lg:flex-row xl:mx-24 xl:pt-12 2xl:mx-24 2xl:pt-12 justify-center items-center">
+            <div class="flex flex-col md:flex-row lg:flex-row xl:w-full xl:flex-row 2xl:w-full 2xl:flex-row justify-center items-center">
+                <div class="flex-1">
+                    <div class="space-x-2 flex flex-row w-full">
+                        <i class="cursor-pointer"><img src="assets/img/linkedin-footer.svg" alt="linkedin-footer" class="md:w-3/4 lg:w-3/4 xl:w-full 2xl:w-full"></i>
+                        <i class="cursor-pointer"><img src="assets/img/facebook-footer.svg" alt="facebook-footer" class="md:w-3/4 lg:w-3/4 xl:w-full 2xl:w-full"></i>
+                        <i class="cursor-pointer"><img src="assets/img/twitter-footer.svg" alt="twitter-footer" class="md:w-3/4 lg:w-3/4 xl:w-full 2xl:w-full"></i>
+                    </div>
+                </div>
+                <div class="flex-1 text-center pt-5 md:pt-3 xl:pt-0 2xl:pt-0">
+                    <div class="attribution inline-flex justify-center mx-auto xl:flex-col 2xl:flex-col">
+                        <p class="text-base md:text-sm lg:text-sm xl:text-base 2xl:text-base f-inter-regular">Developed by Alpha Developers</p>
+                    </div>
+                </div>
+                <div class="flex-1 pt-5 md:pt-3 xl:pt-0 2xl:pt-0">
+                    <div class="attribution text-xs justify-center items-end flex xl:flex-col 2xl:flex-col">
+                        <p class="text-base md:text-sm md:text-center lg:text-sm xl:text-base 2xl:text-base f-inter-regular"> &copy; 2021 HustleHub. All rights reserved.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
