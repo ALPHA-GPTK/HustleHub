@@ -8,11 +8,11 @@ if (isset($_POST["login"], $conn) && $conn) {
     if ((!empty($_POST['email'])) && (!empty($_POST['password']))) {
 
         //Check Account return Boolean
-        $ckAccount = checkAccount($_POST["email"], $_POST['password'], $conn);
+        $ckAccount = checkAccount($_POST["email"], sha1($_POST['password']), $conn);
 
         if ($ckAccount) {
             $user_email = $_POST["email"];
-            $user_password = $_POST["password"];
+            $user_password = sha1($_POST["password"]);
             $sql = "SELECT freelance_email FROM freelance_info 
                     WHERE freelance_email = '$user_email' AND freelance_password = '$user_password'";
             $result = $conn->query($sql) or die($conn->error);
