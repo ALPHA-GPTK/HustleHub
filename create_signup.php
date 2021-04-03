@@ -11,15 +11,16 @@ if (isset($_POST["signup"], $conn) && $conn) {
             $ckAccount = checkAccount($conn, $_POST['email']);
 
             if (!($ckAccount > 0)) {
-                $fullName = sprintf("%s %s", $_POST["fName"], $_POST["lName"]);
+                $firstName = $_POST["fName"];
+                $lastName = $_POST["lName"];
                 $userName = $_POST["username"];
                 $email = $_POST["email"];
                 $password = sha1($_POST["password"]);
 
-                $sql = "INSERT INTO `freelance_db`.freelance_info (freelance_fullname, freelance_username, freelance_email, freelance_password) 
-                        VALUES (?, ?, ?, ?);";
+                $sql = "INSERT INTO `freelance_db`.freelance_info (freelance_fName, freelance_lName, freelance_username, freelance_email, freelance_password) 
+                        VALUES (?, ?, ?, ?, ?);";
                 $stmt = mysqli_prepare($conn, $sql);
-                mysqli_stmt_bind_param($stmt, "ssss", $fullName, $userName, $email, $password);
+                mysqli_stmt_bind_param($stmt, "sssss", $firstName,$lastName, $userName, $email, $password);
                 $result = mysqli_stmt_execute($stmt);
 
                 if (mysqli_stmt_affected_rows($stmt) === 1) {
