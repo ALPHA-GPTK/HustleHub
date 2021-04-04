@@ -29,12 +29,11 @@ if (isset($conn, $_POST["updateGigs"]) && $conn) {
 
             //////////////////////////////
 
-            $service = ucwords($_POST['service']);
             $description = $_POST['description'];
             $price = $_POST['price'];
 
-            if (isset($service, $description, $price)) {
-                $sql = "UPDATE freelance_gig SET gigs_service = '$service', gigs_description = '$description', gigs_banner = '$target_file', gigs_price = '$price' WHERE gigs_id = '$activeCard'";
+            if (isset($description, $price)) {
+                $sql = "UPDATE freelance_gig SET gigs_description = '$description', gigs_banner = '$target_file', gigs_price = '$price' WHERE gigs_id = '$activeCard'";
                 $conn->query($sql);
 
                 unset($_SESSION['active_card']);
@@ -71,12 +70,11 @@ if (isset($conn, $_POST["updateGigs"]) && $conn) {
 
                 ///////////////////////////////
 
-                $service = ucwords($_POST['service']);
                 $description = $_POST['description'];
                 $price = $_POST['price'];
 
-                if (isset($service, $description, $price)) {
-                    $sql = "UPDATE freelance_gig SET gigs_service = '$service', gigs_description = '$description', gigs_banner = '$target_file', gigs_price = '$price' WHERE gigs_id = '$activeCard'";
+                if (isset($description, $price)) {
+                    $sql = "UPDATE freelance_gig SET gigs_description = '$description', gigs_banner = '$target_file', gigs_price = '$price' WHERE gigs_id = '$activeCard'";
                     $conn->query($sql);
 
                     unset($_SESSION['active_card']);
@@ -100,12 +98,6 @@ if (isset($conn, $_POST["updateGigs"]) && $conn) {
 } else {
     trigger_error("Connection Failed: " . $conn->connect_error);
 }
-
-
-
-
-
-
 
 if (isset($_POST['updateGigs'])) {
 }

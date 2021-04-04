@@ -21,20 +21,25 @@
         <?php
         $sql = "SELECT freelance_fName, freelance_lName,freelance_path, gigs_service, gigs_description, gigs_banner, gigs_price, gigs_creation FROM freelance_gig INNER JOIN freelance_info ON user_id = freelance_id WHERE user_id != '$userId'";
         $result = $conn->query($sql);
+        $all = $result->fetch_all();  //  [0]fname, [1]lname, [2]f_path, [3]service, [4]about, [5]g_path, [6]price, [7]time
+        $allLength = count($all);
 
-        while ($userResult = $result->fetch_assoc()) :
+        //  Random Freelancer Cards
+        shuffle($all);
+
+        for ($a = 0; $a < $allLength; $a++) :
 
           //Check Image Existence in DIR
           //Freelance
           $f_target_dir = "./assets/img/";
-          $f_dbFilePath = $userResult['freelance_path'];
+          $f_dbFilePath = $all[$a][2];
           $f_dbFileArr = explode("/", $f_dbFilePath);
           $f_filename = end($f_dbFileArr);
           $f_target_file = $f_target_dir . $f_filename;
 
           //gigs
           $g_target_dir = "./assets/img/";
-          $g_dbFilePath = $userResult['gigs_banner'];
+          $g_dbFilePath = $all[$a][5];
           $g_dbFileArr = explode("/", $g_dbFilePath);
           $g_filename = end($g_dbFileArr);
           $g_target_file = $g_target_dir . $g_filename;
@@ -66,21 +71,21 @@
                 </div>
               </div>
               <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
-                <span class="text-md whitespace-nowrap text-gray-800 font-semibold"><?= $userResult['freelance_fName'] . " " . $userResult['freelance_lName'] ?></span>
+                <span class="text-md whitespace-nowrap text-gray-800 font-semibold"><?= $all[$a][0] . " " . $all[$a][1] ?></span>
               </div>
               <!-- User Description -->
               <div class="p-4 -mt-2">
                 <span class="text-sm text-gray-700">
-                  <?php echo get_timeago(strtotime($userResult['gigs_creation'])); ?>
+                  <?php echo get_timeago(strtotime($all[$a][7])); ?>
                 </span>
-                <div class="font-bold text-lg my-2"><?php echo ucwords($userResult['gigs_service']); ?></div>
-                <div class="text-sm mb-2"><?php echo $userResult['gigs_description']; ?></div>
+                <div class="font-bold text-lg my-2"><?php echo ucwords($all[$a][3]); ?></div>
+                <div class="text-sm mb-2"><?php echo $all[$a][4]; ?></div>
                 <div>
                   <span class="text-gray-700">
                     PRICE
                   </span>
                   <span class="font-extrabold">
-                    <?php echo "₱" . $userResult['gigs_price']; ?>
+                    <?php echo "₱" . $all[$a][6]; ?>
                   </span>
                 </div>
               </div>
@@ -100,7 +105,7 @@
               </div>
             </div>
           </div>
-        <?php endwhile; ?>
+        <?php endfor; ?>
       </div>
     </div>
   </section>
