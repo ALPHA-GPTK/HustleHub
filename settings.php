@@ -6,7 +6,8 @@ require_once "./function.php";
 getSessionValues();
 
 if (isset($conn) && $conn) {
-  $sql = "SELECT freelance_fName, freelance_lName, freelance_username, freelance_email, freelance_about FROM freelance_info WHERE freelance_id = ?";
+  $sql = "SELECT freelance_fName, freelance_lName, freelance_username, freelance_email, freelance_about, freelance_path 
+          FROM freelance_info WHERE freelance_id = ?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param("i", $userId);
   $stmt->execute();
@@ -14,11 +15,17 @@ if (isset($conn) && $conn) {
   $stmt_result = $stmt->get_result();
   $data = $stmt_result->fetch_row();
 
-  [$user_firstname, $user_lastname, $user_username, $user_email, $user_about] = $data;
-} else {
-    echo "<script>alert('Connection Failed.' . $conn->connect_error)
+  if ($stmt_result->num_rows < 1) {
+    echo "<script>alert('Fetch Failed..' . $conn->connect_error)
     window.location.href='settings.php?account_status=change_successful';
     </script>";
+  } else {
+    [$user_firstname, $user_lastname, $user_username, $user_email, $user_about, $profile_pic] = $data;
+  }
+} else {
+  echo "<script>alert('Connection Failed.' . $conn->connect_error)
+  window.location.href='settings.php?account_status=change_successful';
+  </script>";
 }
 
 ?>
@@ -64,26 +71,26 @@ if (isset($conn) && $conn) {
         <!-- Basic Information -->
         <div class="md:grid md:grid-cols-2 duration-500 md:gap-6" id="con-basicinfo">
           <div id="div1" class="targetDiv  mt-5 md:mt-0 md:col-span-2">
-            <form action="change_info.php" method="POST">
-              <div class="shadow sm:rounded-md sm:overflow-hidden">
-                <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
-                  <h3 class="text-lg font-medium leading-6 text-gray-900">Basic Information</h3>
+            <div class="shadow sm:rounded-md sm:overflow-hidden">
+              <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                <h3 class="text-lg font-medium leading-6 text-gray-900">Basic Information</h3>
+                <form action="upload_image.php" method="POST" enctype="multipart/form-data">
                   <div class="flex justify-center">
                     <div class="mt-1 flex items-center">
                     <span class="inline-block h-16 w-16 rounded-full overflow-hidden bg-gray-100">
-                      <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"/>
-                      </svg>
+                      <img src="<?= empty($profile_pic) ? './assets/img/dummy_profile.svg' : $profile_pic ?>"
+                           alt="profile_image">
                     </span>
                       <div class="flex flex-col space-y-2">
-                        <input type="file" value="Choose File"
+                        <input type="file" name="imgToUpload" value="Choose File"
                                class="ml-5 bg-blue-save py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
-                        <input type="submit" value="Upload Now"
+                        <input type="submit" name="submit-file" value="Upload Now"
                                class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
                       </div>
                     </div>
                   </div>
-
+                </form>
+                <form action="change_info.php" method="POST">
                   <div class="px-28 flex justify-end">
                     <div name="edit" id="edit"
                          class="cursor-pointer py-1 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
@@ -172,9 +179,9 @@ if (isset($conn) && $conn) {
                       </div>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
-            </form>
+            </div>
           </div>
         </div>
         <!-- Security -->
