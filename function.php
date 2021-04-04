@@ -77,12 +77,12 @@ function get_timeago($ptime)
     }
 
     $condition = array(
-        12 * 30 * 24 * 60 * 60  =>  'year',
-        30 * 24 * 60 * 60       =>  'month',
-        24 * 60 * 60            =>  'day',
-        60 * 60                 =>  'hour',
-        60                      =>  'minute',
-        1                       =>  'second'
+        12 * 30 * 24 * 60 * 60 => 'year',
+        30 * 24 * 60 * 60 => 'month',
+        24 * 60 * 60 => 'day',
+        60 * 60 => 'hour',
+        60 => 'minute',
+        1 => 'second'
     );
 
     foreach ($condition as $secs => $str) {
@@ -92,5 +92,51 @@ function get_timeago($ptime)
             $r = round($d);
             return 'about ' . $r . ' ' . $str . ($r > 1 ? 's' : '') . ' ago';
         }
+    }
+}
+
+function add_image($conn, $submitBtn, $chooseImg, $database = "freelance_info")
+{
+    if (isset($conn, $submitBtn) && $conn) {
+        $target_dir = "./assets/img/";
+        $filename = htmlspecialchars(basename($chooseImg['name']));
+        $target_file = $target_dir . $filename;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        $user_id = $_SESSION['user_id'];
+        $status = 1;
+
+        if (file_exists($target_file)) {
+            echo "Sorry, file already exists.";
+            $status = 0;
+        }
+
+        if ($imageFileType !== "jpg" && $imageFileType !== "png" && $imageFileType !== "jpeg"
+            && $imageFileType !== "gif") {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $status = 0;
+        }
+
+        if ($status === 0) {
+            echo "Sorry, your file was not uploaded.";
+        } else if (move_uploaded_file($chooseImg["tmp_name"], $target_file)) {
+            if ($database === "freelance_info") {
+                $sql = "SELECT * FROM freelance_info WHERE freelance_id = ?;";
+            } else {
+                $sql = "SELECT * FROM freelance_gig WHERE user_id = ?;";
+            }
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("i", $user_id);
+
+            if ($stmt->execute()) {
+                echo "$filename has been uploaded";
+                return $target_file;
+            }
+
+            echo "The file not uploaded";
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+        }
+    } else {
+        trigger_error("Connection Failed: " . $conn->connect_error);
     }
 }
