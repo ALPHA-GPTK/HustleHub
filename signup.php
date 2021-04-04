@@ -4,8 +4,9 @@
   <div class="bg-lightBlue_8 h-screen">
     <?php require_once "header.php" ?>
     <div class="flex justify-center overflow-hidden">
-      <div class="container w-full">
+      <div class="container w-full -mt-5">
         <div class="max-w-md mx-auto">
+        <!-- Start of Form -->
           <form action="create_signup.php" method="post" oninput='password.setCustomValidity(password.value !== confirm_password.value ? "Password is not the same with the confirm password." : "")'>
             <div class="max-w-lg flex flex-wrap mx-auto md:space-y-4 justify-center">
               <h1 class="text-3xl my-5 mx-auto text-blue dark:text-gray-200 uppercase font-black">Create Account</h1>
@@ -61,7 +62,7 @@
                     <img src="./assets/img/check-not.svg" alt="check-icon" class="h-6 w-6" id="confirm-password-check">
                   </div>
                 </div>
-                <!-- Signup Button -->
+                <!-- Sign Up Button -->
                 <div class="py-6 space-y-6">
                   <input type="submit" name="signup" value="Sign Up" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-blue-900 rounded-lg focus:bg-blue-900 focus:outline-none uppercase font-black cursor-pointer" />
                   <p class="text-sm text-center text-gray-400">Already on HustleHub?
@@ -70,7 +71,9 @@
                 </div>
               </div>
           </form>
+        <!-- End of Form -->
         </div>
       </div>
     </div>
-    <?php require_once "footer.php" ?>
+  </div>
+  <?php require_once "footer.php" ?>
