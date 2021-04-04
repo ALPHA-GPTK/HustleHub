@@ -21,6 +21,7 @@ if (isset($conn) && $conn) {
     </script>";
   } else {
     [$user_firstname, $user_lastname, $user_username, $user_email, $user_about, $profile_pic] = $data;
+    $_SESSION["profileImage"] = $profile_pic;
   }
 } else {
   echo "<script>alert('Connection Failed.' . $conn->connect_error)
@@ -77,7 +78,8 @@ if (isset($conn) && $conn) {
                 <form action="upload_image.php" method="POST" enctype="multipart/form-data">
                   <div class="flex justify-center">
                     <div class="mt-1 flex items-center">
-                    <span class="inline-block h-16 w-16 rounded-full overflow-hidden bg-gray-100">
+                      <!-- Profile Image -->
+                      <span class="inline-block h-16 w-16 rounded-full overflow-hidden bg-gray-100">
                       <img src="<?= empty($profile_pic) ? './assets/img/dummy_profile.svg' : $profile_pic ?>"
                            alt="profile_image">
                     </span>
