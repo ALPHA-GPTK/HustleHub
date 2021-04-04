@@ -12,7 +12,7 @@ if (isset($_POST["login"], $conn) && $conn) {
         $origPass = $_POST['password'];
         $ckAccountRows = checkAccount($conn, $_POST["email"], $shaPass);
 
-        if ($ckAccountRows !== 0  && $ckAccountRows !== null) {
+        if ($ckAccountRows !== 0 && $ckAccountRows !== null) {
             $user_email = $_POST["email"];
             $user_password = sha1($_POST["password"]);
             $sql = "SELECT freelance_id, freelance_fName, freelance_lName, freelance_username, freelance_email, freelance_password FROM freelance_info 
@@ -42,13 +42,13 @@ if (isset($_POST["login"], $conn) && $conn) {
                 window.location.href='gigs.php';
                 </script>";
             } else {
-                echo "<script>alert('Username or Password is incorrect.')
-                window.location.href='login.php?account_status=fail';
+                echo "<script>alert('User doesn\'t exists.')
+                window.location.href='login.php?account_status=not_exist';
                 </script>";
             }
         } else {
-            echo "<script>alert('User doesn\'t exists.')
-            window.location.href='login.php?account_status=not_exist';
+            echo "<script>alert('Username or Password is incorrect.')
+            window.location.href='login.php?account_status=fail';
             </script>";
         }
     } else {
