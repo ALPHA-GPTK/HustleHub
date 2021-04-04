@@ -42,9 +42,9 @@ if (isset($conn, $_POST["submit-file"]) && $conn) {
             $sql = "UPDATE freelance_info SET freelance_path = ? WHERE freelance_id = ?;";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("si", $target_file, $user_id);
-            $stmt->execute();
+            
 
-            if ($stmt->affected_rows === 1) {
+            if ($stmt->execute()) {
                 echo "<script>alert('$filename has been uploaded')
                 window.location.href='settings.php?upload_status=success';
                 </script>";
