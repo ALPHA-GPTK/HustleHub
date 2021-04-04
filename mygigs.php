@@ -8,6 +8,22 @@
   require_once "./function.php";
 
   getSessionValues();
+
+  //  Check Image Existence in DIR
+  $target_dir = "./assets/img/";
+  $sql = "SELECT freelance_path FROM freelance_info WHERE freelance_id = '$userId'";
+  $result = $conn->query($sql);
+  $userResult = $result->fetch_assoc();
+  $dbFilePath = $userResult['freelance_path'];
+  $dbFileArr = explode("/", $dbFilePath);
+  $filename = end($dbFileArr);
+  $target_file = $target_dir . $filename;
+
+  if (!(file_exists($target_file)) || empty($dbFilePath)) {
+    $profile_pic = "./assets/img/dummy_profile.svg.svg";
+  } else {
+    $profile_pic = $dbFilePath;
+  }
   ?>
 
   <section class="mx-auto">
@@ -17,8 +33,7 @@
 
     <div class="antialiased pl-14 pr-14">
       <div class="flex justify-end">
-        <a href="./add_gigs.php"
-           class="py-2 px-4 mb-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-700">Add
+        <a href="./add_gigs.php" class="py-2 px-4 mb-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-700">Add
           Gigs</a>
       </div>
 
@@ -28,16 +43,29 @@
         $sql = "SELECT gigs_id, gigs_service, gigs_description, gigs_banner, gigs_price, gigs_rating, gigs_creation FROM freelance_gig WHERE user_id = '$userId'";
         $result = $conn->query($sql);
         while ($userResult = $result->fetch_assoc()) :
-          ?>
+
+          //  Check Image Existence in DIR
+          $target_dir = "./assets/img/";
+          $dbFilePath = $userResult['gigs_banner'];
+          $dbFileArr = explode("/", $dbFilePath);
+          $filename = end($dbFileArr);
+          $target_file = $target_dir . $filename;
+
+          if (!(file_exists($target_file)) || empty($dbFilePath)) {
+            $timeline_pic = "./assets/img/default-timeline.svg";
+          } else {
+            $timeline_pic = $dbFilePath;
+          }
+        ?>
           <div class="mx-auto justify-center w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 text-center">
             <div class="card-gig block shadow-md hover:shadow-xl rounded-lg overflow-hidden">
               <div class="relative pb-48 overflow-hidden">
-                <img class="absolute inset-0 h-full w-full object-cover" src="<?= $userResult['gigs_banner'] ?>" alt="">
+                <img class="absolute inset-0 h-full w-full object-cover" src="<?= $timeline_pic ?>" alt="">
               </div>
               <!-- Profile Image and Name -->
               <div class="relative flex flex-col items-center w-full text-center">
                 <div class="h-24 w-24 md rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
-                  <img class="h-24 w-24 md rounded-full relative" src="<?= $_SESSION["profileImage"] ?>" alt="">
+                  <img class="h-24 w-24 md rounded-full relative" src="<?= $profile_pic ?>" alt="">
                   <div class="absolute"></div>
                 </div>
               </div>
@@ -47,7 +75,7 @@
               <!-- Profile Image and Name -->
               <div class="p-4 -mt-2">
                 <span class="text-sm text-gray-700">
-                    <?php echo get_timeago(strtotime($userResult['gigs_creation'])); ?>
+                  <?php echo get_timeago(strtotime($userResult['gigs_creation'])); ?>
                 </span>
                 <div class="font-bold text-lg my-2"><?php echo ucwords($userResult['gigs_service']); ?></div>
                 <div class="text-sm mb-2"><?php echo $userResult['gigs_description']; ?></div>
@@ -62,7 +90,7 @@
               </div>
               <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
                 <span class="pl-2">
-                    <img src="assets/img/stars.svg" alt="stars" width="200">
+                  <img src="assets/img/stars.svg" alt="stars" width="200">
                 </span>
               </div>
               <!-- Buttons -->
