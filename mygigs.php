@@ -30,16 +30,14 @@
         while ($userResult = $result->fetch_assoc()) :
           ?>
           <div class="mx-auto justify-center w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 text-center">
-            <div href="" class="card-gig block shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+            <div class="card-gig block shadow-md hover:shadow-xl rounded-lg overflow-hidden">
               <div class="relative pb-48 overflow-hidden">
-                <img class="absolute inset-0 h-full w-full object-cover"
-                     src="<?= $userResult['gigs_banner'] ?>" alt="">
+                <img class="absolute inset-0 h-full w-full object-cover" src="<?= $userResult['gigs_banner'] ?>" alt="">
               </div>
               <!-- Profile Image and Name -->
               <div class="relative flex flex-col items-center w-full text-center">
                 <div class="h-24 w-24 md rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
-                  <img class="h-24 w-24 md rounded-full relative"
-                       src="<?= $_SESSION["profileImage"] ?>" alt="">
+                  <img class="h-24 w-24 md rounded-full relative" src="<?= $_SESSION["profileImage"] ?>" alt="">
                   <div class="absolute"></div>
                 </div>
               </div>
@@ -47,7 +45,7 @@
                 <span class="text-md whitespace-nowrap text-gray-800 font-semibold"><?= $userFName . " " . $userLName ?></span>
               </div>
               <!-- Profile Image and Name -->
-              <div class="p-4">
+              <div class="p-4 -mt-2">
                 <span class="text-sm text-gray-700">
                     <?php echo get_timeago(strtotime($userResult['gigs_creation'])); ?>
                 </span>
@@ -70,12 +68,10 @@
               <!-- Buttons -->
               <div class="grid grid-cols-2 px-5 pb-5 mt-5">
                 <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
-                  <a href="./update_card.php?card_id=<?php echo $userResult['gigs_id']; ?>"
-                     class="update-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</a>
+                  <a href="./update_card.php?card_id=<?php echo $userResult['gigs_id']; ?>" class="update-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</a>
                 </div>
                 <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
-                  <a href="./card_delete.php?card_id=<?php echo $userResult['gigs_id']; ?>"
-                     class="delete-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</a>
+                  <a href="./card_delete.php?card_id=<?php echo $userResult['gigs_id']; ?>" class="delete-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</a>
                 </div>
               </div>
             </div>
