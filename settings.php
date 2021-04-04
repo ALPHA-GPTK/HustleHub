@@ -71,16 +71,19 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
 
     <!-- Start of Account -->
     <div class="flex-1 lg:px-20">
+
       <!-- Start of Basic Information -->
       <div class="w-3/4 rounded-xl mx-auto lg:w-full xl:w-full 2xl:w-full" id="con-basicinfo">
         <div id="div1" class="targetDiv mt-5 md:mt-0 md:col-span-2">
           <div class="shadow rounded-xl">
             <div class="px-4 pt-5 pb-12 bg-white space-y-6 sm:p-6 rounded-xl">
               <div class="text-lg font-medium leading-6 text-gray-900">Basic Information</div>
+              
+              <!-- Start of Form for Image Upload -->
               <form action="upload_image.php" method="POST" enctype="multipart/form-data">
                 <div class="flex justify-center">
                   <div class="mt-1 flex items-center">
-                    <!-- Profile Image -->
+                    <!-- PROFILE IMAGE -->
                     <div class="inline-block h-16 w-16 rounded-full overflow-hidden bg-gray-100">
                       <img src="<?= $profile_pic ?>" alt="profile_image">
                     </div>
@@ -91,28 +94,37 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                   </div>
                 </div>
               </form>
+              <!-- End of Form for Image Upload -->
+
+              <!-- Start of Form for Edit -->
               <form action="change_info.php" method="POST">
                 <div class="px-28 flex justify-end">
                   <div name="edit" id="edit" class="cursor-pointer py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-800">
                     Edit
                   </div>
                 </div>
-                <!-- Input Fields  -->
+
+                <!-- Start of Input Fields  -->
                 <div class="max-w-lg flex flex-wrap mx-auto">
                   <div class="w-full md:w-1/2 pr-2">
+                  
+                    <!-- FIRST NAME -->
                     <label class="block mb-1 text-xs text-gray-600 font-black uppercase" for="fName">
                       First name
                     </label>
                     <input value="<?= $user_firstname ?>" class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="fName" id="fName" disabled />
                   </div>
-                  <!-- Last Name -->
+
+                  <!-- LAST NAME -->
                   <div class="w-full md:w-1/2 mb-2">
                     <label class="block mb-1 text-xs text-gray-600 font-black uppercase" for="lName">Last name</label>
                     <input value="<?= $user_lastname ?>" class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="lName" id="lName" disabled />
                   </div>
-                  <!-- Other Credentials -->
+
+                  <!-- OTHER CREDENTIALS -->
                   <div class="w-full space-y-2">
-                    <!-- Username -->
+
+                    <!-- USERNAME -->
                     <label for="username" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
                       Username
                     </label>
@@ -126,7 +138,8 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                         </svg>
                       </div>
                     </div>
-                    <!-- Email -->
+
+                    <!-- EMAIL -->
                     <label for="email" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
                       Email
                     </label>
@@ -141,6 +154,8 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                         </svg>
                       </div>
                     </div>
+
+                    <!-- ABOUT -->
                     <div class="w-full">
                       <label for="email" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
                         About
@@ -158,7 +173,9 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                     </div>
                   </div>
                 </div>
+                <!-- End of Input Fields  -->
               </form>
+              <!-- End of Form for Edit -->
             </div>
           </div>
         </div>
@@ -168,16 +185,18 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
       <!-- Start of Security -->
       <div class="md:grid-cols-2 md:gap-6 duration-500 hidden" id="con-security">
         <div id="div2" class="targetDiv  mt-5 md:mt-0 md:col-span-2">
+
+          <!-- Start of Form for Change Password -->
           <form action="settings_changepass.php" method="POST">
             <div class="shadow sm:rounded-md sm:overflow-hidden">
               <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
-                <h3 class="text-lg font-medium leading-6 text-gray-900">Security</h3>
+                <div class="text-lg font-medium leading-6 text-gray-900">Security</div>
 
-                <!-- Input Fields  -->
+                <!-- Start of Input Fields  -->
                 <div class="max-w-lg flex flex-wrap mx-auto">
                   <div class="w-full space-y-2">
 
-                    <!-- Current Password -->
+                    <!-- CURRENT PASSWORD -->
                     <label for="current-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">Current
                       Password</label>
                     <div class="relative text-gray-700">
@@ -185,14 +204,13 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                         <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="current-password" id="current-password" required />
                       </label>
 
-                      <!-- svg hide password icon -->
+                      <!-- SVG HIDE PASSWORD ICON -->
                       <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer">
                         <img src="./assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="current-password-icon">
                       </div>
-
                     </div>
 
-                    <!-- New Password -->
+                    <!-- NEW PASSWORD -->
                     <label for="new-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
                       New Password
                     </label>
@@ -201,14 +219,13 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                         <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="new-password" id="new-password" required />
                       </label>
 
-                      <!-- svg hide password icon -->
+                      <!-- SVG HIDE PASSWORD ICON -->
                       <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer">
                         <img src="./assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="new-password-icon">
                       </div>
-
                     </div>
 
-                    <!-- Confirm Password -->
+                    <!-- CONFIRM PASSWORD -->
                     <label for="current-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
                       Confirm Password
                     </label>
@@ -217,11 +234,10 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                         <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="confirm-password" id="confirm-password" required disabled />
                       </label>
 
-                      <!-- svg check password icon -->
+                      <!-- SVG CHECK PASSWORD ICON -->
                       <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
                         <img src="./assets/img/check-not.svg" alt="check-icon" class="h-6 w-6" id="confirm-password-check">
                       </div>
-
                     </div>
 
                     <!-- CANCEL AND SAVE BUTTONS -->
@@ -231,9 +247,11 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                     </div>
                   </div>
                 </div>
+                <!-- End of Input Fields  -->
               </div>
             </div>
           </form>
+          <!-- End of Form for Change Password -->
         </div>
       </div>
       <!-- End of Security -->
@@ -242,16 +260,15 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
       <br>
       <div class="md:grid-cols-2 md:gap-6 duration-500 hidden" id="con-account">
         <div id="div3" class="targetDiv  mt-5 md:mt-0 md:col-span-2">
+          <!-- Start of Form for Deletion -->
           <form action="delete_account.php" method="POST">
             <div class="shadow sm:rounded-md sm:overflow-hidden">
               <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
 
-                <!-- <h3 class="max-w-lg flex flex text-left">Account Deletion</h3> -->
-
-                <!-- DELETE BUTTON -->
                 <div class="max-w-full text-left">
-                  <h3 class="text-lg font-medium leading-6 text-gray-900">Account Deletion</h3>
+                  <div class="text-lg font-medium leading-6 text-gray-900">Deletion</div>
 
+                  <!-- DELETE BUTTON -->
                   <div class="px-8 flex justify-end">
                     <button name="delete" type="submit" class="py-4 px-9 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white account-delete-button account-delete-button:hover">
                       Delete Account
@@ -261,6 +278,7 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
               </div>
             </div>
           </form>
+          <!-- End of Form for Deletion -->
         </div>
       </div>
       <br>
