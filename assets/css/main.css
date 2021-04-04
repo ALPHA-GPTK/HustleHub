@@ -263,7 +263,7 @@ input::-webkit-input-placeholder {
 .hire-button:hover,
 .update-button:hover,
 .delete-button:hover {
-    background-color: #1a4cca;
+    background-color: #2c3b64;
     color: #FFFFFF;
     font-weight: 700;
 }
