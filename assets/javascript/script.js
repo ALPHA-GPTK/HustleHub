@@ -323,7 +323,23 @@ if ((lastUrlElement.includes("login.php"))) {
             confirmIcon.src = "./assets/img/check-not.svg";
         }
     });
-} else if ((lastUrlElement.includes("settings.php"))) {}
+
+    //    Basic Information
+    const btnEdit = document.getElementById("edit");
+    const firstNameInput = document.getElementById("fName");
+    const lastNameInput = document.getElementById("lName");
+    const usernameInput = document.getElementById("username");
+    const emailInput = document.getElementById("email");
+    const aboutInput = document.getElementById("about");
+
+    btnEdit.addEventListener("click", function () {
+        firstNameInput.removeAttribute("disabled");
+        lastNameInput.removeAttribute("disabled");
+        usernameInput.removeAttribute("disabled");
+        emailInput.removeAttribute("disabled");
+        aboutInput.removeAttribute("disabled");
+    })
+}
 
 function isNumberKey(evt) {
     var charCode = (evt.which) ? evt.which : event.keyCode
