@@ -248,12 +248,14 @@ input::-webkit-input-placeholder {
 }
 
 .message-button,
-.update-button {
+.update-button,
+.cancel-button {
     border-color: #364A7C;
 }
 
 .hire-button,
-.delete-button {
+.delete-button,
+.add-button {
     background-color: #364A7C;
     color: #FFFFFF;
     font-weight: 700;
@@ -262,7 +264,9 @@ input::-webkit-input-placeholder {
 .message-button:hover,
 .hire-button:hover,
 .update-button:hover,
-.delete-button:hover {
+.delete-button:hover,
+.cancel-button:hover,
+.add-button:hover {
     background-color: #2c3b64;
     color: #FFFFFF;
     font-weight: 700;
