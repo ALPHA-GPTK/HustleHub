@@ -88,7 +88,7 @@ if (isset($_POST["signup"], $conn) && $conn) {
                                                                             <tr>
                                                                                 <td style=\"background-repeat:no-repeat;height:84px;border-collapse:collapse;color:#666;font-family:Helvetica;font-size:20px;font-weight:bold;line-height:100%;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;text-align:left;vertical-align:middle\">
                                                                                     <p style=\"font-size:28px;color:#243152;margin:0;padding:0 0 0 15px\">
-                                                                                        Verify your Email
+                                                                                        Verify your Account
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -111,14 +111,14 @@ if (isset($_POST["signup"], $conn) && $conn) {
                                                                             <tr>
                                                                                 <td valign=\"top\" style=\"padding-bottom: 20px; border-collapse:collapse; color:#666; font-family:Helvetica; font-size: 14px; line-height:160%; text-align:left;\">
                                                                                     <p>
-                                                                                        This email is to confirm a recent password reset request for your HustleHub account.
+                                                                                        This email is to verify your HustleHub account.
                                                                                     </p>
                                                                                     <p> <br>
                                                                                         If you did not initiate this request, you can ignore this email.
                                                                                     </p> <br> <br>
-                                                                                    Code:
+                                                                                    Link:
                                                                                     <p style=\"font-weight:bold;\">
-                                                                                    <a href='http://localhost/FEU/PHP/Lab/Final Project/HustleHub/account_verification.php?code=$shaRandCode'>Verify your Email</a>
+                                                                                    <a href='http://localhost/FEU/PHP/Lab/Final Project/HustleHub/account_verification.php?code=$shaRandCode'>Click here to verify your account</a>
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -196,7 +196,7 @@ if (isset($_POST["signup"], $conn) && $conn) {
                         if (!$mail->Send()) {
                             echo "Mailer Error: " . $mail->ErrorInfo;
                         } else {
-                            echo "<script>alert('We have sent you an email.'); window.location.href='login.php?account_status=verify-account'</script>";
+                            header("location: login.php?account_status=verify-account");
                         }
                     } catch (phpmailerException $e) {
                         return $e;

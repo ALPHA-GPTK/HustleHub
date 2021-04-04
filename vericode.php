@@ -14,7 +14,7 @@
                                 <label for="code" class="block mb-2 text-xs text-gray-600 dark:text-gray-400 uppercase font-black">Code</label>
                                 <div class="relative text-gray-700">
                                     <label>
-                                        <input class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="code" id="code" required />
+                                        <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="text" name="code" id="code" required />
                                     </label>
                                     <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
                                         <img src="./assets/img/code-out.svg" alt="mail-icon" class="h-6 w-6" id="code-icon">
