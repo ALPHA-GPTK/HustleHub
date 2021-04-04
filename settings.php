@@ -1,5 +1,4 @@
 <?php
-<?php
 
 require_once "./dbConnection.inc";
 require_once "./function.php";

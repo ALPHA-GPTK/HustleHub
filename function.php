@@ -112,8 +112,8 @@ function add_image($conn, $submitBtn, $chooseImg, $database = "freelance_info"):
             } else {
                 $sql = "SELECT gigs_banner FROM freelance_gig WHERE user_id = ? AND gigs_banner = ?";
             }
-//            $result = $conn->query($sql);
-//            $countResult = $result->num_rows;
+            //            $result = $conn->query($sql);
+            //            $countResult = $result->num_rows;
 
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("is", $user_id, $target_file);
@@ -183,4 +183,3 @@ function add_image($conn, $submitBtn, $chooseImg, $database = "freelance_info"):
         trigger_error("Connection Failed: " . $conn->connect_error);
     }
 }
-

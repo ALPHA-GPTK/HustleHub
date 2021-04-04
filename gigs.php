@@ -20,22 +20,49 @@
       <div class="flex flex-wrap -mx-4">
         <!-- Card 1 -->
         <?php
-
-        $sql = "SELECT freelance_fName, freelance_lName,freelance_path, gigs_service, gigs_description, gigs_banner, gigs_price, gigs_creation
-                FROM freelance_gig INNER JOIN freelance_info ON user_id = freelance_id WHERE user_id != '$userId'";
+        $sql = "SELECT freelance_fName, freelance_lName,freelance_path, gigs_service, gigs_description, gigs_banner, gigs_price, gigs_creation FROM freelance_gig INNER JOIN freelance_info ON user_id = freelance_id WHERE user_id != '$userId'";
         $result = $conn->query($sql);
 
         while ($userResult = $result->fetch_assoc()) :
-          ?>
+
+          //  Check Image Existence in DIR
+          //Freelance
+          $f_target_dir = "./assets/img/";
+          $f_dbFilePath = $userResult['freelance_path'];
+          $f_dbFileArr = explode("/", $f_dbFilePath);
+          $f_filename = end($f_dbFileArr);
+          $f_target_file = $f_target_dir . $f_filename;
+
+          //gigs
+          $g_target_dir = "./assets/img/";
+          $g_dbFilePath = $userResult['gigs_banner'];
+          $g_dbFileArr = explode("/", $g_dbFilePath);
+          $g_filename = end($g_dbFileArr);
+          $g_target_file = $g_target_dir . $g_filename;
+
+          //Freelance
+          if (!(file_exists($f_target_file)) || empty($f_dbFilePath)) {
+            $profile = "./assets/img/dummy_profile.svg";
+          } else {
+            $profile = $f_dbFilePath;
+          }
+
+          //Gigs
+          if (!(file_exists($g_target_file)) || empty($g_dbFilePath)) {
+            $timeline = "./assets/img/default-timeline.svg";
+          } else {
+            $timeline = $g_dbFilePath;
+          }
+        ?>
           <div class="mx-auto justify-center w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 text-center">
             <div class="card-gig block shadow-md hover:shadow-xl rounded-lg overflow-hidden">
               <div class="relative pb-48 overflow-hidden">
-                <img class="absolute inset-0 h-full w-full object-cover" src="<?= $userResult['gigs_banner'] ?>" alt="">
+                <img class="absolute inset-0 h-full w-full object-cover" src="<?= $timeline ?>" alt="user-timeline">
               </div>
               <!-- Profile Image and Name -->
               <div class="relative flex flex-col items-center w-full text-center">
                 <div class="h-24 w-24 md rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
-                  <img class="h-24 w-24 md rounded-full relative" src="<?= $userResult["freelance_path"] ?>" alt="">
+                  <img class="h-24 w-24 md rounded-full relative" src="<?= $profile ?>" alt="user-image">
                   <div class="absolute"></div>
                 </div>
               </div>
@@ -45,7 +72,7 @@
               <!-- Profile Image and Name -->
               <div class="p-4 -mt-2">
                 <span class="text-sm text-gray-700">
-                    <?php echo get_timeago(strtotime($userResult['gigs_creation'])); ?>
+                  <?php echo get_timeago(strtotime($userResult['gigs_creation'])); ?>
                 </span>
                 <div class="font-bold text-lg my-2"><?php echo ucwords($userResult['gigs_service']); ?></div>
                 <div class="text-sm mb-2"><?php echo $userResult['gigs_description']; ?></div>
@@ -54,13 +81,13 @@
                     PRICE
                   </span>
                   <span class="font-extrabold">
-                      <?php echo "₱" . $userResult['gigs_price']; ?>
-                    </span>
+                    <?php echo "₱" . $userResult['gigs_price']; ?>
+                  </span>
                 </div>
               </div>
               <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
                 <span class="pl-2">
-                    <img src="assets/img/stars.svg" alt="stars" width="200">
+                  <img src="assets/img/stars.svg" alt="stars" width="200">
                 </span>
               </div>
               <!-- Buttons -->
