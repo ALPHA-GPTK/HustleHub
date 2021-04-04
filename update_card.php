@@ -7,25 +7,27 @@
         require_once "./dbConnection.inc";
 
         $cardId = $_GET['card_id'];
-        $sql = "SELECT gigs_id, gigs_service, gigs_description, gigs_price, gigs_rating, gigs_creation FROM freelance_gig WHERE gigs_id = '$cardId'";
+        $sql = "SELECT gigs_id, gigs_service, gigs_description, gigs_banner, gigs_price, gigs_rating, gigs_creation FROM freelance_gig WHERE gigs_id = '$cardId'";
         $result = $conn->query($sql);
         $userResult = $result->fetch_assoc();
 
         $dbId = $userResult['gigs_id'];
         $dbService = $userResult['gigs_service'];
         $dbDescription = $userResult['gigs_description'];
+        $dbBanner = $userResult['gigs_banner'];
         $dbPrice = $userResult['gigs_price'];
         $dbRating = $userResult['gigs_rating'];
         $dbCreation = $userResult['gigs_creation'];
 
         $_SESSION['active_card'] = $_GET['card_id'];
+
         ?>
         <section class="mx-auto">
             <div>
                 <h1 class="title-header font-bold">Update Gigs</h1>
             </div>
 
-            <form action="./check_update.php" method="POST" id="addgigs">
+            <form action="./check_update.php" method="POST" id="addgigs" enctype="multipart/form-data">
                 <div class="antialiased flex justify-center">
                     <div class="px-4 py-5 bg-white space-y-6 sm:p-6 shadow sm:rounded-md sm:overflow-hidden w-6/12">
                         <h3 class="text-lg font-medium leading-6 text-gray-900">What is your service...</h3>
@@ -70,6 +72,21 @@
                                     <label>
                                         <textarea rows="20" cols="50" form="addgigs" class="w-full h-24 py-2 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" name="description" id="description" placeholder="Enter your description..." required><?php echo $dbDescription; ?></textarea>
                                     </label>
+                                </div>
+                                <!-- Banner -->
+                                <label for="banner" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
+                                    Banner Profile
+                                </label>
+                                <div class="border border-dashed border-gray-500 relative">
+                                    <input type="file" id="banner" name="uploadImage" multiple class="cursor-pointer relative block opacity-0 p-20 z-50">
+                                    <div class="text-center p-10 absolute top-0 right-0 left-0 m-auto">
+                                        <h4 id="image-text">
+                                            Drop files anywhere to upload
+                                            <br />or
+                                        </h4>
+                                        <p class="" id="image-text">Select Files</p>
+                                        <p class="pt-4 italic text-sm c-black_50" id="filename"><?php echo $dbBanner; ?></p>
+                                    </div>
                                 </div>
                                 <!-- Price -->
                                 <label for="price" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
