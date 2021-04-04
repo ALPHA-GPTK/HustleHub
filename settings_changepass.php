@@ -12,18 +12,26 @@ if (isset($_POST['changePass'])) {
         $inputConfirmPassword = sha1($_POST['confirm-password']);
 
         if ($inputCurrentPassword === $userPassword) {
-            if ($inputNewPassword == $inputConfirmPassword) {
+            if ($inputNewPassword === $inputConfirmPassword) {
                 $sql = "UPDATE freelance_info SET freelance_password = '$inputConfirmPassword' WHERE freelance_id = '$userId'";
                 $conn->query($sql);
                 session_destroy();
-                header("location: login.php?change_status=success");
+                echo "<script>alert('Password Changed Successfully')
+                window.location.href='login.php?change_status=success';
+                </script>";
             } else {
-                header("location: settings.php?password_status=pass-not-the-same");
+                echo "<script>alert('Password and Confirm Password is not the same.')
+                window.location.href='=settings.php?password_status=pass-not-the-same';
+                </script>";
             }
         } else {
-            header("location: settings.php?password_status=invalid-current");
+            echo "<script>alert('Current Password is not equal to Login Password.')
+            window.location.href='=settings.php?password_status=invalid-current';
+            </script>";
         }
     } else {
-        header("location: settings.php?password_status=invalid");
+        echo "<script>alert('Please fill out all the fields.')
+        window.location.href='=settings.php?password_status=invalid-current';
+        </script>";
     }
 }
