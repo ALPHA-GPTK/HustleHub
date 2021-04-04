@@ -353,7 +353,6 @@ if ((lastUrlElement.includes("index.php"))) {
     const conInfoBtn = document.getElementById("btnCS");
 
     btnEdit.addEventListener("click", function () {
-        console.log("here");
         firstNameInput.removeAttribute("disabled");
         lastNameInput.removeAttribute("disabled");
         usernameInput.removeAttribute("disabled");
@@ -364,6 +363,32 @@ if ((lastUrlElement.includes("index.php"))) {
             conInfoBtn.classList.remove("hidden");
         }
     })
+} else if ((lastUrlElement.includes("add_gigs.php"))) {
+
+    //Upload file
+    const btnFile = document.getElementById("banner");
+    const dspFilename = document.getElementById("filename");
+
+    btnFile.addEventListener("change", function () {
+        var filePath = btnFile.value;
+        var fileSplit = filePath.split("\\");
+        var filename = fileSplit[fileSplit.length - 1];
+
+        dspFilename.innerHTML = filename;
+    });
+} else if ((lastUrlElement.includes("update_card.php"))) {
+
+    //Upload file
+    const btnFile = document.getElementById("banner");
+    const dspFilename = document.getElementById("filename");
+
+    btnFile.addEventListener("change", function () {
+        var filePath = btnFile.value;
+        var fileSplit = filePath.split("\\");
+        var filename = fileSplit[fileSplit.length - 1];
+
+        dspFilename.innerHTML = filename;
+    });
 }
 
 function isNumberKey(evt) {
