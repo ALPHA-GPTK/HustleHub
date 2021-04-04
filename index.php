@@ -375,4 +375,4 @@
 </footer>
 <!-- End of Footer -->
 
-</html>
+<?php require_once "footer.php"; ?>
