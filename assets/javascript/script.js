@@ -1,11 +1,3 @@
-// For Navigation Bar
-const btn = document.querySelector("button.mobile-menu-button");
-const menu = document.querySelector(".mobile-menu");
-
-btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-});
-
 //Login Page
 //Email
 
@@ -13,6 +5,9 @@ var urlCheck = (window.location.href).split("/");
 var lastUrlElement = urlCheck[urlCheck.length - 1]
 
 if ((lastUrlElement.includes("login.php"))) {
+
+    headerToggleMobile();
+
     const emailInput = document.getElementById("email");
     const emailLogo = document.getElementById("email-logo");
 
@@ -38,6 +33,9 @@ if ((lastUrlElement.includes("login.php"))) {
         passwordInput.type = "password";
     });
 } else if ((lastUrlElement.includes("signup.php"))) { //Sign up Page
+
+    headerToggleMobile();
+
     //Username
     const userNameInput = document.getElementById('username');
     const userNameIcon = document.getElementById('username-icon');
@@ -116,6 +114,9 @@ if ((lastUrlElement.includes("login.php"))) {
         }
     });
 } else if ((lastUrlElement.includes("forgot.php"))) {
+
+    headerToggleMobile();
+
     //Email
     const emailInput = document.getElementById('email');
     const emailIcon = document.getElementById('email-icon');
@@ -128,6 +129,9 @@ if ((lastUrlElement.includes("login.php"))) {
         emailIcon.src = "./assets/img/mail-out.svg";
     });
 } else if ((lastUrlElement.includes("vericode.php"))) {
+
+    headerToggleMobile();
+
     //Code Verification
     const codeInput = document.getElementById('code');
     const codeIcon = document.getElementById('code-icon');
@@ -140,6 +144,9 @@ if ((lastUrlElement.includes("login.php"))) {
         codeIcon.src = "./assets/img/code-out.svg";
     });
 } else if ((lastUrlElement.includes("changepass.php"))) {
+
+    headerToggleMobile();
+
     //Password
     const passwordInput = document.getElementById('newpassword');
     const passwordIcon = document.getElementById('newpassword-icon');
@@ -331,7 +338,29 @@ if ((lastUrlElement.includes("login.php"))) {
             confirmIcon.src = "./assets/img/check-not.svg";
         }
     });
-} else if ((lastUrlElement.includes("settings.php"))) {}
+
+    //Basic Information
+    const btnEdit = document.getElementById("edit");
+    const firstNameInput = document.getElementById("fName");
+    const lastNameInput = document.getElementById("lName");
+    const usernameInput = document.getElementById("username");
+    const emailInput = document.getElementById("email");
+    const aboutInput = document.getElementById("about");
+    const conInfoBtn = document.getElementById("btnCS");
+
+    btnEdit.addEventListener("click", function () {
+        console.log("here");
+        firstNameInput.removeAttribute("disabled");
+        lastNameInput.removeAttribute("disabled");
+        usernameInput.removeAttribute("disabled");
+        emailInput.removeAttribute("disabled");
+        aboutInput.removeAttribute("disabled");
+
+        if (conInfoBtn.classList.contains("hidden")) {
+            conInfoBtn.classList.remove("hidden");
+        }
+    })
+}
 
 function isNumberKey(evt) {
     var charCode = (evt.which) ? evt.which : event.keyCode
@@ -339,4 +368,15 @@ function isNumberKey(evt) {
         return false;
 
     return true;
+}
+
+function headerToggleMobile() {
+    // For Navigation Bar
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn.addEventListener("click", () => {
+        console.log("here1");
+        menu.classList.toggle("hidden");
+    });
 }
