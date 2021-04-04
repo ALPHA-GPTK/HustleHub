@@ -1,5 +1,5 @@
 <?php require_once "header.php"; ?>
-<main class="flex mx-auto justify-between items-center w-full mb-28">
+<main class="flex mx-auto justify-between items-center w-full mb-28 pt-10 md:pt-0 lg:pt-1 xl:pt-0">
     <div class="tagline px-10 2xl:px-40">
         <div class="mb-8 c-black_100 f-inter-bold text-4xl xl:text-5xl 2xl:text-5xl">Hustle your skill for money <br> with <span class="main-title f-fredokaone-regular">Hustle</span><span class="sub-title f-fredokaone-regular">Hub</span></div>
         <div class="c-black_50 text-lg 2xl:text-2xl">An online freelance services platform for everyone</div>
