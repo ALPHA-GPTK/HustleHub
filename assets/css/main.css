@@ -248,13 +248,13 @@ input::-webkit-input-placeholder {
 }
 
 .message-button,
-.update-button,
+.delete-button,
 .cancel-button {
     border-color: #364A7C;
 }
 
 .hire-button,
-.delete-button,
+.update-button,
 .add-button {
     background-color: #364A7C;
     color: #FFFFFF;
