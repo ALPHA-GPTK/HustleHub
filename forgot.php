@@ -21,7 +21,7 @@
                                 </div>
                             </div>
                             <div class="mb-6">
-                                <input type="submit" value="Send" name="forgot" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-indigo-500 rounded-lg focus:bg-indigo-600 focus:outline-none uppercase font-black cursor-pointer">
+                                <input type="submit" value="Send" name="forgot" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-blue-900 rounded-lg focus:bg-blue-900 focus:outline-none uppercase font-black cursor-pointer">
                             </div>
                         </form>
                     </div>
