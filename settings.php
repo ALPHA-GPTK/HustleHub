@@ -153,8 +153,8 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
 
                     <!-- CANCEL AND SAVE BUTTONS -->
                     <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6 hidden" id="btnCS">
-                      <button class="inline-flex justify-center py-3 px-7 border shadow-sm text-sm rounded-lg add-button cursor-pointer">Save</button>
                       <button name="change-info" type="submit" class="inline-flex justify-center py-3 px-7 border cancel-button text-sm rounded-lg cursor-pointer">Cancel</button>
+                      <button class="inline-flex justify-center py-3 px-9 border shadow-sm text-sm rounded-lg add-button cursor-pointer">Save</button>
                     </div>
                   </div>
                 </div>
