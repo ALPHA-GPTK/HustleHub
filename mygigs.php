@@ -25,7 +25,8 @@
       <div class="flex flex-wrap -mx-4">
         <!-- Card 1 -->
         <?php
-        $sql = "SELECT gigs_id, gigs_service, gigs_description, gigs_banner, gigs_price, gigs_rating, gigs_creation FROM freelance_gig WHERE user_id = '$userId'";
+        $sql = "SELECT freelance_fName, freelance_lName, freelance_path, gigs_id, gigs_service, gigs_description, gigs_banner, gigs_price, gigs_creation
+                FROM freelance_gig INNER JOIN freelance_info ON user_id = freelance_id WHERE user_id = '$userId'";
         $result = $conn->query($sql);
         while ($userResult = $result->fetch_assoc()) :
           ?>
@@ -37,12 +38,12 @@
               <!-- Profile Image and Name -->
               <div class="relative flex flex-col items-center w-full text-center">
                 <div class="h-24 w-24 md rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
-                  <img class="h-24 w-24 md rounded-full relative" src="<?= $_SESSION["profileImage"] ?>" alt="">
+                  <img class="h-24 w-24 md rounded-full relative" src="<?= $userResult["freelance_path"] ?>" alt="">
                   <div class="absolute"></div>
                 </div>
               </div>
               <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
-                <span class="text-md whitespace-nowrap text-gray-800 font-semibold"><?= $userFName . " " . $userLName ?></span>
+                <span class="text-md whitespace-nowrap text-gray-800 font-semibold"><?= $userResult["freelance_fName"] . " " . $userResult["freelance_lName"] ?></span>
               </div>
               <!-- Profile Image and Name -->
               <div class="p-4 -mt-2">
