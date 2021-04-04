@@ -19,28 +19,31 @@ if (isset($_POST["signup"], $conn) && $conn) {
                 $email = $_POST["email"];
                 $password = sha1($_POST["password"]);
 
-                $sql = "INSERT INTO `freelance_db`.freelance_info (freelance_fName, freelance_lName, freelance_username, freelance_email, freelance_password) 
-                        VALUES (?, ?, ?, ?, ?);";
+                //Random Alpha-numeric
+                $bytes = random_bytes(20);
+                $randomCode = bin2hex($bytes);
+                $shaRandCode = sha1($randomCode);
+
+                $sql = "INSERT INTO freelance_info (freelance_fName, freelance_lName, freelance_username, freelance_email, freelance_password, freelance_email_code) 
+                        VALUES (?, ?, ?, ?, ?, ?);";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("sssss", $firstName, $lastName, $userName, $email, $password);
+                $stmt->bind_param("ssssss", $firstName, $lastName, $userName, $email, $password, $shaRandCode);
                 $stmt->execute();
 
                 if ($stmt->affected_rows === 1) {
-                    echo "<script>alert('Login Successfully')
-                    window.location.href='gigs.php';
-                    </script>";
+                    // echo "<script>alert('Login Successfully')
+                    // window.location.href='gigs.php';
+                    // </script>";
                     // header("Location: login.php?signup=success");
 
-                    $bytes = random_bytes(20);
-                    $randomCode = bin2hex($bytes);
-                    $shaRandCode = sha1($randomCode);
-                    $sql = "UPDATE freelance_info SET freelance_email_code = '$shaRandCode' WHERE freelance_email = '$email'";
-                    $conn->query($sql);
+
+                    // $sql = "UPDATE freelance_info SET freelance_email_code = '$shaRandCode' WHERE freelance_email = '$email'";
+                    // $conn->query($sql);
 
                     /////////////////////////////////////////////
                     $mail->setFrom($gmailUsername, "HustleHub");
 
-                    $mail->Subject = "Reset Password - HustleHub";
+                    $mail->Subject = "Account Verification - HustleHub";
                     $mail->Body = "
             <body>
             <div marginwidth=\"0\" marginheight=\"0\" style=\"margin:0;padding:0;background-color:#eeeeec;width:100%!important\">
@@ -115,7 +118,7 @@ if (isset($_POST["signup"], $conn) && $conn) {
                                                                                     </p> <br> <br>
                                                                                     Code:
                                                                                     <p style=\"font-weight:bold;\">
-                                                                                    <a href=\"http://localhost/FEU/PHP/Lab/Final Project/HustleHub/account_verification.php?code=$shaRandCode\">Verify your Email</a>
+                                                                                    <a href='http://localhost/FEU/PHP/Lab/Final Project/HustleHub/account_verification.php?code=$shaRandCode'>Verify your Email</a>
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>
@@ -193,8 +196,7 @@ if (isset($_POST["signup"], $conn) && $conn) {
                         if (!$mail->Send()) {
                             echo "Mailer Error: " . $mail->ErrorInfo;
                         } else {
-                            $_SESSION['email'] = $email;
-                            header("location: login.php");
+                            echo "<script>alert('We have sent you an email.'); window.location.href='login.php?account_status=verify-account'</script>";
                         }
                     } catch (phpmailerException $e) {
                         return $e;

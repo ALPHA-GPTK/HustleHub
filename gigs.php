@@ -18,14 +18,13 @@
 
     <div class="antialiased pl-14 pr-14">
       <div class="flex flex-wrap -mx-4">
-        <!-- Card 1 -->
         <?php
         $sql = "SELECT freelance_fName, freelance_lName,freelance_path, gigs_service, gigs_description, gigs_banner, gigs_price, gigs_creation FROM freelance_gig INNER JOIN freelance_info ON user_id = freelance_id WHERE user_id != '$userId'";
         $result = $conn->query($sql);
 
         while ($userResult = $result->fetch_assoc()) :
 
-          //  Check Image Existence in DIR
+          //Check Image Existence in DIR
           //Freelance
           $f_target_dir = "./assets/img/";
           $f_dbFilePath = $userResult['freelance_path'];
@@ -69,7 +68,7 @@
               <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
                 <span class="text-md whitespace-nowrap text-gray-800 font-semibold"><?= $userResult['freelance_fName'] . " " . $userResult['freelance_lName'] ?></span>
               </div>
-              <!-- Profile Image and Name -->
+              <!-- User Description -->
               <div class="p-4 -mt-2">
                 <span class="text-sm text-gray-700">
                   <?php echo get_timeago(strtotime($userResult['gigs_creation'])); ?>

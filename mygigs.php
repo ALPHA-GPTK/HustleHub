@@ -37,7 +37,6 @@
       </div>
 
       <div class="flex flex-wrap -mx-4">
-        <!-- Card 1 -->
         <?php
         $sql = "SELECT freelance_fName, freelance_lName, freelance_path, gigs_id, gigs_service, gigs_description, gigs_banner, gigs_price, gigs_creation
                 FROM freelance_gig INNER JOIN freelance_info ON user_id = freelance_id WHERE user_id = '$userId'";
@@ -72,7 +71,7 @@
               <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
                 <span class="text-md whitespace-nowrap text-gray-800 font-semibold"><?= $userResult["freelance_fName"] . " " . $userResult["freelance_lName"] ?></span>
               </div>
-              <!-- Profile Image and Name -->
+              <!-- User Description -->
               <div class="p-4 -mt-2">
                 <span class="text-sm text-gray-700">
                   <?php echo get_timeago(strtotime($userResult['gigs_creation'])); ?>

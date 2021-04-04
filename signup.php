@@ -6,7 +6,7 @@
     <div class="flex justify-center overflow-hidden">
       <div class="container w-full -mt-5">
         <div class="max-w-md mx-auto">
-        <!-- Start of Form -->
+          <!-- Start of Form -->
           <form action="create_signup.php" method="post" oninput='password.setCustomValidity(password.value !== confirm_password.value ? "Password is not the same with the confirm password." : "")'>
             <div class="max-w-lg flex flex-wrap mx-auto md:space-y-4 justify-center">
               <h1 class="text-3xl my-5 mx-auto text-blue dark:text-gray-200 uppercase font-black">Create Account</h1>
@@ -71,7 +71,7 @@
                 </div>
               </div>
           </form>
-        <!-- End of Form -->
+          <!-- End of Form -->
         </div>
       </div>
     </div>
