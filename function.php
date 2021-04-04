@@ -95,46 +95,89 @@ function get_timeago($ptime)
     }
 }
 
-function add_image($conn, $submitBtn, $chooseImg, $database = "freelance_info")
+function add_image($conn, $submitBtn, $chooseImg, $database = "freelance_info"): string
 {
     if (isset($conn, $submitBtn) && $conn) {
         $target_dir = "./assets/img/";
         $filename = htmlspecialchars(basename($chooseImg['name']));
         $target_file = $target_dir . $filename;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        $phpFile = $database === "freelance_info" ? "settings" : "mygigs";
         $user_id = $_SESSION['user_id'];
         $status = 1;
 
         if (file_exists($target_file)) {
-            echo "Sorry, file already exists.";
-            $status = 0;
-        }
+            if ($database === "freelance_info") {
+                $sql = "SELECT freelance_path FROM freelance_info WHERE freelance_id = ? AND freelance_path = ?";
+            } else {
+                $sql = "SELECT gigs_banner FROM freelance_gig WHERE user_id = ? AND gigs_banner = ?";
+            }
+//            $result = $conn->query($sql);
+//            $countResult = $result->num_rows;
 
-        if ($imageFileType !== "jpg" && $imageFileType !== "png" && $imageFileType !== "jpeg"
-            && $imageFileType !== "gif") {
-            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("is", $user_id, $target_file);
+            $stmt_result = $stmt->store_result();
+
+            // Check if file is in database path
+            if ($stmt_result->num_rows === 0) {
+                if ($database === "freelance_info") {
+                    $sql = "UPDATE freelance_info SET freelance_path = ? WHERE freelance_id = ?";
+                } else {
+                    $sql = "UPDATE freelance_gig SET gigs_banner = ? WHERE user_id = ?";
+                }
+
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("si", $target_file, $user_id);
+
+                if ($stmt->execute()) {
+                    echo "<script>alert('{$filename} uploaded successfully.')
+                    window.location.href='{$phpFile}.php?upload_status=success';
+                    </script>";
+                } else {
+                    echo "<script>alert('{$filename} upload failed. User Id don\'t matched')
+                    window.location.href='{$phpFile}.php?upload_status=failed';
+                    </script>";
+                }
+            } else {
+                echo "<script>alert('Sorry, this is your current profile picture.');
+                window.location.href='{$phpFile}.php?upload_status=already-profile';
+                </script>";
+            }
+        } else if ($imageFileType !== "jpg" && $imageFileType !== "png" && $imageFileType !== "jpeg" && $imageFileType !== "gif") {
             $status = 0;
+            echo "<script>alert('Sorry, only JPG, JPEG, PNG & GIF files are allowed.');
+            window.location.href='{$phpFile}.php?upload_status=invalid-file';
+            </script>";
         }
 
         if ($status === 0) {
-            echo "Sorry, your file was not uploaded.";
-        } else if (move_uploaded_file($chooseImg["tmp_name"], $target_file)) {
+            echo "<script>alert('{$filename} has NOT BEEN uploaded due to not complying.')
+            window.location.href='{$phpFile}.php?upload_status=not-comply';
+            </script>";
+        } else if (!move_uploaded_file($chooseImg["tmp_name"], $target_file)) {
+            echo "<script>alert('{$filename} has NOT BEEN moved to DIR')
+            window.location.href='{$phpFile}.php?upload_status=not-moved';
+            </script>";
+        } else {
             if ($database === "freelance_info") {
-                $sql = "SELECT * FROM freelance_info WHERE freelance_id = ?;";
+                $sql = "UPDATE freelance_info SET freelance_path = ? WHERE freelance_id = ?;";
             } else {
-                $sql = "SELECT * FROM freelance_gig WHERE user_id = ?;";
+                $sql = "UPDATE freelance_gig SET gigs_banner = ? WHERE user_id = ?;";
             }
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("i", $user_id);
+            $stmt->bind_param("si", $target_file, $user_id);
 
             if ($stmt->execute()) {
-                echo "$filename has been uploaded";
+                echo "<script>alert('{$filename} has been uploaded');
+                window.location.href='{$phpFile}.php?upload_status=success';
+                </script>";
                 return $target_file;
             }
 
-            echo "The file not uploaded";
-        } else {
-            echo "Sorry, there was an error uploading your file.";
+            echo "<script>alert('{$filename} has NOT BEEN uploaded')
+            window.location.href='{$phpFile}.php?upload_status=not-uploaded';
+            </script>";
         }
     } else {
         trigger_error("Connection Failed: " . $conn->connect_error);
