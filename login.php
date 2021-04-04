@@ -61,7 +61,7 @@ if ((isset($_COOKIE['user_email'], $_COOKIE['user_password']))) {
               </label>
             </div>
             <div class="mb-6">
-              <input type="submit" value="Log In" name="login" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-indigo-500 rounded-lg focus:bg-indigo-600 focus:outline-none uppercase font-black cursor-pointer">
+              <input type="submit" value="Log In" name="login" class="w-3/5 flex justify-center mx-auto px-3 py-2 text-white bg-blue-900 rounded-lg focus:bg-blue-900 focus:outline-none uppercase font-black cursor-pointer">
             </div>
             <p class="text-sm text-center text-gray-400">New to HustleHub?
               <a class="text-blue focus:outline-none font-black focus:underline focus:text-indigo-500 dark:focus:border-indigo-800 uppercase" href="signup.php">Sign Up</a>
