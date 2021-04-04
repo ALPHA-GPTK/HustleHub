@@ -36,8 +36,6 @@ $target_file = $target_dir . $filename;
 
 if (!(file_exists($target_file)) || empty($profile_pic)) {
   $profile_pic = "./assets/img/dummy_profile.svg";
-} else {
-  $profile_pic = $dbFilePath;
 }
 
 ?>
@@ -47,12 +45,12 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
 <title>HustleHub | Settings</title>
 <div class="bg-lightBlue_8 h-screen">
   <?php require_once "profile_header.php"; ?>
-  <div class="flex lg:px-36">
+  <div class="md:flex flex-col md:flex-row md:min-h-screen w-full lg:px-36">
     <!-- Sidebar Here -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <!-- Start of SideBar -->
     <div class="flex-none text-black">
-      <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 rounded-lg dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
+      <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white rounded-lg  flex-shrink-0" x-data="{ open: false }">
         <div class="px-8 flex flex-row items-center justify-between">
           <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -71,16 +69,19 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
     <!-- End of SideBar -->
     <!-- Sidebar Here -->
 
-    <!-- Start of Account -->
     <div class="flex-1 lg:px-20">
 
+      <!-- Start of Account -->
       <!-- Start of Basic Information -->
-      <div class="w-3/4 rounded-xl mx-auto lg:w-full xl:w-full 2xl:w-full" id="con-basicinfo">
+      <div class="w-4/5 flex lg:w-full xl:w-full 2xl:w-full" id="con-basicinfo">
+        <div class="justify-center items-center">
+
+        </div>
         <div id="div1" class="targetDiv mt-5 md:mt-0 md:col-span-2">
           <div class="shadow rounded-xl">
-            <div class="px-4 pt-5 pb-12 bg-white space-y-6 sm:p-6 rounded-xl">
-              <div class="text-lg font-medium leading-6 text-gray-900">Basic Information</div>
-              
+            <div class="bg-white space-y-6 sm:p-6 rounded-xl">
+              <div class="text-xl px-4 pt-5 font-medium leading-6 text-gray-900">Basic Information</div>
+
               <!-- Start of Form for Image Upload -->
               <form action="upload_image.php" method="POST" enctype="multipart/form-data">
                 <div class="flex justify-center">
@@ -109,7 +110,7 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                 <!-- Start of Input Fields  -->
                 <div class="max-w-lg flex flex-wrap mx-auto">
                   <div class="w-full md:w-1/2 pr-2">
-                  
+
                     <!-- FIRST NAME -->
                     <label class="block mb-1 text-xs text-gray-600 font-black uppercase" for="fName">
                       First name
@@ -185,75 +186,73 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
       <!-- End of Account -->
 
       <!-- Start of Security -->
-      <div class="md:grid-cols-2 md:gap-6 duration-500 hidden" id="con-security">
-        <div id="div2" class="targetDiv  mt-5 md:mt-0 md:col-span-2">
+      <div class="flex w-full hidden" id="con-security">
+        <div id="div2" class="targetDiv rounded-xl mt-5 md:mt-0 w-full flex justify-center ">
+          <div class="flex justify-center p-6 w-5/6 md:w-5/6 lg:w-full lg:p-10 xl:w-full 2xl:w-full bg-white shadow rounded-xl">
+            <!-- Start of Form for Change Password -->
+            <form action="settings_changepass.php" method="POST" class="w-5/6 md:w-5/6 lg:w-full xl:w-full 2xl:w-full">
+              <div class="text-xl px-0 pt-3 lg:px-4 lg:pt-5 font-medium leading-6 text-gray-900 mb-8 font-black">Security</div>
 
-          <!-- Start of Form for Change Password -->
-          <form action="settings_changepass.php" method="POST">
-            <div class="shadow sm:rounded-md sm:overflow-hidden">
-              <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
-                <div class="text-lg font-medium leading-6 text-gray-900">Security</div>
+              <!-- Start of Input Fields  -->
+              <div class="max-w-lg flex flex-wrap mx-auto">
+                <div class="w-full space-y-2">
 
-                <!-- Start of Input Fields  -->
-                <div class="max-w-lg flex flex-wrap mx-auto">
-                  <div class="w-full space-y-2">
-
-                    <!-- CURRENT PASSWORD -->
-                    <label for="current-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">Current
-                      Password</label>
-                    <div class="relative text-gray-700">
-                      <label>
-                        <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="current-password" id="current-password" required />
-                      </label>
-
-                      <!-- SVG HIDE PASSWORD ICON -->
-                      <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer">
-                        <img src="./assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="current-password-icon">
-                      </div>
-                    </div>
-
-                    <!-- NEW PASSWORD -->
-                    <label for="new-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
-                      New Password
+                  <!-- CURRENT PASSWORD -->
+                  <label for="current-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">Current
+                    Password</label>
+                  <div class="relative text-gray-700">
+                    <label>
+                      <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="current-password" id="current-password" required />
                     </label>
-                    <div class="relative text-gray-700">
-                      <label>
-                        <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="new-password" id="new-password" required />
-                      </label>
 
-                      <!-- SVG HIDE PASSWORD ICON -->
-                      <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer">
-                        <img src="./assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="new-password-icon">
-                      </div>
-                    </div>
-
-                    <!-- CONFIRM PASSWORD -->
-                    <label for="current-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
-                      Confirm Password
-                    </label>
-                    <div class="relative text-gray-700">
-                      <label>
-                        <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="confirm-password" id="confirm-password" required disabled />
-                      </label>
-
-                      <!-- SVG CHECK PASSWORD ICON -->
-                      <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
-                        <img src="./assets/img/check-not.svg" alt="check-icon" class="h-6 w-6" id="confirm-password-check">
-                      </div>
-                    </div>
-
-                    <!-- CANCEL AND SAVE BUTTONS -->
-                    <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6">
-                      <input type="reset" value="Cancel" name="cancelPass" class="inline-flex justify-center py-3 px-7 border shadow-sm text-sm rounded-lg bg-transparent cancel-button cursor-pointer" />
-                      <input type="submit" value="Save" name="changePass" class="inline-flex justify-center py-3 px-7 save-button text-sm rounded-lg cursor-pointer" />
+                    <!-- SVG HIDE PASSWORD ICON -->
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer">
+                      <img src="./assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="current-password-icon">
                     </div>
                   </div>
+
+                  <!-- NEW PASSWORD -->
+                  <label for="new-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
+                    New Password
+                  </label>
+                  <div class="relative text-gray-700">
+                    <label>
+                      <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="new-password" id="new-password" required />
+                    </label>
+
+                    <!-- SVG HIDE PASSWORD ICON -->
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer">
+                      <img src="./assets/img/hide.svg" alt="password-icon" class="h-6 w-6 hide" id="new-password-icon">
+                    </div>
+                  </div>
+
+                  <!-- CONFIRM PASSWORD -->
+                  <label for="current-password" class="block text-xs text-gray-600 dark:text-gray-400 uppercase font-black">
+                    Confirm Password
+                  </label>
+                  <div class="relative text-gray-700">
+                    <label>
+                      <input class="w-full h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" type="password" name="confirm-password" id="confirm-password" required disabled />
+                    </label>
+
+                    <!-- SVG CHECK PASSWORD ICON -->
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                      <img src="./assets/img/check-not.svg" alt="check-icon" class="h-6 w-6" id="confirm-password-check">
+                    </div>
+                  </div>
+
+                  <!-- CANCEL AND SAVE BUTTONS -->
+                  <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6">
+                    <input type="reset" value="Cancel" name="cancelPass" class="inline-flex justify-center py-3 px-7 border shadow-sm text-sm rounded-lg bg-transparent cancel-button cursor-pointer" />
+                    <input type="submit" value="Save" name="changePass" class="inline-flex justify-center py-3 px-9 save-button text-sm rounded-lg cursor-pointer" />
+                  </div>
                 </div>
-                <!-- End of Input Fields  -->
               </div>
-            </div>
-          </form>
-          <!-- End of Form for Change Password -->
+              <!-- End of Input Fields  -->
+            </form>
+            <!-- End of Form for Change Password -->
+          </div>
+
         </div>
       </div>
       <!-- End of Security -->
@@ -265,10 +264,10 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
           <!-- Start of Form for Deletion -->
           <form action="delete_account.php" method="POST">
             <div class="shadow sm:rounded-md sm:overflow-hidden">
-              <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+              <div class="px-4 py-5 rounded-xl bg-white space-y-6 sm:p-6">
 
                 <div class="max-w-full text-left">
-                  <div class="text-lg font-medium leading-6 text-gray-900">Deletion</div>
+                  <div class="text-xl px-4 pt-5 font-medium leading-6 text-gray-900">Deletion</div>
 
                   <!-- DELETE BUTTON -->
                   <div class="px-8 flex justify-end">
