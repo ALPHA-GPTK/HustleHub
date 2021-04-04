@@ -29,6 +29,20 @@ if (isset($conn) && $conn) {
   </script>";
 }
 
+//  Check Image Existence in DIR
+$target_dir = "./assets/img/";
+$sql = "SELECT freelance_path FROM freelance_info WHERE freelance_id = '$userId'";
+$result = $conn->query($sql);
+$userResult = $result->fetch_assoc();
+$dbFilePath = $userResult['freelance_path'];
+$dbFileArr = explode("/", $dbFilePath);
+$filename = end($dbFileArr);
+$target_file = $target_dir . $filename;
+
+if (!(file_exists($target_file)) || empty($profile_pic)) {
+  $profile_pic = "./assets/img/dummy_profile.svg";
+}
+
 ?>
 
 <!-- Favicon -->
@@ -62,14 +76,14 @@ if (isset($conn) && $conn) {
       <div class="md:grid md:grid-cols-2 duration-500 md:gap-6" id="con-basicinfo">
         <div id="div1" class="targetDiv  mt-5 md:mt-0 md:col-span-2">
           <div class="shadow sm:rounded-md sm:overflow-hidden">
-            <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+            <div class="px-4 pt-5 pb-12 bg-white space-y-6 sm:p-6">
               <h3 class="text-lg font-medium leading-6 text-gray-900">Basic Information</h3>
               <form action="upload_image.php" method="POST" enctype="multipart/form-data">
                 <div class="flex justify-center">
                   <div class="mt-1 flex items-center">
                     <!-- Profile Image -->
                     <span class="inline-block h-16 w-16 rounded-full overflow-hidden bg-gray-100">
-                      <img src="<?= empty($profile_pic) ? './assets/img/dummy_profile.svg' : $profile_pic ?>" alt="profile_image">
+                      <img src="<?= $profile_pic ?>" alt="profile_image">
                     </span>
                     <div class="flex flex-col space-y-2">
                       <input type="file" name="imgToUpload" value="Choose File" class="ml-5 bg-blue-save py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
@@ -134,12 +148,12 @@ if (isset($conn) && $conn) {
                       </label>
                       <div class="mt-1">
                         <label for="about"></label>
-                        <textarea class="w-full p-3 shadow-sm text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" id="about" name="about" rows="4" disabled></textarea>
+                        <textarea class="w-full p-3 shadow-sm text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" id="about" name="about" rows="4" disabled><?php echo $user_about; ?></textarea>
                       </div>
                     </div>
 
                     <!-- CANCEL AND SAVE BUTTONS -->
-                    <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6" id="btnCS">
+                    <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6  hidden" id="btnCS">
                       <button type="reset" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-change hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Cancel
                       </button>
