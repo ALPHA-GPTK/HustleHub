@@ -71,7 +71,7 @@
 <!-- Start of Top Providers Section -->
 <section class="provider mx-auto">
     <div>
-        <div div class="text-4xl pt-20 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-4xl lg:pt-20 xl:text-5xl 2xl:text-5xl font-black mb-12">Top Providers</div>
+        <div class="text-4xl pt-20 text-center md:text-5xl md:mb-12 md:pt-20 lg:text-4xl lg:pt-20 xl:text-5xl 2xl:text-5xl font-black mb-12">Top Providers</div>
     </div>
 
     <div class="antialiased pl-14 pr-14">
