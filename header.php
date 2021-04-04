@@ -50,7 +50,6 @@ checkSessionGoToGig();
                         </svg>
                     </button>
                 </div>
-
             </div>
         </div>
 

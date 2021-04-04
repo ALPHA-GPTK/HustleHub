@@ -4,7 +4,11 @@
 var urlCheck = (window.location.href).split("/");
 var lastUrlElement = urlCheck[urlCheck.length - 1]
 
-if ((lastUrlElement.includes("login.php"))) {
+if ((lastUrlElement.includes("index.php"))) {
+
+    headerToggleMobile();
+
+} else if ((lastUrlElement.includes("login.php"))) {
 
     headerToggleMobile();
 
@@ -376,7 +380,6 @@ function headerToggleMobile() {
     const menu = document.querySelector(".mobile-menu");
 
     btn.addEventListener("click", () => {
-        console.log("here1");
         menu.classList.toggle("hidden");
     });
 }
