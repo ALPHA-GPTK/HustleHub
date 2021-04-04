@@ -13,7 +13,7 @@
 
   <section class="mx-auto">
     <div>
-      <div class="text-5xl pt-20 text-center md:mb-12 md:pt-20 lg:pt-20 font-black mb-12">Gigs</div>
+      <div class="text-5xl pt-3 text-center md:mb-12 md:pt-10 lg:pt-3 xl:pt-3 2xl:pt-3 font-black mb-12">Gigs</div>
     </div>
 
     <div class="antialiased pl-14 pr-14">
@@ -66,10 +66,10 @@
               <!-- Buttons -->
               <div class="grid grid-cols-2 px-5 pb-5 mt-5">
                 <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
-                  <a href="./update_card.php?card_id=<?php echo $userResult['gigs_id']; ?>" class="update-button border h-10 py-2 px-4 rounded-lg tracking-wide">HIRE</a>
+                  <a href="./update_card.php?card_id=<?php echo $userResult['gigs_id']; ?>" class="update-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</a>
                 </div>
                 <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
-                  <a href="./card_delete.php?card_id=<?php echo $userResult['gigs_id']; ?>" class="delete-button h-10 py-2 px-4 rounded-lg tracking-wide">MESSAGE</a>
+                  <a href="./card_delete.php?card_id=<?php echo $userResult['gigs_id']; ?>" class="delete-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</a>
                 </div>
               </div>
             </div>
