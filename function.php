@@ -110,8 +110,7 @@ function add_image($conn, $submitBtn, $chooseImg, $database = "freelance_info")
             $status = 0;
         }
 
-        if ($imageFileType !== "jpg" && $imageFileType !== "png" && $imageFileType !== "jpeg"
-            && $imageFileType !== "gif") {
+        if ($imageFileType !== "jpg" && $imageFileType !== "png" && $imageFileType !== "jpeg" && $imageFileType !== "gif") {
             echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
             $status = 0;
         }
@@ -140,3 +139,4 @@ function add_image($conn, $submitBtn, $chooseImg, $database = "freelance_info")
         trigger_error("Connection Failed: " . $conn->connect_error);
     }
 }
+
