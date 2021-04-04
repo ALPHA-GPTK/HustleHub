@@ -12,13 +12,13 @@
 
   <section class="mx-auto">
     <div>
-      <h1 class="title-header font-bold">MyGigs</h1>
+      <div class="text-5xl pt-20 text-center md:mb-12 md:pt-20 lg:pt-20 font-black mb-12">MyGigs</div>
     </div>
 
     <div class="antialiased pl-14 pr-14">
       <div class="flex justify-end">
         <a href="./add_gigs.php"
-           class="py-2 px-4 mb-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Add
+           class="py-2 px-4 mb-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-700">Add
           Gigs</a>
       </div>
 
@@ -29,7 +29,7 @@
         $result = $conn->query($sql);
         while ($userResult = $result->fetch_assoc()) :
           ?>
-          <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 text-center">
+          <div class="mx-auto justify-center w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 text-center">
             <div href="" class="card-gig block shadow-md hover:shadow-xl rounded-lg overflow-hidden">
               <div class="relative pb-48 overflow-hidden">
                 <img class="absolute inset-0 h-full w-full object-cover"
@@ -48,11 +48,11 @@
               </div>
               <!-- Profile Image and Name -->
               <div class="p-4">
-                <span class="text-gray-700">
+                <span class="text-sm text-gray-700">
                     <?php echo get_timeago(strtotime($userResult['gigs_creation'])); ?>
                 </span>
-                <div class="font-bold text-xl my-2"><?php echo ucwords($userResult['gigs_service']); ?></div>
-                <span><?php echo $userResult['gigs_description']; ?></span>
+                <div class="font-bold text-lg my-2"><?php echo ucwords($userResult['gigs_service']); ?></div>
+                <div class="text-sm mb-2"><?php echo $userResult['gigs_description']; ?></div>
                 <div>
                   <span class="text-gray-700">
                     PRICE
@@ -64,11 +64,11 @@
               </div>
               <div class="flex leading-none justify-center items-center w-full divide-x divide-gray-400 divide-solid">
                 <span class="pl-2">
-                    <img src="assets/img/stars.svg" alt="">
+                    <img src="assets/img/stars.svg" alt="stars" width="200">
                 </span>
               </div>
               <!-- Buttons -->
-              <div class="grid grid-cols-2 p-10">
+              <div class="grid grid-cols-2 px-5 pb-5 mt-5">
                 <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
                   <a href="./update_card.php?card_id=<?php echo $userResult['gigs_id']; ?>"
                      class="update-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</a>
