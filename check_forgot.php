@@ -57,7 +57,7 @@ if (isset($_POST['email'], $conn, $mail, $gmailUsername)) {
                                         <tbody>
                                             <tr>
                                                 <td align=\"center\" valign=\"top\" style=\"border-collapse:collapse;\">
-                                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"background-color: #8EC1D1;border-top:1px solid #8EC1D1; border-bottom:1px solid #8f0100;\">
+                                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"background-color: #D9EAEF;border-top:1px solid #D9EAEF; border-bottom:1px solid #8f0100;\">
                                                         <tbody>
                                                             <tr>
                                                                 <td align=\"center\" valign=\"top\" style=\"border-collapse:collapse;\">
