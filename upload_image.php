@@ -15,13 +15,6 @@ if (isset($conn, $_POST["submit-file"]) && $conn) {
         $status = 0;
     }
 
-    // Check file size
-    if ($_FILES["imgToUpload"]["size"] > 500000) {
-        echo "Sorry, your file is too large.";
-        $status = 0;
-    }
-
-
     if ($imageFileType !== "jpg" && $imageFileType !== "png" && $imageFileType !== "jpeg"
         && $imageFileType !== "gif") {
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
