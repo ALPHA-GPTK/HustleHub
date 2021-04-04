@@ -73,23 +73,25 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
 
       <!-- Start of Account -->
       <!-- Start of Basic Information -->
-      <div class="flex w-full" id="con-basicinfo">
+      <div class="flex w-full mb-10" id="con-basicinfo">
         <div id="div1" class="targetDiv rrounded-xl mt-5 md:mt-0 w-full flex justify-center">
           <div class="flex justify-center p-6 w-5/6 md:w-5/6 lg:w-full lg:p-10 xl:w-full 2xl:w-full bg-white shadow rounded-xl">
             <div class="w-5/6 md:w-5/6 lg:w-full xl:w-full 2xl:w-full">
               <div class="text-xl px-0 pt-3 lg:px-4 lg:pt-5 font-medium leading-6 text-gray-900 mb-8 font-black">Basic Information</div>
 
                 <!-- Start of Form for Image Upload -->
-                <form action="upload_image.php" method="POST" enctype="multipart/form-data" class="w-5/6 md:w-5/6 lg:w-full xl:w-full 2xl:w-full">
+                <form action="upload_image.php" method="POST" enctype="multipart/form-data">
                   <div class="flex justify-center">
-                    <div class="mt-1 flex-1 md:flex lg:flex xl:flex 2xl:flex justify-center">
+                    <div class="flex- sm:flex md:flex lg:flex xl:flex 2xl:flex justify-center">
                       <!-- PROFILE IMAGE -->
-                      <div class="inline-block h-24 w-24 rounded-full overflow-hidden bg-gray-100">
-                        <img src="<?= $profile_pic ?>" alt="profile_image">
-                      </div>
-                      <div class="flex flex-col space-y-2">
-                        <input type="file" name="imgToUpload" accept="image/*" value="Choose File" class="w-full ml-5 add-button py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-white lg:w-full xl:w-full 2xl:w-full cursor-pointer">
-                        <input type="submit" name="submit-file" value="Upload Now" class="w-full ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 delete-button lg:w-full xl:w-full 2xl:w-full cursor-pointer">
+                      <div class="flex flex-col justify-center align-center">
+                        <div class="inline-block h-24 w-24 rounded-full overflow-hidden bg-gray-100 mx-auto mb-5">
+                          <img src="<?= $profile_pic ?>" alt="profile_image" class="h-full w-full object-cover">
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                          <input type="file" name="imgToUpload" accept="image/*" value="Choose File" class="w-full add-button py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-white lg:w-full xl:w-full 2xl:w-full cursor-pointer">
+                          <input type="submit" name="submit-file" value="Upload Now" class="w-full bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 delete-button lg:w-full xl:w-full 2xl:w-full cursor-pointer">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -98,15 +100,15 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
 
                 <!-- Start of Form for Edit -->
                 <form action="change_info.php" method="POST">
-                  <div class="px-28 pb-5 flex justify-center lg:justify-center xl:justify-center 2xl:justify-end">
-                    <div name="edit" id="edit" class="cursor-pointer py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-800">
+                  <div class="px-24 lg:px-28 pb-10 flex justify-center lg:justify-center xl:justify-center 2xl:justify-end">
+                    <div name="edit" id="edit" class="cursor-pointer py-2 px-32 md:px-6 lg:px-6 xl:px-6 2xl:px-6 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-800">
                       Edit
                     </div>
                   </div>
 
                   <!-- Start of Input Fields  -->
                   <div class="max-w-lg flex flex-wrap mx-auto">
-                    <div class="w-full md:w-1/2 pr-2">
+                    <div class="w-full pr-0 md:w-1/2 sm:pr-2 md:pr-2 lg:pr-2 xl:pr-2 2xl:pr-2">
 
                       <!-- FIRST NAME -->
                       <label class="block mb-1 text-xs text-gray-600 font-black uppercase" for="fName">
@@ -117,7 +119,7 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
 
                     <!-- LAST NAME -->
                     <div class="w-full md:w-1/2 mb-2">
-                      <label class="block mb-1 text-xs text-gray-600 font-black uppercase pt-2 lg:pt-0 xl:pt-0 2xl:pt-0" for="lName">Last name</label>
+                      <label class="block mb-1 text-xs text-gray-600 font-black uppercase pt-2 sm:pt-2 md:pt-0 lg:pt-0 xl:pt-0 2xl:pt-0" for="lName">Last name</label>
                       <input value="<?= $user_lastname ?>" class="w-full h-10 pl-3 pr-8 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" type="text" name="lName" id="lName" disabled />
                     </div>
 
