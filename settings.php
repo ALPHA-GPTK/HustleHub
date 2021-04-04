@@ -85,7 +85,7 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                       <img src="<?= $profile_pic ?>" alt="profile_image">
                     </div>
                     <div class="flex flex-col space-y-2">
-                      <input type="file" name="imgToUpload" value="Choose File" class="w-1/2 ml-5 add-button py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-white  lg:w-full xl:w-full 2xl:w-full cursor-pointer">
+                      <input type="file" name="imgToUpload" value="Choose File" class="w-1/2 ml-5 add-button py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-white lg:w-full xl:w-full 2xl:w-full cursor-pointer">
                       <input type="submit" name="submit-file" value="Upload Now" class="w-1/2 ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 delete-button lg:w-full xl:w-full 2xl:w-full cursor-pointer">
                     </div>
                   </div>
@@ -154,7 +154,7 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                     <!-- CANCEL AND SAVE BUTTONS -->
                     <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6 hidden" id="btnCS">
                       <button name="change-info" type="submit" class="inline-flex justify-center py-3 px-7 border cancel-button text-sm rounded-lg cursor-pointer">Cancel</button>
-                      <button class="inline-flex justify-center py-3 px-9 border shadow-sm text-sm rounded-lg add-button cursor-pointer">Save</button>
+                      <button class="inline-flex justify-center py-3 px-9 text-sm rounded-lg save-button cursor-pointer">Save</button>
                     </div>
                   </div>
                 </div>
@@ -226,8 +226,8 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
 
                     <!-- CANCEL AND SAVE BUTTONS -->
                     <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6">
-                      <input type="reset" value="Cancel" name="cancelPass" class="inline-flex justify-center py-3 px-7 border shadow-sm text-sm rounded-lg add-button cursor-pointer"/>
-                      <input type="submit" value="Save" name="changePass" class="inline-flex justify-center py-3 px-7 border cancel-button text-sm rounded-lg cursor-pointer" />
+                      <input type="reset" value="Cancel" name="cancelPass" class="inline-flex justify-center py-3 px-7 border shadow-sm text-sm rounded-lg bg-transparent cancel-button cursor-pointer"/>
+                      <input type="submit" value="Save" name="changePass" class="inline-flex justify-center py-3 px-7 save-button text-sm rounded-lg cursor-pointer" />
                     </div>
                   </div>
                 </div>
@@ -253,7 +253,7 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
                   <h3 class="text-lg font-medium leading-6 text-gray-900">Account Deletion</h3>
 
                   <div class="px-8 flex justify-end">
-                    <button name="delete" type="submit" class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white account-delete-button account-delete-button:hover">
+                    <button name="delete" type="submit" class="py-4 px-9 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white account-delete-button account-delete-button:hover">
                       Delete Account
                     </button>
                   </div>
