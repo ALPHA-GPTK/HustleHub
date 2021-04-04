@@ -28,13 +28,12 @@
 
   <section class="mx-auto">
     <div>
-      <div class="text-5xl pt-20 text-center md:mb-12 md:pt-20 lg:pt-20 font-black mb-12">MyGigs</div>
+      <div class="text-5xl pt-3 text-center md:mb-12 md:pt-10 lg:pt-3 xl:pt-3 2xl:pt-3 font-black mb-12">MyGigs</div>
     </div>
 
     <div class="antialiased pl-14 pr-14">
       <div class="flex justify-end">
-        <a href="./add_gigs.php" class="py-2 px-4 mb-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-700">Add
-          Gigs</a>
+        <a href="./add_gigs.php" class="py-3 px-6 mb-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gray-600 hover:bg-gray-700">Add Gigs</a>
       </div>
 
       <div class="flex flex-wrap -mx-4">
@@ -97,10 +96,10 @@
               <!-- Buttons -->
               <div class="grid grid-cols-2 px-5 pb-5 mt-5">
                 <div class="col-span-1 w-100 flex flex-col justify-center pr-1">
-                  <a href="./update_card.php?card_id=<?php echo $userResult['gigs_id']; ?>" class="update-button border h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</a>
+                  <a href="./update_card.php?card_id=<?php echo $userResult['gigs_id']; ?>" class="delete-button border h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</a>
                 </div>
                 <div class="col-span-1 w-100 flex flex-col justify-center pl-1">
-                  <a href="./card_delete.php?card_id=<?php echo $userResult['gigs_id']; ?>" class="delete-button h-10 py-2 px-4 rounded-lg tracking-wide">DELETE</a>
+                  <a href="./card_delete.php?card_id=<?php echo $userResult['gigs_id']; ?>" class="update-button h-10 py-2 px-4 rounded-lg tracking-wide">UPDATE</a>
                 </div>
               </div>
             </div>
