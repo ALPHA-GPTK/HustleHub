@@ -21,17 +21,17 @@ if (isset($_POST['changePass'])) {
                 </script>";
             } else {
                 echo "<script>alert('Password and Confirm Password is not the same.')
-                window.location.href='=settings.php?password_status=pass-not-the-same';
+                window.location.href='settings.php?password_status=pass-not-the-same';
                 </script>";
             }
         } else {
             echo "<script>alert('Current Password is not equal to Login Password.')
-            window.location.href='=settings.php?password_status=invalid-current';
+            window.location.href='settings.php?password_status=invalid-current';
             </script>";
         }
     } else {
         echo "<script>alert('Please fill out all the fields.')
-        window.location.href='=settings.php?password_status=invalid-current';
+        window.location.href='settings.php?password_status=no-input';
         </script>";
     }
 }
