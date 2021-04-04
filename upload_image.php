@@ -1,6 +1,9 @@
 <?php
 require_once "./dbConnection.inc";
-session_start();
+require_once "./function.php";
+
+getSessionValues();
+
 if (isset($conn, $_POST["submit-file"]) && $conn) {
     $target_dir = "./assets/img/";
     $filename = htmlspecialchars(basename($_FILES['imgToUpload']['name']));
@@ -11,36 +14,46 @@ if (isset($conn, $_POST["submit-file"]) && $conn) {
 
     // Check if file already exists
     if (file_exists($target_file)) {
-        echo "Sorry, file already exists.";
-        $status = 0;
-    }
+        $sql = "SELECT freelance_path FROM freelance_info WHERE freelance_id = '$userId' AND freelance_path = '$target_file'";
+        $result = $conn->query($sql);
+        $countResult = count($result->fetch_all());
 
-    if ($imageFileType !== "jpg" && $imageFileType !== "png" && $imageFileType !== "jpeg"
-        && $imageFileType !== "gif") {
-        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-        $status = 0;
-    }
-
-    // Check if $uploadOk is set to 0 by an error
-    if ($status === 0) {
-        echo "Sorry, your file was not uploaded.";
-        // if everything is ok, try to upload file
-    } else if (move_uploaded_file($_FILES["imgToUpload"]["tmp_name"], $target_file)) {
-        $sql = "UPDATE freelance_info SET freelance_path = ? WHERE freelance_id = ?;";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("si", $target_file, $user_id);
-        $stmt->execute();
-
-        if ($stmt->affected_rows === 1) {
-            echo "<script>alert('$filename has been uploaded')
-            window.location.href='settings.php?account_status=upload_successful';
-            </script>";
+        // Check if file is in database path
+        if ($countResult == 0) {
+            $sql = "UPDATE freelance_info SET freelance_path = '$target_file' WHERE freelance_id = '$userId'";
+            $conn->query($sql);
+            echo "<script>window.location.href='settings.php?upload_status=success';</script>";
         } else {
-            echo "The file not uploaded";
+            echo "<script>alert('Sorry, this is your current profile picture.');
+            window.location.href='settings.php?upload_status=already-profile';
+            </script>";
         }
 
-    } else {
-        echo "Sorry, there was an error uploading your file.";
+        $status = 0;
+    } else if ($imageFileType !== "jpg" && $imageFileType !== "png" && $imageFileType !== "jpeg" && $imageFileType !== "gif") {
+        $status = 0;
+        echo "<script>alert('Sorry, only JPG, JPEG, PNG & GIF files are allowed.');
+        window.location.href='settings.php?upload_status=invalid-file';
+        </script>";
+    }
+
+    if ($status != 0) {
+        if (move_uploaded_file($_FILES["imgToUpload"]["tmp_name"], $target_file)) {
+            $sql = "UPDATE freelance_info SET freelance_path = ? WHERE freelance_id = ?;";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("si", $target_file, $user_id);
+            $stmt->execute();
+
+            if ($stmt->affected_rows === 1) {
+                echo "<script>alert('$filename has been uploaded')
+                window.location.href='settings.php?upload_status=success';
+                </script>";
+            } else {
+                echo "The file not uploaded";
+            }
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+        }
     }
 } else {
     trigger_error("Connection Failed: " . $conn->connect_error);

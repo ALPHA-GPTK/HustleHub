@@ -134,9 +134,7 @@ if (isset($conn) && $conn) {
                       </label>
                       <div class="mt-1">
                         <label for="about"></label>
-                        <textarea class="w-full shadow-sm text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" id="about" name="about" rows="4" disabled>
-                            <?= empty($user_about) ? "" : preg_replace('/\s+/', '', $user_about) ?>
-                          </textarea>
+                        <textarea class="w-full p-3 shadow-sm text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" id="about" name="about" rows="4" disabled></textarea>
                       </div>
                     </div>
 
