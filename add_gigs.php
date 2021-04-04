@@ -14,7 +14,7 @@
 
     <form action="./check_gigs.php" method="POST" enctype="multipart/form-data" id="addgigs">
       <div class="antialiased flex justify-center">
-        <div class="px-4 py-5 bg-white space-y-6 sm:p-6 shadow sm:overflow-hidden rounded-lg w-5/6 lg:w-1/2 xl:w-1/2 2xl:w-1/2">
+        <div class="px-4 py-5 bg-white space-y-6 sm:p-6 shadow sm:overflow-hidden rounded-lg w-5/6 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
           <div class="text-lg font-medium leading-6 text-gray-900 text-center pt-5">What is your service...</div>
           <div class="px-28 flex justify-end">
           </div>
@@ -28,7 +28,7 @@
 
               <div class="relative margin">
                 <select name="service" id="service" class="w-full appearance-none h-10 pl-3 pr-12 text-base rounded-md border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500 outline-none cursor-pointer">
-                  <option value="">-Select Service-</option>
+                  <option value="">Select Service</option>
                   <?php
                   $sql = "SELECT * FROM freelance_service";
                   $result = $conn->query($sql);
@@ -59,13 +59,13 @@
                 Banner Profile
               </label>
               <div class="border border-dashed border-gray-500 relative">
-                <input type="file" id="banner" name="imgToUpload" multiple class="cursor-pointer relative block opacity-0 p-20 z-50">
-                <div class="text-center p-10 absolute top-0 right-0 left-0 m-auto">
+                <input type="file" id="banner" name="imgToUpload" multiple class="cursor-pointer relative block opacity-0 p-10 lg:p-20 z-50">
+                <div class="text-center text-sm text-gray-500 p-6 lg:text-base lg:p-14 xl:pt-14 2xl:pt-16 absolute top-0 right-0 left-0 m-auto">
                   <h4 id="image-text">
                     Drop files anywhere to upload
                     <br />or
                   </h4>
-                  <p class="" id="image-text">Select Files</p>
+                  <p id="image-text">Select Files</p>
                   <p class="pt-4 italic text-sm c-black_50" id="filename"></p>
                 </div>
               </div>
@@ -81,8 +81,8 @@
               </div>
               <!-- CANCEL AND SAVE BUTTONS -->
               <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6">
-                <a href="./mygigs.php" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-change hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">Cancel</a>
-                <input type="submit" value="Add" name="addGigs" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-save focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer" />
+                <a href="./mygigs.php" class="inline-flex justify-center py-3 px-7 border border-transparent shadow-sm text-sm font-medium rounded-lg cancel-button">Cancel</a>
+                <input type="submit" value="Add" name="addGigs" class="inline-flex justify-center py-3 px-9 border border-transparent shadow-sm text-sm rounded-lg add-button cursor-pointer" />
               </div>
             </div>
           </div>
