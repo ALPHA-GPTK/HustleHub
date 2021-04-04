@@ -74,16 +74,13 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
       <!-- Start of Account -->
       <!-- Start of Basic Information -->
       <div class="w-4/5 flex lg:w-full xl:w-full 2xl:w-full" id="con-basicinfo">
-        <div class="justify-center items-center">
-
-        </div>
-        <div id="div1" class="targetDiv mt-5 md:mt-0 md:col-span-2">
-          <div class="shadow rounded-xl">
+        <div id="div1" class="targetDiv rounded-xl mt-5 md:mt-0 w-full flex justify-center">
+          <div class="flex justify-center p-6 w-5/6 md:w-5/6 lg:w-full lg:p-10 xl:w-full 2xl:w-full bg-white shadow rounded-xl">
             <div class="bg-white space-y-6 sm:p-6 rounded-xl">
-              <div class="text-xl px-4 pt-5 font-medium leading-6 text-gray-900">Basic Information</div>
+              <div class="text-xl px-0 pt-3 lg:px-4 lg:pt-5 font-medium leading-6 text-gray-900 mb-8 font-black">Basic Information</div>
 
               <!-- Start of Form for Image Upload -->
-              <form action="upload_image.php" method="POST" enctype="multipart/form-data">
+              <form action="upload_image.php" method="POST" enctype="multipart/form-data" class="w-5/6 md:w-5/6 lg:w-full xl:w-full 2xl:w-full">
                 <div class="flex justify-center">
                   <div class="mt-1 flex items-center">
                     <!-- PROFILE IMAGE -->
@@ -259,32 +256,27 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
 
       <!-- Start of Account Deletion -->
       <br>
-      <div class="md:grid-cols-2 md:gap-6 duration-500 hidden" id="con-account">
-        <div id="div3" class="targetDiv  mt-5 md:mt-0 md:col-span-2">
-          <!-- Start of Form for Deletion -->
-          <form action="delete_account.php" method="POST">
-            <div class="shadow sm:rounded-md sm:overflow-hidden">
-              <div class="px-4 py-5 rounded-xl bg-white space-y-6 sm:p-6">
+      <div class="flex w-full hidden" id="con-account">
+        <div id="div3" class="targetDiv rounded-xl mt-5 md:mt-0 w-full flex justify-center">
+          <div class="flex justify-center p-6 w-5/6 md:w-5/6 lg:w-full lg:p-10 xl:w-full 2xl:w-full bg-white shadow rounded-xl">
+            <!-- Start of Form for Deletion -->
+            <form action="delete_account.php" method="POST" class="w-5/6 md:w-5/6 lg:w-full xl:w-full 2xl:w-full">
+              <div class="text-xl px-0 pt-3 lg:px-4 lg:pt-5 font-medium leading-6 text-gray-900 mb-8 font-black">Deletion</div>
 
-                <div class="max-w-full text-left">
-                  <div class="text-xl px-4 pt-5 font-medium leading-6 text-gray-900">Deletion</div>
-
-                  <!-- DELETE BUTTON -->
-                  <div class="px-8 flex justify-end">
-                    <button name="delete" type="submit" class="py-4 px-9 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white account-delete-button account-delete-button:hover">
-                      Delete Account
-                    </button>
-                  </div>
-                </div>
+              <!-- DELETE BUTTON -->
+              <div class="px-8 flex justify-center lg:justify-end">
+                <button name="delete" type="submit" class="py-4 px-9 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white account-delete-button account-delete-button:hover">
+                  Delete Account
+                </button>
               </div>
-            </div>
+          </div>
           </form>
           <!-- End of Form for Deletion -->
         </div>
       </div>
-      <br>
     </div>
     <!-- End of Account Deletion -->
+    
   </div>
 </div>
 <?php require_once "footer.php" ?>
