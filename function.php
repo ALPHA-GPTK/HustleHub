@@ -22,7 +22,7 @@ function checkAccount(...$info): bool
 
 function checkSession()
 {
-    if (!isset($_SESSION['user_id'], $_SESSION['user_username'], $_SESSION['user_email'], $_SESSION['user_password'])) {
+    if (!isset($_SESSION['user_id'], $_SESSION['user_username'], $_SESSION['user_email'])) {
         session_destroy();
         header("location: login.php");
     }
@@ -30,7 +30,7 @@ function checkSession()
 
 function checkSessionGoToGig()
 {
-    if (isset($_SESSION['user_id'], $_SESSION['user_username'], $_SESSION['user_email'], $_SESSION['user_password'])) {
+    if (isset($_SESSION['user_id'], $_SESSION['user_username'], $_SESSION['user_email'])) {
         header("location: gigs.php");
     }
 }
@@ -59,13 +59,12 @@ function infoDecrypt($encryption)
 
 function getSessionValues()
 {
-    global $userId, $userFName, $userLName, $userName, $userEmail, $userPassword;
+    global $userId, $userFName, $userLName, $userName, $userEmail;
     $userId = $_SESSION['user_id'];
     $userFName = $_SESSION['user_firstname'];
     $userLName = $_SESSION['user_lastname'];
     $userName = $_SESSION['user_username'];
     $userEmail = $_SESSION['user_email'];
-    $userPassword = $_SESSION['user_password'];
 }
 
 function get_timeago($ptime)
@@ -112,8 +111,6 @@ function add_image($conn, $submitBtn, $chooseImg, $database = "freelance_info"):
             } else {
                 $sql = "SELECT gigs_banner FROM freelance_gig WHERE user_id = ? AND gigs_banner = ?";
             }
-            //            $result = $conn->query($sql);
-            //            $countResult = $result->num_rows;
 
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("is", $user_id, $target_file);
@@ -201,8 +198,6 @@ function add_image_gigs($conn, $submitBtn, $chooseImg, $database = "freelance_in
             } else {
                 $sql = "SELECT gigs_banner FROM freelance_gig WHERE user_id = ? AND gigs_banner = ?";
             }
-            //            $result = $conn->query($sql);
-            //            $countResult = $result->num_rows;
 
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("is", $user_id, $target_file);
@@ -272,3 +267,27 @@ function add_image_gigs($conn, $submitBtn, $chooseImg, $database = "freelance_in
         trigger_error("Connection Failed: " . $conn->connect_error);
     }
 }
+
+function getDatabase_info($conn, $userId, $database = "freelance_info", $get_password = FALSE)
+{
+    if ($database === "freelance_info") {
+        if ($get_password) {
+            $sql = "SELECT * FROM freelance_info WHERE freelance_id = ?";
+        } else {
+            $sql = "SELECT freelance_id, freelance_fName, freelance_lName, freelance_username, 
+                           freelance_email, freelance_about, freelance_path FROM freelance_info 
+                    WHERE freelance_id = ?";
+        }
+    } else {
+        $sql = "SELECT * FROM freelance_gig WHERE gigs_id = ?";
+    }
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $userId);
+    if ($stmt->execute()) {
+        $result = $stmt->get_result();
+        return $result->fetch_assoc();
+    }
+
+    trigger_error("Statement did not execute: " . $stmt->error());
+}
+
