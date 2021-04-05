@@ -258,7 +258,8 @@ input::-webkit-input-placeholder {
 .update-button,
 .add-button,
 .save-button,
-.btn-sidebar:hover  {
+.btn-sidebar:hover,
+.signup-button:hover  {
     background-color: #364A7C;
     color: #FFFFFF;
     font-weight: 700;
