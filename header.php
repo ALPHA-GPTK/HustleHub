@@ -39,7 +39,7 @@ checkSessionGoToGig();
                 <!-- Login Signup Navigation -->
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="login.php" class="text-blue-900 text-dark px-6 py-2 rounded-full font-medium" aria-current="page">Log In</a>
-                    <a href="signup.php" class="text-blue-900 hover:bg-blue-900 hover:text-white border-2 border-current px-6 py-2 rounded-full font-medium">Sign Up</a>
+                    <a href="signup.php" class="text-blue-900 hover:text-white border-2 border-current px-6 py-2 rounded-full font-medium signup-button">Sign Up</a>
                 </div>
 
                 <!-- Mobile Button -->
