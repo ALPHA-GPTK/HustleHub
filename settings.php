@@ -49,8 +49,8 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
     <!-- Sidebar Here -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <!-- Start of SideBar -->
-    <div class="flex-none text-black">
-      <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white rounded-lg  flex-shrink-0" x-data="{ open: false }">
+    <div class="flex-col md:flex-col lg:flex-col xl:flex-col 2xl:flex-col text-black">
+      <div @click.away="open = false" class="flex flex-col w-full md:w-64 bg-white rounded-lg" x-data="{ open: false }">
         <div class="px-8 flex flex-row items-center justify-between">
           <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -69,13 +69,13 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
     <!-- End of SideBar -->
     <!-- Sidebar Here -->
 
-    <div class="flex-1 lg:px-20">
+    <div class="flex-1 lg:px-10 xl:px-20 2xl:px-20">
 
       <!-- Start of Account -->
       <!-- Start of Basic Information -->
       <div class="flex w-full mb-10" id="con-basicinfo">
-        <div id="div1" class="targetDiv rrounded-xl mt-5 md:mt-0 w-full flex justify-center">
-          <div class="flex justify-center p-6 w-5/6 md:w-5/6 lg:w-full lg:p-10 xl:w-full 2xl:w-full bg-white shadow rounded-xl">
+        <div id="div1" class="targetDiv rounded-xl mt-5 md:mt-0 w-full justify-center">
+          <div class="flex justify-center p-6 w-5/6 md:w-5/6 lg:w-full lg:ml-10 xl:ml-20 2xl:ml-20 xl:w-full 2xl:w-full bg-white shadow rounded-xl mx-auto">
             <div class="w-5/6 md:w-5/6 lg:w-full xl:w-full 2xl:w-full">
               <div class="text-xl px-0 pt-3 lg:px-4 lg:pt-5 font-medium leading-6 text-gray-900 mb-8 font-black">Basic Information</div>
 
@@ -189,7 +189,7 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
       <!-- Start of Security -->
       <div class="flex w-full hidden" id="con-security">
         <div id="div2" class="targetDiv rounded-xl mt-5 md:mt-0 w-full justify-center">
-          <div class="flex justify-center p-6 w-5/6 md:w-5/6 lg:w-full lg:p-10 xl:w-full 2xl:w-full bg-white shadow rounded-xl">
+          <div class="flex justify-center p-6 w-5/6 md:w-5/6 lg:w-full lg:p-10 xl:w-full 2xl:w-full bg-white shadow rounded-xl mx-auto">
             <!-- Start of Form for Change Password -->
             <form action="settings_changepass.php" method="POST" class="w-5/6 md:w-5/6 lg:w-full xl:w-full 2xl:w-full">
               <div class="text-xl px-0 pt-3 lg:px-4 lg:pt-5 font-medium leading-6 text-gray-900 mb-8 font-black">Security</div>
@@ -262,7 +262,7 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
       <br>
       <div class="flex w-full hidden" id="con-account">
         <div id="div3" class="targetDiv rounded-xl mt-5 md:mt-0 w-full justify-center">
-          <div class="flex justify-center p-6 w-5/6 md:w-5/6 lg:w-full lg:p-10 xl:w-full 2xl:w-full bg-white shadow rounded-xl">
+          <div class="flex justify-center p-6 w-5/6 md:w-5/6 lg:w-full lg:p-10 xl:w-full 2xl:w-full bg-white shadow rounded-xl mx-auto">
             <!-- Start of Form for Deletion -->
             <form action="delete_account.php" method="POST" class="w-5/6 md:w-5/6 lg:w-full xl:w-full 2xl:w-full">
               <div class="text-xl px-0 pt-3 lg:px-4 lg:pt-5 font-medium leading-6 text-gray-900 mb-8 font-black">Deletion</div>
