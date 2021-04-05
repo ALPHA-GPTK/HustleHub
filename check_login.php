@@ -21,7 +21,7 @@ if (isset($_POST["login"], $conn) && $conn) {
             if ($userResult['freelance_email_validation'] === '1') {
 
                 [$_SESSION['user_id'], $_SESSION['user_firstname'], $_SESSION['user_lastname'],
-                    $_SESSION['user_username'], $_SESSION['user_email'], $_SESSION['user_password'], $code] = $userResult;
+                    $_SESSION['user_username'], $_SESSION['user_email'], $code] = $userResult;
 
                 if (isset($_POST['rememberme'])) {
                     setcookie("user_email", infoEncrypt($user_email), time() + 86400);
