@@ -20,7 +20,7 @@
   $target_file = $target_dir . $filename;
 
   if (!(file_exists($target_file)) || empty($dbFilePath)) {
-    $profile_pic = "./assets/img/dummy_profile.svg.svg";
+    $profile_pic = "./assets/img/dummy_profile.svg";
   } else {
     $profile_pic = $dbFilePath;
   }
