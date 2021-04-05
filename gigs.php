@@ -58,7 +58,7 @@
             $timeline = $g_dbFilePath;
           }
         ?>
-          <div class="mx-auto justify-center w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 text-center">
+          <div class="justify-center w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 text-center">
             <div class="card-gig block shadow-md hover:shadow-xl rounded-lg overflow-hidden">
               <div class="relative pb-48 overflow-hidden">
                 <img class="absolute inset-0 h-full w-full object-cover" src="<?= $timeline ?>" alt="user-timeline">
