@@ -63,8 +63,8 @@
               </div>
               <!-- Profile Image and Name -->
               <div class="relative flex flex-col items-center w-full text-center">
-                <div class="h-24 w-24 md rounded-full relative avatar flex items-end justify-end text-purple-600 min-w-max absolute -top-16 flex bg-purple-200 text-purple-100 row-start-1 row-end-3 text-purple-650 ring-1 ring-white">
-                  <img class="h-24 w-24 md rounded-full relative" src="<?= $profile_pic ?>" alt="">
+                <div class="h-24 w-24 md rounded-full relative avatar flex items-end justify-end min-w-max absolute -top-16 flex bg-purple-200 row-start-1 row-end-3 ring-1 ring-white">
+                    <img class="h-24 w-24 md rounded-full relative object-cover" src="<?= $profile_pic ?>" alt="">
                   <div class="absolute"></div>
                 </div>
               </div>
