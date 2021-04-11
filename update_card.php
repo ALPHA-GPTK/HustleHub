@@ -24,14 +24,12 @@
         ?>
         <section class="mx-auto">
             <div>
-                <h1 class="title-header font-bold">Update Gigs</h1>
+            <div class="text-5xl pt-3 text-center md:mb-12 md:pt-10 lg:pt-3 xl:pt-3 2xl:pt-3 font-black mb-12">Update Gigs</div>
             </div>
 
-            <form action="./check_update.php" method="POST" id="addgigs" enctype="multipart/form-data">
+            <form action="./check_update.php" method="POST" id="addgigs" accept="image/*" enctype="multipart/form-data">
                 <div class="antialiased flex justify-center">
-                    <div class="px-4 py-5 bg-white space-y-6 sm:p-6 shadow sm:rounded-md sm:overflow-hidden w-6/12">
-                        <h3 class="text-lg font-medium leading-6 text-gray-900">What is your service...</h3>
-
+                    <div class="px-4 py-5 bg-white space-y-6 sm:p-6 shadow sm:rounded-md sm:overflow-hidden w-2/3 md:w-2/3 lg:w-1/2 xl:w-1/2 2x:w-1/2">
                         <div class="px-28 flex justify-end">
                         </div>
                         <!-- Input Fields  -->
@@ -78,8 +76,8 @@
                                     Banner Profile
                                 </label>
                                 <div class="border border-dashed border-gray-500 relative">
-                                    <input type="file" id="banner" name="uploadImage" multiple class="cursor-pointer relative block opacity-0 p-20 z-50">
-                                    <div class="text-center p-10 absolute top-0 right-0 left-0 m-auto">
+                                    <input type="file" id="banner" name="uploadImage" multiple class="w-full cursor-pointer relative block opacity-0 p-20 z-50">
+                                    <div class="text-center p-7 sm:p-10 md:p-10 lg:p-10 xl:p-10 2xl:p-10 absolute top-0 right-0 left-0 m-auto">
                                         <h4 id="image-text">
                                             Drop files anywhere to upload
                                             <br />or
@@ -100,8 +98,8 @@
 
                                 <!-- CANCEL AND SAVE BUTTONS -->
                                 <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6">
-                                    <input type="submit" value="Cancel" name="cancelUpdate" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-change hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer" />
-                                    <input type="submit" value="Update" name="updateGigs" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-blue-save focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer" />
+                                    <button type="submit" value="Cancel" name="cancelUpdate" class="inline-flex justify-center py-3 px-7 border cancel-button text-sm rounded-lg cursor-pointer" >Cancel</button>
+                                    <button type="submit" value="Update" name="updateGigs" class="inline-flex justify-center py-3 px-9 text-sm rounded-lg save-button cursor-pointer">Update</button>
                                 </div>
                             </div>
                         </div>
