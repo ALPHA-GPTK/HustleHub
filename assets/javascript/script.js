@@ -21,14 +21,14 @@ if ((lastUrlElement.includes("login.php"))) {
     const passwordIcon = document.getElementById("password-show");
     const passwordInput = document.getElementById("password");
 
-    passwordIcon.addEventListener('mousedown', (event) => {
-        passwordIcon.src = "./assets/img/show.svg";
-        passwordInput.type = "text";
-    });
-
-    passwordIcon.addEventListener('mouseup', (event) => {
-        passwordIcon.src = "./assets/img/hide.svg";
-        passwordInput.type = "password";
+    passwordIcon.addEventListener('click', (event) => {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            passwordIcon.src = "./assets/img/show.svg";
+        } else if (passwordInput.type === "text") {
+            passwordInput.type = "password";
+            passwordIcon.src = "./assets/img/hide.svg";
+        }
     });
 } else if ((lastUrlElement.includes("signup.php"))) { //Sign up Page
 
@@ -60,14 +60,14 @@ if ((lastUrlElement.includes("login.php"))) {
     const passwordInput = document.getElementById('password');
     const passwordIcon = document.getElementById('password-icon');
 
-    passwordIcon.addEventListener('mousedown', (event) => {
-        passwordIcon.src = "./assets/img/show.svg";
-        passwordInput.type = "text";
-    });
-
-    passwordIcon.addEventListener('mouseup', (event) => {
-        passwordIcon.src = "./assets/img/hide.svg";
-        passwordInput.type = "password";
+    passwordIcon.addEventListener('click', (event) => {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            passwordIcon.src = "./assets/img/show.svg";
+        } else if (passwordInput.type === "text") {
+            passwordInput.type = "password";
+            passwordIcon.src = "./assets/img/hide.svg";
+        }
     });
 
     //Confirm Password
