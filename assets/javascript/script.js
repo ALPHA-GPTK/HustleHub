@@ -99,6 +99,7 @@ if ((lastUrlElement.includes("login.php"))) {
             confirmInput.disabled = true;
         } else {
             confirmInput.disabled = false;
+            confirmIcon.src = "./assets/img/check-not.svg";
         }
     });
 
@@ -107,6 +108,18 @@ if ((lastUrlElement.includes("login.php"))) {
             confirmIcon.src = "./assets/img/check-same.svg";
         } else {
             confirmIcon.src = "./assets/img/check-not.svg";
+        }
+    });
+
+    passwordInput.addEventListener('input', (event) => {
+        if (((passwordInput.value).trim() == null || (passwordInput.value).trim() == "") && ((confirmInput.value).trim() == null || (confirmInput.value).trim() == "")) {
+            confirmIcon.src = "./assets/img/check-not.svg";
+        } else {
+            if (passwordInput.value == confirmInput.value) {
+                confirmIcon.src = "./assets/img/check-same.svg";
+            } else {
+                confirmIcon.src = "./assets/img/check-not.svg";
+            }
         }
     });
 } else if ((lastUrlElement.includes("forgot.php"))) {
@@ -190,8 +203,19 @@ if ((lastUrlElement.includes("login.php"))) {
             confirmIcon.src = "./assets/img/check-not.svg";
         }
     });
+
+    passwordInput.addEventListener('input', (event) => {
+        if (((passwordInput.value).trim() == null || (passwordInput.value).trim() == "") && ((confirmInput.value).trim() == null || (confirmInput.value).trim() == "")) {
+            confirmIcon.src = "./assets/img/check-not.svg";
+        } else {
+            if (passwordInput.value == confirmInput.value) {
+                confirmIcon.src = "./assets/img/check-same.svg";
+            } else {
+                confirmIcon.src = "./assets/img/check-not.svg";
+            }
+        }
+    });
 } else if ((lastUrlElement.includes("settings.php"))) {
-    headerToggleMobile();
 
     const btnBasic = document.getElementById("btn-basic");
     const btnSecurity = document.getElementById("btn-security");
@@ -266,28 +290,28 @@ if ((lastUrlElement.includes("login.php"))) {
     const currentPasswordInput = document.getElementById('current-password');
     const currentPasswordIcon = document.getElementById('current-password-icon');
 
-    currentPasswordIcon.addEventListener('mousedown', (event) => {
-        currentPasswordIcon.src = "./assets/img/show.svg";
-        currentPasswordInput.type = "text";
-    });
-
-    currentPasswordIcon.addEventListener('mouseup', (event) => {
-        currentPasswordIcon.src = "./assets/img/hide.svg";
-        currentPasswordInput.type = "password";
+    currentPasswordIcon.addEventListener('click', (event) => {
+        if (currentPasswordInput.type === "password") {
+            currentPasswordInput.type = "text";
+            currentPasswordIcon.src = "./assets/img/show.svg";
+        } else if (currentPasswordInput.type === "text") {
+            currentPasswordInput.type = "password";
+            currentPasswordIcon.src = "./assets/img/hide.svg";
+        }
     });
 
     //New Password
     const newPasswordInput = document.getElementById('new-password');
     const newPasswordIcon = document.getElementById('new-password-icon');
 
-    newPasswordIcon.addEventListener('mousedown', (event) => {
-        newPasswordIcon.src = "./assets/img/show.svg";
-        newPasswordInput.type = "text";
-    });
-
-    newPasswordIcon.addEventListener('mouseup', (event) => {
-        newPasswordIcon.src = "./assets/img/hide.svg";
-        newPasswordInput.type = "password";
+    newPasswordIcon.addEventListener('click', (event) => {
+        if (newPasswordInput.type === "password") {
+            newPasswordInput.type = "text";
+            newPasswordIcon.src = "./assets/img/show.svg";
+        } else if (newPasswordInput.type === "text") {
+            newPasswordInput.type = "password";
+            newPasswordIcon.src = "./assets/img/hide.svg";
+        }
     });
 
     //Confirm Password
@@ -327,6 +351,18 @@ if ((lastUrlElement.includes("login.php"))) {
             confirmIcon.src = "./assets/img/check-same.svg";
         } else {
             confirmIcon.src = "./assets/img/check-not.svg";
+        }
+    });
+
+    newPasswordInput.addEventListener('input', (event) => {
+        if (((newPasswordInput.value).trim() == null || (newPasswordInput.value).trim() == "") && ((confirmInput.value).trim() == null || (confirmInput.value).trim() == "")) {
+            confirmIcon.src = "./assets/img/check-not.svg";
+        } else {
+            if (newPasswordInput.value == confirmInput.value) {
+                confirmIcon.src = "./assets/img/check-same.svg";
+            } else {
+                confirmIcon.src = "./assets/img/check-not.svg";
+            }
         }
     });
 
