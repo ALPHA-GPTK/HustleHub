@@ -311,8 +311,8 @@
                     <div class="w-full flex flex-col justify-center items-center mb-12 lg:mb-0 lg:w-1/2 lg:space-y-4">
                         <a href="./index.php"><span class="c-darkBlue_100 text-5xl sm:text-5xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-5xl f-fredokaone-regular cursor-pointer">HUSTLE</span><span class="c-lightBlue_100 text-5xl sm:text-5xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-5xl f-fredokaone-regular cursor-pointer">HUB</span></a>
                         <div class="text-center pt-6">
-                            <p class="text-base pb-2 lg:text-sm lg:pb-4 c-black_100">(02) 8281-88-88</p>
-                            <p class="text-base lg:text-sm c_gray">hustlehub@gmail.com</p>
+                            <a href="tel: +(02) 8281-88-88" class="block">(02) 8281-88-88</a>
+                            <a href="mailto: alphadevhustlehub@gmail.com" class="text-base lg:text-sm c_gray block">alphadevhustlehub@gmail.com</a>
                         </div>
                     </div>
                     <div class="w-full sm:flex sm:flex-row lg:w-1/2 lg:flex lg:px-6">

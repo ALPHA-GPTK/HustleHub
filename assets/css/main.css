@@ -155,6 +155,7 @@ p {
 
 a,
 a:focus {
+    cursor: pointer;
     outline: none;
 }
 
@@ -259,7 +260,7 @@ input::-webkit-input-placeholder {
 .add-button,
 .save-button,
 .btn-sidebar:hover,
-.signup-button:hover  {
+.signup-button:hover {
     background-color: #364A7C;
     color: #FFFFFF;
     font-weight: 700;
