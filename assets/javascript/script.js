@@ -205,6 +205,7 @@ if ((lastUrlElement.includes("index.php"))) {
         }
     });
 } else if ((lastUrlElement.includes("settings.php"))) {
+    headerToggleMobile();
 
     const btnBasic = document.getElementById("btn-basic");
     const btnSecurity = document.getElementById("btn-security");
