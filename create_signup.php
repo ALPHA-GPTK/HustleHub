@@ -19,6 +19,9 @@ if (isset($_POST["signup"], $conn) && $conn) {
                 $email = $_POST["email"];
                 $password = sha1($_POST["password"]);
 
+                //  Get dir without current php file
+                $dir = getDirWoLast();
+
                 //Random Alpha-numeric
                 $bytes = random_bytes(20);
                 $randomCode = bin2hex($bytes);
@@ -118,7 +121,7 @@ if (isset($_POST["signup"], $conn) && $conn) {
                                                                                     </p> <br> <br>
                                                                                     Link:
                                                                                     <p style=\"font-weight:bold;\">
-                                                                                    <a href='http://localhost/FEU/PHP/Lab/Final Project/HustleHub/account_verification.php?code=$shaRandCode'>Click here to verify your account</a>
+                                                                                    <a href='http://localhost$dir/account_verification.php?code=$shaRandCode'>Click here to verify your account</a>
                                                                                     </p>
                                                                                 </td>
                                                                             </tr>

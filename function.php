@@ -291,3 +291,11 @@ function getDatabase_info($conn, $userId, $database = "freelance_info", $get_pas
     trigger_error("Statement did not execute: " . $stmt->error());
 }
 
+function getDirWoLast(): string
+{
+    $dir = $_SERVER['PHP_SELF'];
+    $expDir = explode("/", $dir);
+    $dirLastPop = array_slice($expDir, 0, -1);
+    $phpDir = implode("/", $dirLastPop);
+    return $phpDir;
+}
