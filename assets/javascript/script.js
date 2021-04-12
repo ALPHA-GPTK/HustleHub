@@ -18,18 +18,12 @@ if ((lastUrlElement.includes("login.php"))) {
     });
 
     // Password
-    const passwordIcon = document.getElementById("password-show");
-    const passwordInput = document.getElementById("password");
 
-    passwordIcon.addEventListener('click', (event) => {
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            passwordIcon.src = "./assets/img/show.svg";
-        } else if (passwordInput.type === "text") {
-            passwordInput.type = "password";
-            passwordIcon.src = "./assets/img/hide.svg";
-        }
-    });
+    const passwordInputName = 'password';
+    const passwordIconName = 'password-show';
+
+    passwordIconToggle(passwordInputName, passwordIconName);
+
 } else if ((lastUrlElement.includes("signup.php"))) { //Sign up Page
 
     //Username
@@ -57,18 +51,12 @@ if ((lastUrlElement.includes("login.php"))) {
     });
 
     //Password
-    const passwordInput = document.getElementById('password');
-    const passwordIcon = document.getElementById('password-icon');
+    const passwordInputName = 'password';
+    const passwordIconName = 'password-icon';
 
-    passwordIcon.addEventListener('click', (event) => {
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            passwordIcon.src = "./assets/img/show.svg";
-        } else if (passwordInput.type === "text") {
-            passwordInput.type = "password";
-            passwordIcon.src = "./assets/img/hide.svg";
-        }
-    });
+    const passwordInput = document.getElementById('password');
+
+    passwordIconToggle(passwordInputName, passwordIconName);
 
     //Confirm Password
     const confirmInput = document.getElementById("confirm_password");
@@ -151,18 +139,12 @@ if ((lastUrlElement.includes("login.php"))) {
 } else if ((lastUrlElement.includes("changepass.php"))) {
 
     //Password
+    const passwordInputName = 'newpassword';
+    const passwordIconName = 'newpassword-icon';
+
     const passwordInput = document.getElementById('newpassword');
-    const passwordIcon = document.getElementById('newpassword-icon');
 
-    passwordIcon.addEventListener('mousedown', (event) => {
-        passwordIcon.src = "./assets/img/show.svg";
-        passwordInput.type = "text";
-    });
-
-    passwordIcon.addEventListener('mouseup', (event) => {
-        passwordIcon.src = "./assets/img/hide.svg";
-        passwordInput.type = "password";
-    });
+    passwordIconToggle(passwordInputName, passwordIconName);
 
     //Confirm Password
     const confirmInput = document.getElementById("confirm_password");
@@ -220,6 +202,7 @@ if ((lastUrlElement.includes("login.php"))) {
     const btnBasic = document.getElementById("btn-basic");
     const btnSecurity = document.getElementById("btn-security");
     const btnDeletion = document.getElementById("btn-deletion");
+    const btnCancel = document.getElementById("cancel");
 
     var conBasic = document.getElementById("con-basicinfo");
     var conSecurity = document.getElementById("con-security");
@@ -287,32 +270,18 @@ if ((lastUrlElement.includes("login.php"))) {
     });
 
     //Current Password
-    const currentPasswordInput = document.getElementById('current-password');
-    const currentPasswordIcon = document.getElementById('current-password-icon');
+    const currentPasswordInputName = 'current-password';
+    const currentPasswordIconName = 'current-password-icon';
 
-    currentPasswordIcon.addEventListener('click', (event) => {
-        if (currentPasswordInput.type === "password") {
-            currentPasswordInput.type = "text";
-            currentPasswordIcon.src = "./assets/img/show.svg";
-        } else if (currentPasswordInput.type === "text") {
-            currentPasswordInput.type = "password";
-            currentPasswordIcon.src = "./assets/img/hide.svg";
-        }
-    });
+    passwordIconToggle(currentPasswordInputName, currentPasswordIconName);
 
     //New Password
-    const newPasswordInput = document.getElementById('new-password');
-    const newPasswordIcon = document.getElementById('new-password-icon');
+    const newPasswordInputName = 'new-password';
+    const newPasswordIconName = 'new-password-icon';
 
-    newPasswordIcon.addEventListener('click', (event) => {
-        if (newPasswordInput.type === "password") {
-            newPasswordInput.type = "text";
-            newPasswordIcon.src = "./assets/img/show.svg";
-        } else if (newPasswordInput.type === "text") {
-            newPasswordInput.type = "password";
-            newPasswordIcon.src = "./assets/img/hide.svg";
-        }
-    });
+    const newPasswordInput = document.getElementById('new-password')
+
+    passwordIconToggle(newPasswordInputName, newPasswordIconName);
 
     //Confirm Password
     const confirmInput = document.getElementById("confirm-password");
@@ -386,6 +355,12 @@ if ((lastUrlElement.includes("login.php"))) {
             conInfoBtn.classList.remove("hidden");
         }
     })
+
+    btnCancel.addEventListener("click", (event) => {
+        confirmInput.disabled = false;
+        confirmIcon.src = "./assets/img/check-not.svg";
+
+    });
 } else if ((lastUrlElement.includes("add_gigs.php"))) {
 
     //Upload file
@@ -434,5 +409,20 @@ function headerToggleMobile() {
 
     btn.addEventListener("click", () => {
         menu.classList.toggle("hidden");
+    });
+}
+
+function passwordIconToggle(inputPassId, IconPassId) {
+    const passwordInput = document.getElementById(inputPassId);
+    const passwordIcon = document.getElementById(IconPassId);
+
+    passwordIcon.addEventListener('click', (event) => {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            passwordIcon.src = "./assets/img/show.svg";
+        } else if (passwordInput.type === "text") {
+            passwordInput.type = "password";
+            passwordIcon.src = "./assets/img/hide.svg";
+        }
     });
 }

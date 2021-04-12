@@ -244,7 +244,7 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
 
                 <!-- CANCEL AND SAVE BUTTONS -->
                 <div class="flex justify-center px-4 py-3 text-right sm:px-6 space-x-6">
-                  <input type="reset" value="Cancel" name="cancelPass" class="inline-flex justify-center py-3 px-7 border shadow-sm text-sm rounded-lg bg-transparent cancel-button cursor-pointer" />
+                  <input type="reset" value="Cancel" name="cancelPass" class="inline-flex justify-center py-3 px-7 border shadow-sm text-sm rounded-lg bg-transparent cancel-button cursor-pointer" id="cancel" />
                   <input type="submit" value="Save" name="changePass" class="inline-flex justify-center py-3 px-9 save-button text-sm rounded-lg cursor-pointer" />
                 </div>
               </div>
