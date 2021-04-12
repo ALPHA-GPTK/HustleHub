@@ -34,14 +34,6 @@ if (isset($_POST["signup"], $conn) && $conn) {
                 $stmt->execute();
 
                 if ($stmt->affected_rows === 1) {
-                    // echo "<script>alert('Login Successfully')
-                    // window.location.href='gigs.php';
-                    // </script>";
-                    // header("Location: login.php?signup=success");
-
-
-                    // $sql = "UPDATE freelance_info SET freelance_email_code = '$shaRandCode' WHERE freelance_email = '$email'";
-                    // $conn->query($sql);
 
                     /////////////////////////////////////////////
                     $mail->setFrom($gmailUsername, "HustleHub");

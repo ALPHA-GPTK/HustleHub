@@ -4,13 +4,7 @@
 var urlCheck = (window.location.href).split("/");
 var lastUrlElement = urlCheck[urlCheck.length - 1]
 
-if ((lastUrlElement.includes("index.php"))) {
-
-    headerToggleMobile();
-
-} else if ((lastUrlElement.includes("login.php"))) {
-
-    headerToggleMobile();
+if ((lastUrlElement.includes("login.php"))) {
 
     const emailInput = document.getElementById("email");
     const emailLogo = document.getElementById("email-logo");
@@ -37,8 +31,6 @@ if ((lastUrlElement.includes("index.php"))) {
         passwordInput.type = "password";
     });
 } else if ((lastUrlElement.includes("signup.php"))) { //Sign up Page
-
-    headerToggleMobile();
 
     //Username
     const userNameInput = document.getElementById('username');
@@ -119,8 +111,6 @@ if ((lastUrlElement.includes("index.php"))) {
     });
 } else if ((lastUrlElement.includes("forgot.php"))) {
 
-    headerToggleMobile();
-
     //Email
     const emailInput = document.getElementById('email');
     const emailIcon = document.getElementById('email-icon');
@@ -134,8 +124,6 @@ if ((lastUrlElement.includes("index.php"))) {
     });
 } else if ((lastUrlElement.includes("vericode.php"))) {
 
-    headerToggleMobile();
-
     //Code Verification
     const codeInput = document.getElementById('code');
     const codeIcon = document.getElementById('code-icon');
@@ -148,8 +136,6 @@ if ((lastUrlElement.includes("index.php"))) {
         codeIcon.src = "./assets/img/code-out.svg";
     });
 } else if ((lastUrlElement.includes("changepass.php"))) {
-
-    headerToggleMobile();
 
     //Password
     const passwordInput = document.getElementById('newpassword');
@@ -390,6 +376,11 @@ if ((lastUrlElement.includes("index.php"))) {
 
         dspFilename.innerHTML = filename;
     });
+}
+
+if ((lastUrlElement.includes("index.php")) || (lastUrlElement.includes("login.php")) || (lastUrlElement.includes("singup.php")) || (lastUrlElement.includes("forgot.php")) || (lastUrlElement.includes("vericode.php")) || (lastUrlElement.includes("changepass.php")) || (lastUrlElement.includes("mygigs.php")) || (lastUrlElement.includes("gigs.php")) || (lastUrlElement.includes("settings.php")) || (lastUrlElement.includes("signup.php"))) {
+    headerToggleMobile();
+    console.log("here");
 }
 
 function isNumberKey(evt) {

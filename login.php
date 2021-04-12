@@ -17,7 +17,6 @@ if ((isset($_COOKIE['user_email'], $_COOKIE['user_password']))) {
   $password = null;
   $rememberme = null;
 }
-
 ?>
 
 <!-- Favicon -->
