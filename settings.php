@@ -43,7 +43,7 @@ if (!(file_exists($target_file)) || empty($profile_pic)) {
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
 <title>HustleHub | Settings</title>
-<div class="bg-lightBlue_8 h-screen">
+<div class="bg-lightBlue_8">
   <?php require_once "profile_header.php"; ?>
   <div class="md:flex flex-col md:flex-row md:min-h-screen w-full lg:px-36">
     <!-- Sidebar Here -->
