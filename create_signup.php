@@ -27,6 +27,8 @@ if (isset($_POST["signup"], $conn) && $conn) {
                 $randomCode = bin2hex($bytes);
                 $shaRandCode = sha1($randomCode);
 
+                $year = date("Y");
+
                 $sql = "INSERT INTO freelance_info (freelance_fName, freelance_lName, freelance_username, freelance_email, freelance_password, freelance_email_code) 
                         VALUES (?, ?, ?, ?, ?, ?);";
                 $stmt = $conn->prepare($sql);
@@ -161,7 +163,7 @@ if (isset($_POST["signup"], $conn) && $conn) {
                                                                                     <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"280\" align=\"center\">
                                                                                         <tr>
                                                                                             <p style=\"font-family:Helvetica; font-size:11px; line-height:150%; text-align:right;\">
-                                                                                                © 2021 HustleHub. All rights reserved
+                                                                                                © $year HustleHub. All rights reserved
                                                                                             </p>
                                                                                         </tr>
                                                                                     </table>

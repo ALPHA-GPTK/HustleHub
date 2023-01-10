@@ -18,6 +18,8 @@ if (isset($_POST['email'], $conn, $mail, $gmailUsername)) {
             $sql = "UPDATE freelance_info SET freelance_passwordcode = '$shaRandCode' WHERE freelance_email = '$email'";
             $conn->query($sql);
 
+            $year = date("Y");
+
             /////////////////////////////////////////////
             $mail->setFrom($gmailUsername, "HustleHub");
 
@@ -147,7 +149,7 @@ if (isset($_POST['email'], $conn, $mail, $gmailUsername)) {
                                                                                     <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"280\" align=\"center\">
                                                                                         <tr>
                                                                                             <p style=\"font-family:Helvetica; font-size:11px; line-height:150%; text-align:right;\">
-                                                                                                © 2021 HustleHub. All rights reserved
+                                                                                                © $year HustleHub. All rights reserved
                                                                                             </p>
                                                                                         </tr>
                                                                                     </table>

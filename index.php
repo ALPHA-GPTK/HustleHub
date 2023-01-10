@@ -366,7 +366,7 @@
                 </div>
                 <div class="flex-1 pt-5 md:pt-3 xl:pt-0 2xl:pt-0">
                     <div class="attribution text-xs justify-center items-end flex xl:flex-col 2xl:flex-col">
-                        <p class="text-base md:text-sm md:text-center lg:text-sm xl:text-base 2xl:text-base f-inter-regular"> &copy; 2021 HustleHub. All rights reserved.</p>
+                        <p class="text-base md:text-sm md:text-center lg:text-sm xl:text-base 2xl:text-base f-inter-regular"> &copy; <?= date("Y") ?> HustleHub. All rights reserved.</p>
                     </div>
                 </div>
             </div>
